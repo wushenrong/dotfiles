@@ -35,6 +35,13 @@ path=(
   $HOME/.dotnet/tools
 )
 
+if (( $#commands[snap] )); then
+  path=(
+    /snap/bin
+    $path
+  )
+fi
+
 fpath=(
   $ZFUNCDIR
   $ZDOTDIR/completions(-/FN)
