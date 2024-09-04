@@ -35,7 +35,7 @@ export INPUTRC=$XDG_CONFIG_HOME/readline/inputrc
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
 
 # Wget
-export WGETRC=$XDG_CONFIG_HOME/wget/wgetrc
+export WGETRC=$XDG_CONFIG_HOME/wgetrc
 
 #
 # Dev tools

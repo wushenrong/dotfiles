@@ -16,7 +16,7 @@ if [ "$TERM" = "xterm-kitty" ]; then
   alias diff="kitten diff"
   alias ssh="kitten ssh"
 else
-  (( $+commands[delta] )) && alias diff=delta  
+  (( $+commands[delta] )) && alias diff=delta
 fi
 
 # General Aliases
@@ -91,7 +91,7 @@ alias print-path='echo $PATH | tr ":" "\n"'
 alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 
 # Corepack
-if (($ + commands[corepack])); then
+if (( $+commands[corepack])); then
   alias yarn="corepack yarn"
   alias yarnpkg="corepack yarnpkg"
   alias pnpm="corepack pnpm"
