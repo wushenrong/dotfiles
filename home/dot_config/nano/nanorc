@@ -51,7 +51,7 @@ set constantshow
 set cutfromcursor
 
 ## Do not use the line below the title bar, leaving it entirely blank.
-set emptyline
+# set emptyline
 
 ## Set the target width for automatic hard-wrapping and for justifying
 ## paragraphs.  If the specified value is 0 or less, the wrapping point
