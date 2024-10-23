@@ -1,0 +1,10 @@
+# Linux Config
+{{- if eq .chezmoi.os "windows" }}
+# Shell and Terminal Settings
+.zshenv
+
+.config/kitty
+.config/nano
+.config/zsh
+
+{{- end }}

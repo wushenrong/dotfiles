@@ -1,0 +1,54 @@
+[user]
+    name = {{ .name }}
+    email = {{ .email }}
+    signingKey = 5C5400B08A9A51A3BF1BC1176DA8EF9135CAA64C
+
+[commit]
+    gpgSign = true
+
+[tag]
+    gpgSign = true
+
+[core]
+    editor = code --wait
+    pager = delta
+
+[init]
+    defaultBranch = main
+
+[pull]
+    rebase = true
+
+[push]
+    autoSquash = true
+    default = current
+
+[rebase]
+    autostash = true
+
+[status]
+    submoduleSummary = true
+
+[alias]
+    s = status
+
+[format]
+    signoff = true
+
+[delta]
+    line-numbers = true
+    navigate = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+{{- if eq .chezmoi.os "windows" }}
+[gpg]
+    program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+{{- else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ) }}
+[gpg]
+    program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
+{{- end }}
