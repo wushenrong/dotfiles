@@ -1,0 +1,6 @@
+[submodule "home/dot_config/nano/external_extras"]
+	path = home/dot_config/nano/external_extras
+	url = https://github.com/galenguyer/nano-syntax-highlighting.git
+[submodule "home/dot_config/zsh/external_dot_antidote"]
+	path = home/dot_config/zsh/external_dot_antidote
+	url = https://github.com/mattmc3/antidote
