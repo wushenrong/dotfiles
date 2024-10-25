@@ -38,7 +38,12 @@ path=(
 
 # Default programs for the terminal
 export EDITOR=nano
+<<<<<<< HEAD
 export VISUAL=code
+||||||| parent of 9754475 (Add more git aliases)
+=======
+export VISUAL=nano
+>>>>>>> 9754475 (Add more git aliases)
 export PAGER=less
 export LESS="-R"
 export BROSWER=links

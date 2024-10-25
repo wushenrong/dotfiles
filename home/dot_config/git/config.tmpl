@@ -1,57 +1,75 @@
 [user]
-    name = {{ .name }}
-    email = {{ .email }}
-    signingKey = 5C5400B08A9A51A3BF1BC1176DA8EF9135CAA64C
+	name = {{ .name }}
+	email = {{ .email }}
+	signingKey = 5C5400B08A9A51A3BF1BC1176DA8EF9135CAA64C
 
 [commit]
-    gpgSign = true
+	gpgSign = true
 
 [tag]
-    gpgSign = true
+	gpgSign = true
 
 [core]
-    editor = code --wait
-    pager = delta
-    whitespace = trailing-space
+	editor = code --wait
+	pager = delta
+	whitespace = trailing-space
 
 [init]
-    defaultBranch = main
+	defaultBranch = main
 
 [pull]
-    rebase = true
+	rebase = true
 
 [push]
-    autoSquash = true
-    default = current
+	autoSquash = true
+	default = current
 
 [rebase]
-    autostash = true
+	autostash = true
 
 [status]
-    submoduleSummary = true
+	submoduleSummary = true
 
 [alias]
-    pl = pull
-    s = status
+	alias = config get --all --global --regexp alias
+
+	a = add
+	aa = add --all
+
+	c = commit --verbose
+	ca = commit --all --verbose
+	cm = commit --message
+	cam = commit --all --message
+
+	d = diff
+	dc = diff --cached
+
+	p = push
+	pl = pull
+
+	s = status
 
 [format]
-    signoff = true
+	signoff = true
 
 [delta]
-    hyperlinks = true
-    navigate = true
-    side-by-side = true
+	hyperlinks = true
+	navigate = true
+	side-by-side = true
 
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 
 [merge]
-    conflictstyle = diff3
+	conflictstyle = diff3
 
 {{ if eq .chezmoi.os "windows" -}}
 [gpg]
     program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
-{{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ) -}}
+{{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
 [gpg]
-    program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
+	program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
+
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 {{ end -}}
