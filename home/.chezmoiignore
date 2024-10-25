@@ -1,10 +1,14 @@
 # Linux Config
 {{- if eq .chezmoi.os "windows" }}
-# Shell and Terminal Settings
+# Shell Settings
 .zshenv
-
-.config/kitty
-.config/nano
 .config/zsh
+.config/tmux
+
+# Editor Settings
+.config/nano
+
+# Terminal Settings
+.config/kitty
 
 {{- end }}
