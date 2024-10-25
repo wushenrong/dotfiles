@@ -4,3 +4,9 @@
 [submodule "home/dot_config/zsh/external_dot_antidote"]
 	path = home/dot_config/zsh/external_dot_antidote
 	url = https://github.com/mattmc3/antidote
+[submodule "home/dot_config/tmux/plugins/external_tmp"]
+	path = home/dot_config/tmux/plugins/external_tmp
+	url = https://github.com/tmux-plugins/tpm
+[submodule "home/dot_config/tmux/plugins/external_tpm"]
+	path = home/dot_config/tmux/plugins/external_tpm
+	url = https://github.com/tmux-plugins/tpm
