@@ -8,7 +8,7 @@ else
 fi
 
 alias ll='ls -l'
-alias ldot='ll -d .*'
+alias lh='ll -d .*'
 alias lD='ll -D'
 alias lF='ll -F'
 alias lc='ll -1'
