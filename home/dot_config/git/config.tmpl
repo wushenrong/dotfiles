@@ -31,6 +31,7 @@
     submoduleSummary = true
 
 [alias]
+    pl = pull
     s = status
 
 [format]
@@ -53,4 +54,4 @@
 {{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft") ) -}}
 [gpg]
     program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
-{{- end }}
+{{ end -}}
