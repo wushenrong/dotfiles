@@ -31,14 +31,13 @@ typeset -gU path fpath
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/{,s}bin(N)
-  /snap/{,s}bin(N)
   /usr/local/{,s}bin(N)
+  /snap/{,s}bin(N)
   $path
 )
 
 # Default programs for the terminal
 export EDITOR=nano
-export VISUAL=code
 export PAGER=less
 export LESS="-R"
 export BROSWER=links

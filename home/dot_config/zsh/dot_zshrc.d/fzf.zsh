@@ -1,6 +1,6 @@
 (( $+commands[fzf] )) || return 1
 
-if fzf --zsh 2> /dev/null; then
+if fzf --zsh >/dev/null 2>&1; then
   source <(fzf --zsh)
 else
   source /usr/share/doc/fzf/examples/completion.zsh
