@@ -41,6 +41,7 @@ path=(
 
 # Default programs for the terminal
 export EDITOR=nano
+export VISUAL=nano
 export PAGER=less
 export LESS="-R"
 export BROSWER=links

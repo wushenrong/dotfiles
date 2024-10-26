@@ -17,3 +17,6 @@ end_of_line = lf
 [dot_z*]
 indent_size = 2
 end_of_line = lf
+
+[**/git/config.tmpl]
+indent_style = tab
