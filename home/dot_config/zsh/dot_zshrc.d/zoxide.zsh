@@ -1,2 +1,2 @@
 (( $+commands[zoxide] )) || return 1
-source <(zoxide init zsh)
+source <(zoxide init zsh --cd cd)

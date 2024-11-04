@@ -38,6 +38,10 @@ set matchbrackets "(<[{)>]}"
 ## X Window System, and on the console when gpm is running.
 set mouse
 
+## Use this spelling checker instead of the internal one.  This option
+## does not have a default value.
+set speller "aspell -x -c"
+
 ## Use the end of the title bar for some state flags: I = auto-indenting,
 ## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
 set stateflags
