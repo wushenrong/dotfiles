@@ -15,6 +15,11 @@ alias cls=clear
 alias tarls="tar -tvf"
 alias untar="tar -xvf"
 
+# print paths and functions
+alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
+alias print-path='echo $PATH | tr ":" "\n"'
+alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
+
 # misc
 alias load_antidote='source $ZDOTDIR/.antidote/antidote.zsh'
 alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
