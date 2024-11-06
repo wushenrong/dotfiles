@@ -7,7 +7,8 @@ elif (( $+commands[fdfind] )); then
   export FZF_DEFAULT_COMMAND="fdfind --type f --color=always"
   export FZF_ALT_C_COMMAND="fdfind --type d . $HOME --color=always"
 
-  alias find='fdfind'
+  alias fd='fdfind'
+  alias find='fd'
 else
   alias fD='find -type d'
   alias fF='find -type f'
