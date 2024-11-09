@@ -12,8 +12,8 @@ alias cd..='cd ..'
 alias cls=clear
 
 # tar
-alias tarls="tar -tvf"
-alias untar="tar -xvf"
+alias tarls='tar -tvf'
+alias untar='tar -xvf'
 
 # print paths and functions
 alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
