@@ -27,6 +27,10 @@
 [rebase]
 	autostash = true
 
+[rerere]
+	autoupdate = true
+	enabled = true
+
 [status]
 	submoduleSummary = true
 
@@ -41,13 +45,24 @@
 	cm = commit --message
 	cam = commit --all --message
 
+	cl = clone --recurse-submodules
+
+	co = checkout
+	cob = checkout -b
+
 	d = diff
 	dc = diff --cached
 
 	p = push
 	pl = pull
 
+	rb = rebase
+	rbc = rebase --continue
+	rbi = rebase --interactive
+
 	s = status
+
+	st = stash
 
 [format]
 	signoff = true
