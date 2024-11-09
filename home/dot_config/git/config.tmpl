@@ -21,11 +21,17 @@
 	rebase = true
 
 [push]
+	autoSetupRemote = true
 	autoSquash = true
-	default = current
 
 [rebase]
-	autostash = true
+	abbreviateCommands = true
+	autoStash = true
+	autoSquash = true
+
+[rerere]
+	autoupdate = true
+	enabled = true
 
 [status]
 	submoduleSummary = true
@@ -36,21 +42,45 @@
 	a = add
 	aa = add --all
 
-	c = commit --verbose
-	ca = commit --all --verbose
-	cm = commit --message
-	cam = commit --all --message
+	c = commit --signoff --verbose
+	ca = commit --all --signoff --verbose
+	cm = commit --signoff --message
+	cam = commit --all --signoff --message
+
+	cl = clone --recurse-submodules
+
+	co = checkout
+	cob = checkout -b
+	cop = checkout -
+	com = checkout main
 
 	d = diff
 	dc = diff --cached
+	ds = diff --stat
+	dcs = diff --cached --stat
 
 	p = push
+	pf = push --force-with-lease
+
 	pl = pull
+
+	r = reset --mixed
+	rhard = reset --hard
+	rk = reset --keep
+	rs = reset --soft
+
+	rb = rebase --signoff
+	rbc = rebase --continue
+	rbi = rebase --interactive --signoff
+	rbir = rebase --interactive --signoff --root
 
 	s = status
 
-[format]
-	signoff = true
+	st = stash
+	sta = stash apply
+	std = stash drop
+	stl = stash list
+	stp = stash pop
 
 [delta]
 	hyperlinks = true
@@ -61,7 +91,7 @@
 	diffFilter = delta --color-only
 
 [merge]
-	conflictstyle = diff3
+	conflictstyle = zdiff3
 
 {{ if eq .chezmoi.os "windows" -}}
 [gpg]
