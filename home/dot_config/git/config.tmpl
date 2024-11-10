@@ -40,10 +40,10 @@
 	a = add
 	aa = add --all
 
-	c = commit --verbose
-	ca = commit --all --verbose
-	cm = commit --message
-	cam = commit --all --message
+	c = commit --signoff --verbose
+	ca = commit --all --signoff --verbose
+	cm = commit --signoff --message
+	cam = commit --all --signoff --message
 
 	cl = clone --recurse-submodules
 
@@ -58,18 +58,18 @@
 	dcs = diff --cached --stat
 
 	p = push
+	pf = push --force-with-lease
+
 	pl = pull
 
 	rb = rebase
 	rbc = rebase --continue
-	rbi = rebase --interactive
+	rbi = rebase --interactive --signoff
+	rbir = rebase --interactive --signoff --root
 
 	s = status
 
 	st = stash
-
-[format]
-	signoff = true
 
 [delta]
 	hyperlinks = true
