@@ -1,0 +1,2 @@
+# Wrap lines to 80 columns
+--terminal-width 80
