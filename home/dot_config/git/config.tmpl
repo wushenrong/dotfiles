@@ -21,11 +21,13 @@
 	rebase = true
 
 [push]
+	autoSetupRemote = true
 	autoSquash = true
-	default = current
 
 [rebase]
-	autostash = true
+	abbreviateCommands = true
+	autoStash = true
+	autoSquash = true
 
 [rerere]
 	autoupdate = true
@@ -62,7 +64,12 @@
 
 	pl = pull
 
-	rb = rebase
+	r = reset --mixed
+	rhard = reset --hard
+	rk = reset --keep
+	rs = reset --soft
+
+	rb = rebase --signoff
 	rbc = rebase --continue
 	rbi = rebase --interactive --signoff
 	rbir = rebase --interactive --signoff --root
@@ -70,6 +77,10 @@
 	s = status
 
 	st = stash
+	sta = stash apply
+	std = stash drop
+	stl = stash list
+	stp = stash pop
 
 [delta]
 	hyperlinks = true
