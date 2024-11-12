@@ -43,5 +43,5 @@ path=(
 export EDITOR=nano
 export VISUAL=nano
 export PAGER=less
-export LESS="-R"
+export LESS="-R -F -K"
 export BROSWER=links
