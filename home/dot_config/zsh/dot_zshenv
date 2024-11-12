@@ -38,10 +38,3 @@ path=(
   /snap/{,s}bin(N)
   $path
 )
-
-# Default programs for the terminal
-export EDITOR=nano
-export VISUAL=nano
-export PAGER=less
-export LESS="-R -F -K"
-export BROSWER=links
