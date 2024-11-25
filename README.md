@@ -9,7 +9,7 @@ This repository contains configuration for:
 
 - Chezmoi
 - Bat
-- Fastfetch and Hyfetch
+- Fastfetch
 - Git
 - Kitty
 - Lazygit
