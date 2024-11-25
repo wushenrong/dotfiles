@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 (( $+commands[fzf] )) || return 1
 
 if fzf --zsh >/dev/null 2>&1; then

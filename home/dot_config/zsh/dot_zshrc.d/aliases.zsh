@@ -1,4 +1,7 @@
 #!/bin/zsh
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
 #
 # .aliases - Set whatever shell aliases you want.
 #

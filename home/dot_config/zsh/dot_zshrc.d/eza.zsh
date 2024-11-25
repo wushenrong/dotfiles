@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 if (( $+commands[eza] )); then
   alias ls='eza --classify --group --header --group-directories-first --git --git-ignore --icons --color-scale all --hyperlink'
   alias tree='ls --tree'
