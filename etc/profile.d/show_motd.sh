@@ -18,10 +18,8 @@ printf "This system is running %b.\n" "\033[${ANSI_COLOR}m$PRETTY_NAME\033[0m"
 printf "The local system datetime is \033[32m%s\033[0m.\n" \
   "$(date '+%Y-%m-%d %H:%M:%S %z')"
 
-if [ -x "$(command -v hyfetch)" ]; then
-  hyfetch
-elif [ -x "$(command -v neofetch)" ]; then
-  neofetch
+if [ -x "$(command -v fastfetch)" ]; then
+  fastfetch
 fi
 
 printf "All activities performed on this device are logged and monitored.\n"
