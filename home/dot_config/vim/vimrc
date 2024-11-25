@@ -56,7 +56,7 @@ set colorcolumn=79,80,100,120
 
 " Show Whitespace
 set list
-set listchars=eol:↓,tab:→\ ,space:·,trail:·,extends:>,precedes:<,nbsp:%
+set listchars=eol:↓,tab:→\ ,space:·,trail:-,extends:>,precedes:<,nbsp:+
 
 " Enable The Wildmenu
 set wildmenu
@@ -85,9 +85,18 @@ call plug#begin()
 " Install Theme
 Plug 'baskerville/bubblegum'
 
-" Install Better Statusline
+" Install Better Status Line
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+" Enable more settings
+Plug 'tpope/vim-sensible'
+
+" Better Language Support
+Plug 'sheerun/vim-polyglot'
+
+" Autodetect indent
+Plug 'tpope/vim-sleuth'
 
 " Install File Manager
 Plug 'preservim/nerdtree'
