@@ -1,0 +1,119 @@
+" SPDX-FileCopyrightText: 2024 Samuel Wu
+"
+" SPDX-License-Identifier: 0BSD
+
+"" Set Vim Settings
+" Do not enable vi compatible mode
+set nocompatible
+
+" Do not use settings from modelines
+set nomodeline
+
+" Set Leader Keys
+let mapleader = " "
+let maplocalleader = "\\"
+
+" Enable line numbers
+set number
+set relativenumber
+
+" Show The Sign Column
+set signcolumn=yes
+
+" Enable Syntax Highlighting
+filetype on
+filetype indent on
+filetype plugin on
+syntax on
+
+" Set Indentation
+set expandtab
+
+set tabstop=4
+set shiftwidth=4
+
+set autoindent
+set smartindent
+
+" Show Cursor Lines
+set cursorline
+set cursorcolumn
+
+" Do not wrap lines
+set nowrap
+
+" Set Search Settings
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Enable virtual editing
+set virtualedit=all
+
+" Set Colomns Lines
+set colorcolumn=79,80,100,120
+
+" Show Whitespace
+set list
+set listchars=eol:↓,tab:→\ ,space:·,trail:·,extends:>,precedes:<,nbsp:%
+
+" Enable The Wildmenu
+set wildmenu
+set wildmode=longest:full,full
+
+" Use UTF-8
+set encoding=UTF-8
+
+" Enable Mouse Support
+set mouse=a
+
+" Set Title For Terminals
+set title
+
+" Shortening The Update Time
+set updatetime=100
+
+" Disable Backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+"" Install Plugins
+call plug#begin()
+
+" Install Theme
+Plug 'baskerville/bubblegum'
+
+" Install Better Statusline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+" Install File Manager
+Plug 'preservim/nerdtree'
+
+" Install FZF Support
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Install Git Plugins
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Auto Pairs
+Plug 'tpope/vim-surround'
+
+" Indent Lines
+Plug 'preservim/vim-indent-guides'
+
+" Install NerdFont/DevIcons
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+" Set Theme
+silent! colorscheme bubblegum-256-dark
+let g:airline_theme = "bubblegum"
+
+" Enable Indent Lines
+let g:indent_guides_enable_on_vim_startup = 1
