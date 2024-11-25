@@ -14,7 +14,6 @@ path = [
     "home/dot_config/fastfetch/config.jsonc",
     "home/dot_config/git/config.tmpl",
     "home/dot_config/hyfetch.json",
-    "home/dot_config/zsh/dot_p10k.zsh",
     "home/symlink_dot_zshenv",
 ]
 SPDX-FileCopyrightText = "2024 Samuel Wu"
