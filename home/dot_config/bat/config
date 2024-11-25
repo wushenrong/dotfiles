@@ -1,2 +1,6 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 # Wrap lines to 80 columns
 --terminal-width 80

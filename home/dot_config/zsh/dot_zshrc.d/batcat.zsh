@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 if (( $+commands[bat] )); then
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 

@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 [[ -v terminfo ]] || zmodload zsh/terminfo
 
 if [[ -n "$terminfo[kcuu1]" ]]; then

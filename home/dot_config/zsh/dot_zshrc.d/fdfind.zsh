@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 if (( $+commands[fd] )); then
   export FZF_DEFAULT_COMMAND="fd --type f --color=always"
   export FZF_ALT_C_COMMAND="fd --type d . $HOME --color=always"
