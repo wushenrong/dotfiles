@@ -14,6 +14,7 @@ This repository contains configuration for:
 - Kitty
 - Lazygit
 - Nano
+- NeoVim
 - Glow
 - Ripgrep
 - Tmux
@@ -25,7 +26,8 @@ The `etc` folder contains some configuration for running OpenSSH.
 
 ## Installing The Configuration
 
-First install chezmoi using your preferred package manager. Then run:
+First install [chezmoi](https://chezmoi.io/install) and run the following
+commands:
 
 ```bash
 # Download the config and initialize chezmoi to use this config
@@ -36,7 +38,14 @@ chezmoi apply
 
 ## License
 
-This repository is licensed under the BSD Zero Clause License using
-[SPDX](https://spdx.dev) expressions. Except for external git modules and the
-`VSCode_Dark` theme for Kitty by huabeiyou which are under their own licenses
-and the MIT License respectively.
+This most of the configuration is licensed under the BSD Zero Clause License
+using [SPDX](https://spdx.dev) expressions. Except for external git modules
+which are under their own licenses. The NeoVim configuration is based on the
+[LazyVim starter template][lazyvim], which is under the Apache 2.0 License. The
+Zsh configuration is based on the [antidote sample configuration][antidote],
+which is under the MIT License. And the `VSCode_Dark` theme for Kitty by
+huabeiyou which is the MIT License. Check for SPDX expressions for which license
+the configuration is under.
+
+[lazyvim]: https://github.com/LazyVim/starter
+[antidote]: https://github.com/getantidote/zdotdir

@@ -1,6 +1,6 @@
-# SPDX-FileCopyrightText: 2024 Samuel Wu
+# SPDX-FileCopyrightText: 2023 mattmc3
 #
-# SPDX-License-Identifier: 0BSD
+# SPDX-License-Identifier: MIT
 
 (( $+commands[zoxide] )) || return 1
 source <(zoxide init zsh --cmd cd)

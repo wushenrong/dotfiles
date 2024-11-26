@@ -1,9 +1,12 @@
 #!/bin/zsh
+# SPDX-FileCopyrightText: 2023 mattmc3
 # SPDX-FileCopyrightText: 2024 Samuel Wu
 #
-# SPDX-License-Identifier: 0BSD
+# SPDX-License-Identifier: MIT
 #
 # .aliases - Set whatever shell aliases you want.
+#
+
 #
 
 # single character aliases - be sparing!
