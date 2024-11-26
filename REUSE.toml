@@ -13,6 +13,7 @@ path = [
     "etc/**/*",
     "home/dot_config/fastfetch/config.jsonc",
     "home/dot_config/git/config.tmpl",
+    "home/symlink_dot_vim",
     "home/symlink_dot_zshenv",
 ]
 SPDX-FileCopyrightText = "2024 Samuel Wu"

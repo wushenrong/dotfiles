@@ -1,0 +1,170 @@
+" SPDX-FileCopyrightText: 2024 Samuel Wu
+"
+" SPDX-License-Identifier: 0BSD
+
+"" Set Vim Settings
+" Do not enable vi compatible mode
+set nocompatible
+
+" Set Leader Keys
+let mapleader = ' '
+let maplocalleader = ' '
+
+" Disable Reading Settings From Modelines
+set nomodeline
+
+" Enable Line Numbers
+set number
+set relativenumber
+
+" Disable Ruler
+set noruler
+
+" Show The Sign Column
+set signcolumn=yes
+
+" Enable Syntax Highlighting
+filetype on
+filetype indent on
+filetype plugin on
+syntax on
+
+" Do Not Show The Current Mode
+set noshowmode
+
+" Set Indentation
+set expandtab
+set smarttab
+
+set tabstop=4
+set shiftwidth=4
+
+set autoindent
+set breakindent
+set smartindent
+
+" Make Sure Backspace Works As Intended
+set backspace=indent,eol,start
+
+" Disable Soft Wrapping
+set nowrap
+set linebreak
+
+" Show Cursor Lines
+set cursorline
+set cursorcolumn
+
+" Conceal Details
+set conceallevel=2
+
+" Set Search Settings
+set ignorecase
+set smartcase
+set hlsearch
+set incsearch
+
+" Enable Virtual Editing
+set virtualedit=all
+
+" Enable Hidden Buffers
+set hidden
+
+" Set History
+set history=10000
+
+" Enable Reading From External Changes
+set autoread
+
+" Set Column Lines
+set colorcolumn=79,80,100,120
+
+" Show Whitespace
+set list
+set listchars=eol:↓,tab:→\ ,space:·,trail:-,extends:>,precedes:<,nbsp:␣
+
+" Enable The Wildmenu
+set wildmenu
+set wildmode=longest:full,full
+
+" Use UTF-8
+set encoding=UTF-8
+
+" Enable Mouse Support
+set mouse=a
+
+" Enable Smooth Scrolling
+set smoothscroll
+
+" Set Title For Terminals
+set title
+
+" Shortening The Update Time
+set updatetime=100
+
+" Setting How Panes Should Be Split
+set splitright
+set splitbelow
+
+" Disable Backups
+set nobackup
+set nowritebackup
+set noswapfile
+
+"" Set Keymaps
+nmap <esc> <cmd>nohlsearch<cr>
+
+"" Install Plugins
+call plug#begin()
+
+" Install Theme
+Plug 'tomasiser/vim-code-dark'
+
+" Install Better Status Lines
+Plug 'vim-airline/vim-airline'
+Plug 'bling/vim-bufferline'
+
+" Enable more settings
+Plug 'tpope/vim-sensible'
+
+" Better Language Support
+Plug 'sheerun/vim-polyglot'
+
+" Autodetect File Indentation
+Plug 'tpope/vim-sleuth'
+
+" Install File Manager
+Plug 'preservim/nerdtree'
+
+" Install FZF Support
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" Install Git Plugins
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+
+" Surround With Quotes And Tags
+Plug 'tpope/vim-surround'
+
+" Indent Lines And Rainbow Brackets
+Plug 'preservim/vim-indent-guides'
+Plug 'luochen1990/rainbow'
+
+" Install Start Time Analyzer
+Plug 'dstein64/vim-startuptime'
+
+" Install NerdFont/DevIcons
+Plug 'ryanoasis/vim-devicons'
+
+call plug#end()
+
+" Set Theme
+let g:codedark_transparent=1
+let g:codedark_italics=1
+
+let g:airline_theme = 'codedark'
+silent! colorscheme codedark
+
+" Enable Indent Lines And Rainbow Brackets
+let g:indent_guides_enable_on_vim_startup = 1
+let g:rainbow_active = 1

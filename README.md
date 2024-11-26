@@ -14,9 +14,11 @@ This repository contains configuration for:
 - Kitty
 - Lazygit
 - Nano
+- NeoVim
 - Glow
 - Ripgrep
 - Tmux
+- Vim
 - Zsh
 
 All inside the default `XDG_CONFIG_HOME` directory, `~/.config`.
