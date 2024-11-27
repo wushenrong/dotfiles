@@ -111,6 +111,7 @@ return {
   },
   {
     'HiPhish/rainbow-delimiters.nvim',
+    main = 'rainbow-delimiters.setup',
     event = { 'BufReadPost', 'BufWritePost', 'BufNewFile' },
   },
 

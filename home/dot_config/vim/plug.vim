@@ -17,7 +17,6 @@ Plug 'tomasiser/vim-code-dark'
 
 " Install Better Status Lines
 Plug 'vim-airline/vim-airline'
-Plug 'bling/vim-bufferline'
 
 " Enable Better Settings, Do Not Need To Set Defaults
 Plug 'tpope/vim-sensible'
