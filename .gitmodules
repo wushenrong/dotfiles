@@ -7,6 +7,3 @@
 [submodule "home/dot_config/tmux/plugins/external_tpm"]
 	path = home/dot_config/tmux/plugins/external_tpm
 	url = https://github.com/tmux-plugins/tpm
-[submodule "home/dot_config/zsh"]
-	path = home/dot_config/zsh
-	url = https://github.com/wushenrong/zshrc.git

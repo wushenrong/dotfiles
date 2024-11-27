@@ -9,11 +9,12 @@ path = [
     ".chezmoiroot",
     ".chezmoiversion",
     ".gitmodules",
-    "README.md",
+    "**/README.md",
     "etc/**/*",
     "home/dot_config/fastfetch/config.jsonc",
     "home/dot_config/git/config.tmpl",
-    "home/symlink_dot_zshenv",
+    "home/dot_config/zsh/dot_p10k.zsh",
+    "**/symlink_*",
 ]
 SPDX-FileCopyrightText = "2024 Samuel Wu"
 SPDX-License-Identifier = "0BSD"
