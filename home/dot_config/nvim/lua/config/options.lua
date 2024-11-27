@@ -6,7 +6,7 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Disable Reading Settings From Modelines
+-- Disable Reading Settings From Mode Lines
 vim.opt.modeline = false
 
 -- Enable Line Numbers
@@ -48,7 +48,6 @@ vim.opt.smartcase = true
 
 -- Enable Virtual Editing
 vim.opt.virtualedit = 'all'
-
 
 -- Set Column Lines
 vim.opt.colorcolumn = { 79, 80, 100, 120 }

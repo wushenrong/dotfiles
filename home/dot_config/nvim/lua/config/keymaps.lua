@@ -2,6 +2,7 @@
 --
 -- SPDX-License-Identifier: 0BSD
 
+-- Clear Search Highlighting
 vim.keymap.set(
   'n',
   '<esc>',
