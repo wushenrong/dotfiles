@@ -14,9 +14,16 @@ call plug#begin()
 
 " Install Theme
 Plug 'tomasiser/vim-code-dark'
+let g:codedark_transparent=1
+let g:codedark_italics=1
 
 " Install Better Status Lines
 Plug 'vim-airline/vim-airline'
+let g:airline_theme = 'codedark'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+autocmd VimEnter * nested silent! colorscheme codedark
 
 " Enable Better Settings, Do Not Need To Set Defaults
 Plug 'tpope/vim-sensible'
@@ -32,10 +39,21 @@ Plug 'tpope/vim-sleuth'
 
 " Install File Manager
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Install FZF Support
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+nnoremap <leader>sh :HelpTags<cr>
+nnoremap <leader>sk :Maps<cr>
+nnoremap <leader>sf :Files<cr>
+nnoremap <leader>ss :HelpTags<cr>
+nnoremap <leader>sg :RG<cr>
+nnoremap <leader><leader> :Buffers<cr>
+nnoremap <leader>/ :BLines<cr>
+nnoremap <leader>s/ :Lines<cr>
+nnoremap <leader>sv :call fzf#vim#files(data_dir)<cr>
 
 " Install Git Plugins
 Plug 'tpope/vim-fugitive'
@@ -46,7 +64,17 @@ Plug 'tpope/vim-surround'
 
 " Indent Lines And Rainbow Brackets
 Plug 'preservim/vim-indent-guides'
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_exclude_filetypes = ['help', 'vim-plug', 'nerdtree']
+
 Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1
+
+" Autopairs
+Plug 'jiangmiao/auto-pairs'
+
+" Comments
+Plug 'tpope/vim-commentary'
 
 " Install Start Time Analyzer
 Plug 'dstein64/vim-startuptime'

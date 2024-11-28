@@ -11,7 +11,7 @@ end
 vim.api.nvim_create_autocmd('TextYankPost', {
   group = augroup('highlight_yank'),
   callback = function()
-    (vim.hl or vim.highlight).on_yank()
+    vim.hl.on_yank()
   end,
 })
 
@@ -31,5 +31,14 @@ vim.api.nvim_create_autocmd({ 'FileType' }, {
   pattern = { 'json', 'jsonc', 'json5' },
   callback = function()
     vim.opt_local.conceallevel = 0
+  end,
+})
+
+-- Disable colorcolumns
+vim.api.nvim_create_autocmd({ 'FileType' }, {
+  group = augroup('disable_colorcolumn'),
+  pattern = { 'help' },
+  callback = function()
+    vim.opt_local.columnlines = 0
   end,
 })

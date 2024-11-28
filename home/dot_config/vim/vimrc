@@ -3,29 +3,13 @@
 " SPDX-License-Identifier: 0BSD
 
 "" Set Vim Settings
-source ~/.config/vim/options.vim
+runtime config/options.vim
 
 "" Set Keymaps
-source ~/.config/vim/keymaps.vim
+runtime config/keymaps.vim
 
 "" Add Auto Commands
-source ~/.config/vim/autocmds.vim
+runtime config/autocmds.vim
 
 "" Install Plugins
-source ~/.config/vim/plug.vim
-
-"" Set Plugin Settings
-" Set Theme
-let g:codedark_transparent=1
-let g:codedark_italics=1
-
-let g:airline_theme = 'codedark'
-silent! colorscheme codedark
-
-" Airline Settings
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
-" Enable Indent Lines And Rainbow Brackets
-let g:indent_guides_enable_on_vim_startup = 1
-let g:rainbow_active = 1
+runtime config/plug.vim
