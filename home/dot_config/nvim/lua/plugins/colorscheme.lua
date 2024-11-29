@@ -21,6 +21,6 @@ return {
   },
 
   -- Disable other colorschemes
-  { "folke/tokyonight.nvim", enable = false },
-  { "catppuccin/nvim", enable = false },
+  { "folke/tokyonight.nvim", enabled = false },
+  { "catppuccin/nvim", enabled = false },
 }
