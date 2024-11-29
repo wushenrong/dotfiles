@@ -1,7 +1,8 @@
 #!/bin/zsh
+# SPDX-FileCopyrightText: 2023 mattmc3
 # SPDX-FileCopyrightText: 2024 Samuel Wu
 #
-# SPDX-License-Identifier: 0BSD
+# SPDX-License-Identifier: MIT
 #
 # .zshenv - Zsh environment file, loaded always.
 #
