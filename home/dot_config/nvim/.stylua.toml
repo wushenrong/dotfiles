@@ -1,8 +1,0 @@
-# SPDX-FileCopyrightText: 2024 Samuel Wu
-#
-# SPDX-License-Identifier: 0BSD
-
-column_width = 80
-indent_type = "Spaces"
-indent_width = 2
-quote_style = "AutoPreferSingle"
