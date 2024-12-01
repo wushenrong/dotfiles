@@ -24,6 +24,3 @@ vim.opt.listchars = {
   precedes = "<",
   nbsp = "␣",
 }
-
--- Set terminal title
-vim.opt.title = true
