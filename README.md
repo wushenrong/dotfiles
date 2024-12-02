@@ -14,7 +14,6 @@ This repository contains configuration for:
 - Kitty
 - Lazygit
 - Nano
-- NeoVim
 - Glow
 - Ripgrep
 - Tmux
@@ -40,12 +39,10 @@ chezmoi apply
 
 This most of the configuration is licensed under the BSD Zero Clause License
 using [SPDX](https://spdx.dev) expressions. Except for external git modules
-which are under their own licenses. The NeoVim configuration is based on the
-[LazyVim starter template][lazyvim], which is under the Apache 2.0 License. The
-Zsh configuration is based on the [antidote sample configuration][antidote],
-which is under the MIT License. And the `VSCode_Dark` theme for Kitty by
-huabeiyou which is the MIT License. Check for SPDX expressions for which license
-the configuration is under.
+which are under their own licenses. The Zsh configuration is based on the
+[antidote sample configuration][antidote], which is under the MIT License. And
+the `VSCode_Dark` theme for Kitty by huabeiyou which is the MIT License. Check
+for SPDX expressions for which license the configuration is under.
 
 [lazyvim]: https://github.com/LazyVim/starter
 [antidote]: https://github.com/getantidote/zdotdir
