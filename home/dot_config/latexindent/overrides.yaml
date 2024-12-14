@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# default value of indentation
+defaultIndent: "  "
+
+# specialBeginEnd is, by default, mathmode focus, although
+# there's no restrictions
+specialBeginEnd:
+    Function:
+        begin: \\Function
+        end: \\EndFunction
+        lookForThis: 1
+    If:
+        begin: \\If
+        middle:
+            - \\ElsIf
+            - \\Else
+        end: \\EndIf
+        lookForThis: 1
+    While:
+        begin: \\While
+        end: \\EndWhile
+        lookForThis: 1
+    specialBeforeCommand: 1
