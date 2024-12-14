@@ -1,0 +1,46 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+defaultIndent: "  "
+
+fineTuning:
+    arguments:
+        before: (?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in
+
+lookForAlignDelims:
+    path:
+        delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})'
+
+specialBeginEnd:
+    # Split LaTeX inline math instead of $'s from TeX
+    inlineMath:
+        begin: (?<!\\)\\\(
+        end: \\\)
+
+    node:
+        begin: \\node
+        end: ;
+    path:
+        begin: \\path
+        end: ;
+    graph:
+        begin: \\graph
+        end: ;
+
+    Function:
+        begin: \\Function
+        end: \\EndFunction
+    If:
+        begin: \\If
+        middle:
+            - \\ElsIf
+            - \\Else
+        end: \\EndIf
+    For:
+        begin: \\For
+        end: \\EndFor
+    While:
+        begin: \\While
+        end: \\EndWhile
+    specialBeforeCommand: 1
