@@ -5,5 +5,6 @@
     "Alt-g": "None",
     "Alt-s": "lua:snippets.Insert",
     "Alt-w": "lua:snippets.Next",
+    "Ctrl-/": "lua:comment.comment",
     "CtrlUnderscore": "lua:comment.comment"
 }
