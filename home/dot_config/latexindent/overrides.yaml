@@ -2,11 +2,11 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# default value of indentation
 defaultIndent: "  "
 
-# specialBeginEnd is, by default, mathmode focus, although
-# there's no restrictions
+lookForAlignDelims:
+    logicproof: 1
+
 specialBeginEnd:
     Function:
         begin: \\Function
