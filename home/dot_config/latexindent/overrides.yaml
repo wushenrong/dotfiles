@@ -4,9 +4,6 @@
 
 defaultIndent: "  "
 
-lookForAlignDelims:
-    logicproof: 1
-
 specialBeginEnd:
     Function:
         begin: \\Function
