@@ -4,6 +4,14 @@
 
 defaultIndent: '  '
 
+fineTuning:
+  arguments:
+      before: '(?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in'
+
+lookForAlignDelims:
+    path:
+        delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})'
+
 specialBeginEnd:
     path:
         begin: '\\path'
@@ -21,16 +29,10 @@ specialBeginEnd:
             - '\\ElsIf'
             - '\\Else'
         end: '\\EndIf'
+    For:
+        begin: '\\For'
+        end: '\\EndFor'
     While:
         begin: '\\While'
         end: '\\EndWhile'
-
     specialBeforeCommand: 1
-
-lookForAlignDelims:
-    path:
-        delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})'
-
-fineTuning:
-  arguments:
-      before: '(?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in'
