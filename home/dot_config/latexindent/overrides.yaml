@@ -2,22 +2,35 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-defaultIndent: "  "
+defaultIndent: '  '
 
 specialBeginEnd:
+    path:
+        begin: '\\path'
+        end: ';'
+    graph:
+        begin: '\\graph'
+        end: ';'
+
     Function:
-        begin: \\Function
-        end: \\EndFunction
-        lookForThis: 1
+        begin: '\\Function'
+        end: '\\EndFunction'
     If:
-        begin: \\If
+        begin: '\\If'
         middle:
-            - \\ElsIf
-            - \\Else
-        end: \\EndIf
-        lookForThis: 1
+            - '\\ElsIf'
+            - '\\Else'
+        end: '\\EndIf'
     While:
-        begin: \\While
-        end: \\EndWhile
-        lookForThis: 1
+        begin: '\\While'
+        end: '\\EndWhile'
+
     specialBeforeCommand: 1
+
+lookForAlignDelims:
+    path:
+        delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})'
+
+fineTuning:
+  arguments:
+      before: '(?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in'
