@@ -13,6 +13,11 @@ lookForAlignDelims:
         delimiterRegEx: '(edge|node\h*\{[0-9,A-Z]+\})'
 
 specialBeginEnd:
+    # Split LaTeX inline math instead of $'s from TeX
+    inlineMath:
+        begin: '(?<!\\)\\\('
+        end: '\\\)'
+
     path:
         begin: '\\path'
         end: ';'
