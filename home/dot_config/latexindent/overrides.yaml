@@ -2,11 +2,11 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-defaultIndent: '  '
+defaultIndent: "  "
 
 fineTuning:
-  arguments:
-      before: '(?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in'
+    arguments:
+        before: (?:#\d\h*;?,?\/?)+|\<.*?\>|\-\-|\->|in
 
 lookForAlignDelims:
     path:
@@ -15,29 +15,32 @@ lookForAlignDelims:
 specialBeginEnd:
     # Split LaTeX inline math instead of $'s from TeX
     inlineMath:
-        begin: '(?<!\\)\\\('
-        end: '\\\)'
+        begin: (?<!\\)\\\(
+        end: \\\)
 
+    node:
+        begin: \\node
+        end: ;
     path:
-        begin: '\\path'
-        end: ';'
+        begin: \\path
+        end: ;
     graph:
-        begin: '\\graph'
-        end: ';'
+        begin: \\graph
+        end: ;
 
     Function:
-        begin: '\\Function'
-        end: '\\EndFunction'
+        begin: \\Function
+        end: \\EndFunction
     If:
-        begin: '\\If'
+        begin: \\If
         middle:
-            - '\\ElsIf'
-            - '\\Else'
-        end: '\\EndIf'
+            - \\ElsIf
+            - \\Else
+        end: \\EndIf
     For:
-        begin: '\\For'
-        end: '\\EndFor'
+        begin: \\For
+        end: \\EndFor
     While:
-        begin: '\\While'
-        end: '\\EndWhile'
+        begin: \\While
+        end: \\EndWhile
     specialBeforeCommand: 1
