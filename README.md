@@ -44,5 +44,4 @@ which are under their own licenses. The Zsh configuration is based on the
 the `VSCode_Dark` theme for Kitty by huabeiyou which is the MIT License. Check
 for SPDX expressions for which license the configuration is under.
 
-[lazyvim]: https://github.com/LazyVim/starter
 [antidote]: https://github.com/getantidote/zdotdir

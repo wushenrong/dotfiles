@@ -6,15 +6,16 @@ version = 1
 
 [[annotations]]
 path = [
-    ".chezmoiroot",
-    ".chezmoiversion",
-    ".gitmodules",
-    "**/README.md",
-    "etc/**/*",
-    "home/dot_config/fastfetch/config.jsonc",
-    "home/dot_config/git/config.tmpl",
-    "home/dot_config/zsh/dot_p10k.zsh",
-    "**/symlink_*",
+  ".chezmoiroot",
+  ".chezmoiversion",
+  ".gitmodules",
+  "**/README.md",
+  "**/symlink_*",
+  "etc/**/*",
+  "home/dot_config/fastfetch/config.jsonc",
+  "home/dot_config/git/config.tmpl",
+  "home/dot_config/micro/**",
+  "home/dot_config/zsh/dot_p10k.zsh",
 ]
 SPDX-FileCopyrightText = "2024 Samuel Wu"
 SPDX-License-Identifier = "0BSD"
