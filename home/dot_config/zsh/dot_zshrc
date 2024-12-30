@@ -31,7 +31,7 @@ fi
 
 # Clone antidote if necessary.
 if [[ ! -d $ZDOTDIR/.antidote ]]; then
-  git clone https://github.com/mattmc3/antidote $ZDOTDIR/.antidote
+  git clone https://github.com/mattmc3/antidote.git $ZDOTDIR/.antidote
 fi
 
 # Create an amazing Zsh config using antidote plugins.
