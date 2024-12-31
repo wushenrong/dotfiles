@@ -1,7 +1,0 @@
-# SPDX-FileCopyrightText: 2024 Samuel Wu
-#
-# SPDX-License-Identifier: 0BSD
-
-[{dot_z*,*.zsh}]
-indent_size = 2
-end_of_line = lf

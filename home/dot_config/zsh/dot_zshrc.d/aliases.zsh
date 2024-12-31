@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2024 Samuel Wu
 #
 # SPDX-License-Identifier: MIT
+
 #
 # .aliases - Set whatever shell aliases you want.
 #
