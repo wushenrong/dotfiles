@@ -17,7 +17,7 @@ insert_final_newline = true
 [*.{md}]
 indent_size = 4
 
-[*.{sh,zsh}]
+[*.{sh,zsh},dot_z*]
 end_of_line = lf
 
 [**/git/config.tmpl]
