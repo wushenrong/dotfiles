@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2025 Samuel Wu
+# SPDX-FileCopyrightText: 2024 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
 
@@ -41,7 +41,7 @@ repos:
     rev: v0.10.0
     hooks:
       - id: shellcheck
-        exclude: dot_p10k.zsh
+        exclude: .*\.zsh
 
   - repo: https://github.com/scop/pre-commit-shfmt
     rev: v3.10.0-2

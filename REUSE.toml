@@ -11,7 +11,7 @@ path = [
   ".gitmodules",
   "**/README.md",
   "**/symlink_*",
-  "etc/**/*",
+  "etc/**",
   "home/dot_config/fastfetch/config.jsonc",
   "home/dot_config/git/config.tmpl",
   "home/dot_config/micro/**",
