@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Rules from https://wushenrong.github.io/markdown-formatting-style-guide
+# based on https://cirosantilli.com/markdown-style-guide/
+# and https://google.github.io/styleguide/docguide/style.html
+
+default: true
+
+heading-style:
+  style: atx
+
+ul-style:
+  style: dash
+
+ul-indent:
+  indent: 4
+
+no-trailing-spaces:
+  br_spaces: 0
+  strict: true
+
+no-hard-tabs:
+  spaces_per_tab: 4
+
+line-length:
+  heading_line_length: 120
+  code_block_line_length: 120
+  tables: false
+
+no-duplicate-heading:
+  siblings_only: true
+
+list-marker-space:
+  ul_multi: 3
+  ol_multi: 2
+
+hr-style:
+  style: ---
+
+fenced-code-language:
+  language_only: true
+
+code-block-style:
+  style: fenced
+
+code-fence-style:
+  style: backtick
+
+emphasis-style:
+  style: asterisk
+
+strong-style:
+  style: asterisk
+
+link-image-style:
+  collapsed: false
+  url_inline: false
+
+table-pipe-style:
+  style: no_leading_or_trailing
