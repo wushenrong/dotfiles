@@ -3,6 +3,8 @@
 # SPDX-License-Identifier: 0BSD
 
 # Rules based on https://cirosantilli.com/markdown-style-guide/
+# and https://google.github.io/styleguide/docguide/style.html
+
 default: true
 
 heading-style:
@@ -31,7 +33,7 @@ list-marker-space:
   ul_multi: 3
   ol_multi: 2
 
-no-inline-html: false
+no-inline-html: true
 
 hr-style:
   style: ---
@@ -53,8 +55,7 @@ strong-style:
 
 link-image-style:
   collapsed: false
-  shortcut: false
   url_inline: false
 
 table-pipe-style:
-  style: leading_and_trailing
+  style: no_leading_or_trailing
