@@ -1,7 +1,6 @@
 # dotfiles
 
-My actual configuration for Linux and Windows, managed by
-[chezmoi](https://chezmoi.io).
+My actual configuration for Linux and Windows, managed by [chezmoi](https://chezmoi.io).
 
 ## Configurations
 
