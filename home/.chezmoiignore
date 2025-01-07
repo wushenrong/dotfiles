@@ -10,9 +10,6 @@
 .config/zsh
 .config/tmux
 
-# Editor Settings
-.config/nano
-
 # Terminal Settings
 .config/kitty
 {{- end -}}
