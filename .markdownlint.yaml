@@ -2,7 +2,8 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Rules based on https://cirosantilli.com/markdown-style-guide/
+# Rules from https://wushenrong.github.io/markdown-formatting-style-guide
+# based on https://cirosantilli.com/markdown-style-guide/
 # and https://google.github.io/styleguide/docguide/style.html
 
 default: true
@@ -24,7 +25,9 @@ no-hard-tabs:
   spaces_per_tab: 4
 
 line-length:
-  strict: true
+  heading_line_length: 120
+  code_block_line_length: 120
+  tables: false
 
 no-duplicate-heading:
   siblings_only: true
@@ -56,4 +59,4 @@ link-image-style:
   url_inline: false
 
 table-pipe-style:
-  style: no_leading_or_trailing
+  style: leading_and_trailing
