@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if (($ + commands[eza])); then
+if (( $+commands[eza] )); then
   alias ls='eza -g -s Name --header --group-directories-first --git --git-ignore --icons --color-scale --hyperlink'
   alias tree='ls --tree'
   alias la='ls -la'
