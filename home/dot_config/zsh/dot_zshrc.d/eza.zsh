@@ -2,26 +2,19 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if (( $+commands[eza] )); then
-  alias ls='eza --classify --group --header --group-directories-first --git --git-ignore --icons --color-scale all --hyperlink'
+if (($ + commands[eza])); then
+  alias ls='eza -g -s Name --header --group-directories-first --git --git-ignore --icons --color-scale --hyperlink'
   alias tree='ls --tree'
   alias la='ls -la'
 else
-  alias ls='ls --classify --group-directories-first --hyperlink --color --human-readable'
+  alias ls='ls -v --human-readable --group-directories-first --color --hyperlink'
   alias la='ls -lA'
 fi
 
 alias ll='ls -l'
 alias lh='ll -d .*'
 alias lD='ll -D'
-alias lF='ll -F'
 alias lc='ll -1'
-
-alias lA='ll --sort=acc'
-alias lC='ll --sort=cr'
-alias lM='ll --sort=mod'
-alias lS='ll --sort=size'
-alias lX='ll --sort=ext'
 
 alias lsa='la -a'
 alias lx='lsa -HimUuS'
