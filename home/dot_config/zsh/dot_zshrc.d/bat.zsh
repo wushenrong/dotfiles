@@ -2,19 +2,12 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if (( $+commands[bat] )); then
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+(( $+commands[bat] )) || return 1
 
-  alias cat=bat
-elif (( $+commands[batcat] )); then
-  export MANPAGER="sh -c 'col -bx | batcat -l man -p'"
-
-  alias cat=batcat
-else
-  return 1
-fi
-
+export MANPAGER="sh -c 'sed -u -e \"s/\\x1B\[[0-9;]*m//g; s/.\\x08//g\" | bat -l man -p'"
 export MANROFFOPT="-c"
+
+alias cat=bat
 
 alias -g -- -h='-h 2>&1 | cat --language=help --style=plain'
 alias -g -- --help='--help 2>&1 | cat --language=help --style=plain'
