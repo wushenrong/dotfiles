@@ -8,9 +8,6 @@
 # .aliases - Set whatever shell aliases you want.
 #
 
-# single character aliases - be sparing!
-alias g=git
-
 # fix common typos
 alias quit=exit
 alias cd..='cd ..'
