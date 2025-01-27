@@ -21,14 +21,14 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
-    rev: v0.17.1
+    rev: v0.17.2
     hooks:
       - id: markdownlint-cli2
         args:
           - --fix
 
   - repo: https://github.com/gitleaks/gitleaks
-    rev: v8.23.0
+    rev: v8.23.1
     hooks:
       - id: gitleaks
 
@@ -37,8 +37,8 @@ repos:
     hooks:
       - id: reuse
 
-  - repo: https://github.com/koalaman/shellcheck-precommit
-    rev: v0.10.0
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.10.0.1
     hooks:
       - id: shellcheck
         exclude: .*\.zsh
