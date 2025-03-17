@@ -35,9 +35,6 @@ if [[ ! -d $ZDOTDIR/.antidote ]]; then
   git clone https://github.com/mattmc3/antidote.git $ZDOTDIR/.antidote
 fi
 
-# Create an amazing Zsh config using antidote plugins.
-vivid_theme=molokai
-
 typeset -gA AUTOPAIR_PAIRS
 AUTOPAIR_PAIRS+=("<" ">")
 
