@@ -8,8 +8,8 @@
 # .zshrc - Zsh file loaded on interactive shell sessions.
 #
 
-# Show fetch if it is avaliable
-if (( $+commands[fastfetch] )); then
+# Show fetch if it is available and we are not using VSCode
+if (( $+commands[fastfetch] )) && [[ "$TERM_PROGRAM" != "vscode" ]]; then
   fastfetch
 fi
 
