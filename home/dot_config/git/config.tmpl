@@ -30,7 +30,7 @@
 	autoSquash = true
 
 [rerere]
-	autoupdate = true
+	autoUpdate = true
 	enabled = true
 
 [status]
@@ -38,19 +38,22 @@
 
 [alias]
 	alias = config get --all --global --regexp alias
+	amend = commit -asv --amend
 
 	a = add
-	aa = add --all
+	aa = add -A
 
 	b = branch
-	ba = branch --all
-	bd = branch --delete
-	bdf = branch --delete --force
+	ba = branch -a
+	bd = branch -d
+	bdf = branch -df
 
-	c = commit --signoff --verbose
-	ca = commit --all --signoff --verbose
-	cm = commit --signoff --message
-	cam = commit --all --signoff --message
+	c = commit -sv
+	ca = commit -asv
+	caa = commit -asv --amend
+	caan = commit -asv --amend --no-edit
+	cm = commit -sm
+	cam = commit -asm
 
 	cl = clone --recurse-submodules
 
@@ -59,33 +62,45 @@
 	cop = checkout -
 	com = checkout main
 
-	d = diff
-	dc = diff --cached
-	ds = diff --stat
-	dcs = diff --cached --stat
+	d = diff --stat
+	dc = diff --cached --stat
+
+	f = fetch
+	fo = fetch origin
+	fop = fetch origin -p
+	fp = fetch -p
+
+	fd = diff
+	fdc = diff --cached
+	fs = status
+
+	l = log --oneline
 
 	p = push
-	pf = push --force-with-lease
+	pf = push --force-with-lease --force-if-includes
 
 	pl = pull
+	plp = pull -p
 
-	r = reset --mixed
+	r = reset
 	rhard = reset --hard
 	rk = reset --keep
 	rs = reset --soft
 
-	rb = rebase --signoff
+	rb = rebase
+	rba = rebase --abort
 	rbc = rebase --continue
-	rbi = rebase --interactive --signoff
-	rbir = rebase --interactive --signoff --root
+	rbcn = rebase --continue --no-edit
+	rbi = rebase -i --signoff
+	rbir = rebase -i --signoff --root
 
-	s = status
-	ss = status --short
+	s = status -s
 
 	st = stash
 	sta = stash apply
 	std = stash drop
 	stl = stash list
+	stm = stash -m
 	stp = stash pop
 
 	sub = submodule
@@ -102,7 +117,8 @@
 	diffFilter = delta --color-only
 
 [merge]
-	conflictstyle = zdiff3
+	autoStash = true
+	conflictStyle = zdiff3
 
 {{ if eq .chezmoi.os "windows" -}}
 [gpg]
