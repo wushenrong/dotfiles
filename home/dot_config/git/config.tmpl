@@ -5,6 +5,7 @@
 
 [commit]
 	gpgSign = true
+	verbose = true
 
 [tag]
 	gpgSign = true
@@ -12,10 +13,12 @@
 [core]
 	editor = code --wait
 	pager = delta
-	whitespace = trailing-space
 
 [init]
 	defaultBranch = main
+
+[fetch]
+	prune = true
 
 [pull]
 	rebase = true
@@ -38,7 +41,7 @@
 
 [alias]
 	alias = config get --all --global --regexp alias
-	amend = commit -asv --amend
+	amend = commit -as --amend
 
 	a = add
 	aa = add -A
@@ -48,14 +51,14 @@
 	bd = branch -d
 	bdf = branch -df
 
-	c = commit -sv
-	ca = commit -asv
-	caa = commit -asv --amend
-	caan = commit -asv --amend --no-edit
+	c = commit -s
+	ca = commit -as
+	caa = commit -as --amend
 	cm = commit -sm
 	cam = commit -asm
 
-	cl = clone --recurse-submodules
+	cl = clone
+	clrs = clone --recurse-submodules
 
 	co = checkout
 	cob = checkout -b
@@ -66,9 +69,6 @@
 	dc = diff --cached --stat
 
 	f = fetch
-	fo = fetch origin
-	fop = fetch origin -p
-	fp = fetch -p
 
 	fd = diff
 	fdc = diff --cached
@@ -80,7 +80,6 @@
 	pf = push --force-with-lease --force-if-includes
 
 	pl = pull
-	plp = pull -p
 
 	r = reset
 	rhard = reset --hard
@@ -90,9 +89,8 @@
 	rb = rebase
 	rba = rebase --abort
 	rbc = rebase --continue
-	rbcn = rebase --continue --no-edit
-	rbi = rebase -i --signoff
-	rbir = rebase -i --signoff --root
+	rbi = rebase -i
+	rbir = rebase -i --root
 
 	s = status -s
 
@@ -107,18 +105,21 @@
 	suba = submodule add
 	subi = submodule update --init --recursive
 	subs = submodule status
-	subu = submodule update --recursive --remote
-
-[delta]
-	hyperlinks = true
-	navigate = true
-
-[interactive]
-	diffFilter = delta --color-only
+	subu = submodule update --recursive --remote --rebase
 
 [merge]
 	autoStash = true
 	conflictStyle = zdiff3
+
+[submodule]
+	recurse = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	hyperlinks = true
+	navigate = true
 
 {{ if eq .chezmoi.os "windows" -}}
 [gpg]
