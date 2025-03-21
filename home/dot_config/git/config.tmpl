@@ -10,6 +10,9 @@
 [tag]
 	gpgSign = true
 
+[branch]
+	sort = -committerdate
+
 [core]
 	editor = code --wait
 	pager = delta
@@ -40,7 +43,7 @@
 	submoduleSummary = true
 
 [format]
-	pretty = %C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) %C(dim white)[%an]%C(reset)%C(auto)%d%C(reset)
+	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
 	signOff = true
 
 [alias]
@@ -50,7 +53,7 @@
 	a = add
 	aa = add -A
 
-	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
+	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
 	ba = branch -a
 	bd = branch -d
 	bdf = branch -df
