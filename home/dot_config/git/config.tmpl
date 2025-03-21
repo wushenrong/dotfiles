@@ -39,6 +39,10 @@
 [status]
 	submoduleSummary = true
 
+[format]
+	pretty = %C(bold blue)%h%C(reset) - %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) %C(dim white)[%an]%C(reset)%C(auto)%d%C(reset)
+	signOff = true
+
 [alias]
 	alias = config get --all --global --regexp alias
 	amend = commit -as --amend
@@ -46,7 +50,7 @@
 	a = add
 	aa = add -A
 
-	b = branch
+	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	ba = branch -a
 	bd = branch -d
 	bdf = branch -df
@@ -66,15 +70,14 @@
 	com = checkout main
 
 	d = diff --stat
+	dl = diff
 	dc = diff --cached --stat
+	dcl = diff --cached
 
 	f = fetch
 
-	fd = diff
-	fdc = diff --cached
-	fs = status
-
-	l = log --oneline
+	l = log --abbrev-commit -10
+	lg = log --graph --abbrev-commit --decorate
 
 	p = push
 	pf = push --force-with-lease --force-if-includes
@@ -92,7 +95,8 @@
 	rbi = rebase -i
 	rbir = rebase -i --root
 
-	s = status -s
+	s = status -sb
+	sl = status
 
 	st = stash
 	sta = stash apply

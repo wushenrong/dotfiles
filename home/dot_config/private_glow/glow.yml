@@ -2,8 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# style name or JSON path (default "auto")
-style: "auto"
 # mouse support (TUI-mode only)
 mouse: true
 # use pager to display markdown
