@@ -14,7 +14,7 @@
 	sort = -committerdate
 
 [core]
-	editor = code --wait
+	editor = code -w
 	pager = delta
 
 [init]
@@ -127,6 +127,12 @@
 [delta]
 	hyperlinks = true
 	navigate = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 
 {{ if eq .chezmoi.os "windows" -}}
 [gpg]
