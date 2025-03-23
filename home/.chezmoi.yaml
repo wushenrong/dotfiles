@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+progress: true
+
+data:
+  email: twopizza9621536@gmail.com
+  name: Samuel Wu
+
+edit:
+  command: code
+  args:
+    - -w
+
+diff:
+  command: delta
+  pager: delta
+  exclude:
+    - externals
+
+interpreters:
+  ps1:
+    command: pwsh
+    args:
+      - -NoLogo
