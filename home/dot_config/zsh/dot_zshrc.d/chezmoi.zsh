@@ -3,4 +3,5 @@
 # SPDX-License-Identifier: 0BSD
 
 (( $+commands[chezmoi] )) || return 1
+
 source <(chezmoi completion zsh)

@@ -3,4 +3,5 @@
 # SPDX-License-Identifier: 0BSD
 
 (( $+commands[delta] )) || return 1
+
 alias diff=delta
