@@ -4,11 +4,6 @@
 
 (( $+commands[fzf] )) || return 1
 
-if fzf --zsh >/dev/null 2>&1; then
-  source <(fzf --zsh)
-else
-  source /usr/share/doc/fzf/examples/completion.zsh
-  source /usr/share/doc/fzf/examples/key-bindings.zsh
-fi
+source <(fzf --zsh)
 
 export FZF_DEFAULT_OPTS="--reverse --ansi"
