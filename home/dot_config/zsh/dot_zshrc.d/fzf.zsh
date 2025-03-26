@@ -4,6 +4,5 @@
 
 (( $+commands[fzf] )) || return 1
 
-source <(fzf --zsh)
-
+export FZF_DEFAULT_COMMAND="fd --type f --color=always"
 export FZF_DEFAULT_OPTS="--reverse --ansi"
