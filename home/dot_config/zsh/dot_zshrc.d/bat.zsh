@@ -17,5 +17,6 @@ elif (( $+commands[batcat] )); then
   alias -g -- -h='-h 2>&1 | batcat --language=help --style=plain'
   alias -g -- --help='--help 2>&1 | batcat --language=help --style=plain'
 
+  alias bat=batcat
   alias cat=batcat
 fi
