@@ -22,4 +22,8 @@ elif (( $+commands[batcat] )); then
   export FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --preview 'batcat -n --color=always {}'"
 fi
 
-source /usr/share/doc/fzf/examples/key-bindings.zsh
+if command fzf --zsh 2>/dev/null; then
+  source /usr/share/doc/fzf/examples/key-bindings.zsh
+else
+  source <(fzf --zsh)
+fi
