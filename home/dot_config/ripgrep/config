@@ -8,3 +8,6 @@
 
 # Show links
 --hyperlink-format=default
+
+# Match all instances unless there is uppercase
+--smart-case

@@ -15,7 +15,6 @@
 
 [core]
 	editor = code -w
-	pager = delta
 
 [init]
 	defaultBranch = main
@@ -114,6 +113,9 @@
 	subs = submodule status
 	subu = submodule update --recursive --remote --rebase
 
+[pager]
+	diff = delta
+
 [merge]
 	autoStash = true
 	conflictStyle = zdiff3
@@ -126,6 +128,7 @@
 
 [delta]
 	hyperlinks = true
+	line-numbers = true
 	navigate = true
 
 [filter "lfs"]

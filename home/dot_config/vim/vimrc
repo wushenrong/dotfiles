@@ -1,0 +1,17 @@
+" SPDX-FileCopyrightText: 2024 Samuel Wu
+"
+" SPDX-License-Identifier: 0BSD
+
+filetype on
+filetype plugin on
+filetype indent on
+syntax on
+set nocompatible
+set ruler
+set autoindent
+set number
+set relativenumber
+set laststatus=2
+set ignorecase
+color elflord
+set viminfofile=~/.cache/viminfo

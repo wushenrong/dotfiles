@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/zsh
 # SPDX-FileCopyrightText: 2023 mattmc3
 # SPDX-FileCopyrightText: 2024 Samuel Wu
 #
@@ -18,6 +18,9 @@ alias cls=clear
 # tar
 alias tarls='tar -tvf'
 alias untar='tar -xvf'
+
+# xdg
+alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
 
 # print paths and functions
 alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'

@@ -4,5 +4,22 @@
 
 (( $+commands[fzf] )) || return 1
 
-export FZF_DEFAULT_COMMAND="fd --type f --color=always"
-export FZF_DEFAULT_OPTS="--reverse --ansi"
+export FZF_DEFAULT_COMMAND="fd -t f --strip-cwd-prefix -L -H -E .git"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
+export FZF_ALT_C_COMMAND="fd -t d"
+
+export FZF_CTRL_T_OPTS="--ansi"
+
+if (( $+commands[eza] )); then
+  export FZF_ALT_C_OPTS="--preview 'eza -1F -sName --group-directories-first --icons --color=always {}'"
+else
+  export FZF_ALT_C_OPTS="--preview 'ls -1F --group-directories-first --color=always {}'"
+fi
+
+if (( $+commands[bat] )); then
+  export FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --preview 'bat -n --color=always {}'"
+elif (( $+commands[batcat] )); then
+  export FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --preview 'batcat -n --color=always {}'"
+fi
+
+source /usr/share/doc/fzf/examples/key-bindings.zsh
