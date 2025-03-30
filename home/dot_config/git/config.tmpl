@@ -137,7 +137,7 @@
 	process = git-lfs filter-process
 	required = true
 
-{{ if eq .chezmoi.os "windows" -}}
+{{ if (eq .chezmoi.os "windows") -}}
 [gpg]
     program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
 {{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}

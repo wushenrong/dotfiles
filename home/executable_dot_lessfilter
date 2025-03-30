@@ -15,6 +15,7 @@ fi
 
 mime=$(file -Lbs --mime-type "$1")
 category=${mime%%/*}
+kind=${mime##*/}
 
 if [ -d "$1" ]; then
   eza -1F -sName --group-directories-first --icons --color=always "$1"
@@ -25,6 +26,8 @@ elif [ "$category" = "image" ]; then
     chafa -f sixel "$1"
   fi
   exiftool "$1" | bat --color=always -plyaml
+elif [ "$kind" = "json" ]; then
+  bat --color=always -pljson "$1"
 elif [ "$category" = "text" ]; then
   bat --color=always -p "$1"
 else

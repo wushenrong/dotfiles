@@ -4,7 +4,7 @@
 
 # Linux Config
 
-{{- if eq .chezmoi.os "windows" -}}
+{{- if (eq .chezmoi.os "windows") -}}
 # Shell Settings
 .zshenv
 .config/zsh
