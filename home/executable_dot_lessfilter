@@ -1,10 +1,13 @@
-#!/usr/bin/zsh
+#!/bin/sh
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
 
-if (( $+commands[bat] )); then
+if command -v bat >/dev/null; then
   bat() {
     command bat "$@"
   }
-elif (( $+commands[batcat] )); then
+elif command -v batcat >/dev/null; then
   bat() {
     command batcat "$@"
   }
@@ -14,21 +17,15 @@ mime=$(file -Lbs --mime-type "$1")
 category=${mime%%/*}
 
 if [ -d "$1" ]; then
-  if (( $+commands[eza] )); then
-    eza -1F -sName --group-directories-first --icons --color=always "$1"
-  else
-    ls -1F --group-directories-first --color=always "$1"
-  fi
-elif [[ "$category" == "image" ]]; then
-  if [[ "$TERM" == "xterm-kitty" ]]; then
+  eza -1F -sName --group-directories-first --icons --color=always "$1"
+elif [ "$category" = "image" ]; then
+  if [ "$TERM" = "xterm-kitty" ]; then
     kitten icat "$1"
-  elif (( $+commands[chafa] )); then
+  else
     chafa -f sixel "$1"
   fi
-  if (( $+commands[exiftool] )); then
-    exiftool "$1" | bat --color=always -plyaml
-  fi
-elif [[ "$category" == "text" ]]; then
+  exiftool "$1" | bat --color=always -plyaml
+elif [ "$category" = "text" ]; then
   bat --color=always -p "$1"
 else
   return 1

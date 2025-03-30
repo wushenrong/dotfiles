@@ -14,7 +14,7 @@ aloxaf/fzf-tab
 Freed-Wu/fzf-tab-source
 
 # Completion styles
-belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
+belak/zsh-utils path:completion/functions kind:autoload
 
 # Keybindings
 belak/zsh-utils path:editor
