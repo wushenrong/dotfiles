@@ -22,7 +22,7 @@ fi
 
 if (( $+commands[bat] )); then
   export FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --preview 'bat -n --color=always {}'"
-elif (($ + commands[batcat])); then
+elif (( $+commands[batcat] )); then
   export FZF_CTRL_T_OPTS="$FZF_CTRL_T_OPTS --preview 'batcat -n --color=always {}'"
 fi
 
@@ -30,6 +30,7 @@ if command fzf --zsh 2>/dev/null; then
   source <(fzf --zsh)
 else
   source /usr/share/doc/fzf/examples/key-bindings.zsh
+  source /usr/share/doc/fzf/examples/completion.zsh
 fi
 
 # Enable fzf-tab
