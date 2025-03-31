@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if ((!$ + commands[fzf])); then
+if (( ! $+commands[fzf] )); then
   compstyle zshzoo
   return 1
 fi
