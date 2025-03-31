@@ -2,9 +2,13 @@
 #
 # SPDX-License-Identifier: 0BSD
 
+{{- $codespaces:= env "CODESPACES" | not | not -}}
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
 progress: true
 
 data:
+  codespaces: {{ $codespaces }}
   email: twopizza9621536@gmail.com
   name: Samuel Wu
 

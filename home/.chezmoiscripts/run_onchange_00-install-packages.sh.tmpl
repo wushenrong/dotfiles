@@ -9,7 +9,7 @@
 sudo apt update -y
 sudo apt upgrade -y
 sudo apt install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
-  libimage-exiftool-perl micro ripgrep vivid zoxide zsh
+  libimage-exiftool-perl micro pandoc ripgrep vivid zoxide zsh
 
 sudo apt install -y autotools-dev autoconf build-essential
 
@@ -17,7 +17,8 @@ sudo apt install -y autotools-dev autoconf build-essential
 
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm bat chafa eza fastfetch fd fzf github-cli \
-  git-delta glow lesspipe micro perl-image-exiftool ripgrep vivid zoxide zsh
+  git-delta glow lesspipe micro navi pandoc perl-image-exiftool ripgrep vivid \
+  zoxide zsh
 
 sudo pacman -S --needed --noconfirm base-devel
 
@@ -25,7 +26,7 @@ sudo pacman -S --needed --noconfirm base-devel
 
 sudo dnf upgrade -y
 sudo dnf install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
-  micro perl-Image-ExifTool ripgrep zoxide zsh
+  micro navi pandoc perl-Image-ExifTool ripgrep zoxide zsh
 
 sudo dnf group install -y c-development
 
