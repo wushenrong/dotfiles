@@ -4,7 +4,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-{{ if (or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.io "debian")) }}
+{{ if (or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian")) }}
 
 sudo apt update -y
 sudo apt upgrade -y
