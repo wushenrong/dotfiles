@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if (( ! $+commands[fzf] )); then
+if ((!$ + commands[fzf])); then
   compstyle zshzoo
   return 1
 fi
@@ -15,7 +15,7 @@ export FZF_DEFAULT_OPTS="--preview-window=right:60%,wrap"
 export FZF_CTRL_T_OPTS="--ansi --preview '~/.lessfilter {} || less {}'"
 export FZF_ALT_C_OPTS="--preview 'eza -1F -sName --group-directories-first --icons --color=always {}'"
 
-if command fzf --zsh 2>/dev/null; then
+if command fzf --zsh >/dev/null 2>&1; then
   source <(fzf --zsh)
 else
   source /usr/share/doc/fzf/examples/key-bindings.zsh
