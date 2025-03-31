@@ -8,24 +8,24 @@
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y bat chafa exiftool eza fastfetch fd-find fzf gh \
-  git-delta glow micro ripgrep vivid zoxide zsh
+sudo apt install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
+  libimage-exiftool-perl micro ripgrep vivid zoxide zsh
 
 sudo apt install -y autotools-dev autoconf build-essential
 
 {{ else if (eq .chezmoi.osRelease.id "arch") }}
 
-sudo pacman -Syu --confirm
-sudo pacman -S --needed --confirm bat chafa exiftool eza fastfetch fd fzf \
-  github-cli git-delta glow lesspipe micro ripgrep vivid zoxide zsh
+sudo pacman -Syu --noconfirm
+sudo pacman -S --needed --noconfirm bat chafa eza fastfetch fd fzf github-cli \
+  git-delta glow lesspipe micro perl-image-exiftool ripgrep vivid zoxide zsh
 
-sudo pacman -S --needed --confirm base-devel
+sudo pacman -S --needed --noconfirm base-devel
 
 {{ else if (eq .chezmoi.osRelease.id "fedora") }}
 
 sudo dnf upgrade -y
-sudo dnf install -y bat chafa exiftool eza fastfetch fd-find fzf gh \
-  git-delta glow micro ripgrep zoxide zsh
+sudo dnf install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
+  micro perl-Image-ExifTool ripgrep zoxide zsh
 
 sudo dnf group install -y c-development
 
