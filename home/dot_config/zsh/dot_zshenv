@@ -26,6 +26,9 @@ export GNUPGHOME=$XDG_DATA_HOME/gnupg
 # Ripgrep
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/config
 
+# FZF
+export FZF_DEFAULT_OPTS_FILE=$XDG_CONFIG_HOME/fzf/config
+
 # Python
 export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 

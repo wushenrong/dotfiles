@@ -20,6 +20,10 @@ if (( $+commands[glow] )); then
   source <(glow completion zsh)
 fi
 
+if (( $+commands[navi] )); then
+  source <(navi widget zsh)
+fi
+
 if (( $+commands[pipx] )); then
   autoload -U bashcompinit
   bashcompinit

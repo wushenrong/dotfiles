@@ -1,32 +1,35 @@
-{{ if eq .chezmoi.os "linux" -}}
+{{ if (eq .chezmoi.os "linux") -}}
 #!/bin/sh
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
 
-{{ if (or (eq .chezmoi.osRelease.id "ubuntu") (eq .chezmoi.osRelease.id "debian")) }}
+# Debian/Ubuntu based distributions
+{{ if (or (eq .chezmoi.osRelease.id "debian") (.chezmoi.osRelease.idLike | contains "debian")) }}
 
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
-  libimage-exiftool-perl micro pandoc ripgrep vivid zoxide zsh
+sudo apt install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow jq \
+  libimage-exiftool-perl micro pandoc ripgrep tealdeer vivid zoxide zsh
 
 sudo apt install -y autotools-dev autoconf build-essential
 
-{{ else if (eq .chezmoi.osRelease.id "arch") }}
+# Arch based distributions
+{{ else if (or (eq .chezmoi.osRelease.id "arch") (.chezmoi.osRelease.idLike | contains "arch")) }}
 
 sudo pacman -Syu --noconfirm
 sudo pacman -S --needed --noconfirm bat chafa eza fastfetch fd fzf github-cli \
-  git-delta glow lesspipe micro navi pandoc perl-image-exiftool ripgrep vivid \
-  zoxide zsh
+  git-delta glow jq lesspipe micro navi pandoc perl-image-exiftool ripgrep \
+  tealdeer vivid zoxide zsh
 
 sudo pacman -S --needed --noconfirm base-devel
 
-{{ else if (eq .chezmoi.osRelease.id "fedora") }}
+# Fedora based distributions
+{{ else if (or (eq .chezmoi.osRelease.id "fedora") (.chezmoi.osRelease.idLike | contains "fedora")) }}
 
 sudo dnf upgrade -y
-sudo dnf install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow \
-  micro navi pandoc perl-Image-ExifTool ripgrep zoxide zsh
+sudo dnf install -y bat chafa eza fastfetch fd-find fzf gh git-delta glow jq \
+  micro navi pandoc perl-Image-ExifTool ripgrep tealdeer zoxide zsh
 
 sudo dnf group install -y c-development
 

@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+[display]
+use_pager = true
+
+[updates]
+auto_update = true

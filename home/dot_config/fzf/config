@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+--preview-window=right:60%,wrap
+--color fg:252,hl:67,fg+:252,hl+:81
+--color info:144,prompt:161,spinner:135,pointer:135,marker:118
