@@ -15,11 +15,34 @@ alias quit=exit
 alias cd..='cd ..'
 alias cls=clear
 
+# ls
+alias ls='eza -F -sName --group-directories-first --git --icons --color-scale --hyperlink'
+alias ll='ls -lh'
+
+alias la='ll -a'
+alias lD='ll -D'
+alias lc='ll -1'
+alias lh='ll -d .*'
+
+alias lsa='la -a'
+alias lx='lsa -gHimUuS'
+alias lxa='lx -Z@'
+
+alias lt='ls -T'
+alias tree=lt
+
+# diff
+alias diff=delta
+
+# grep and ack
+alias grep=rg
+alias ack=ag
+
 # tar
 alias tarls='tar -tvf'
 alias untar='tar -xvf'
 
-# xdg
+# xdg support
 alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
 
 # print paths and functions

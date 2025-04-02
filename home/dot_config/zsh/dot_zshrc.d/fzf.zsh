@@ -2,14 +2,9 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if (( ! $+commands[fzf] )); then
-  compstyle zshzoo
-  return 1
-fi
-
-export FZF_DEFAULT_COMMAND="fd -t f --strip-cwd-prefix -L -H -E .git"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND --color=always"
-export FZF_ALT_C_COMMAND="fd -t d"
+export FZF_DEFAULT_COMMAND="bfs -type f -mindepth 1 -L -exclude -name .git -printf '%P\n'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND -color"
+export FZF_ALT_C_COMMAND="bfs -type d -mindepth 1 -nohidden -printf '%P\n'"
 
 export FZF_CTRL_T_OPTS="--ansi --preview '~/.lessfilter {} || less {}'"
 export FZF_ALT_C_OPTS="--preview 'eza -1F -sName --group-directories-first --icons --color=always {}'"

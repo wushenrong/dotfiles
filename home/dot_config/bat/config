@@ -2,8 +2,11 @@
 #
 # SPDX-License-Identifier: 0BSD
 
+# Set theme
+--theme "Visual Studio Dark+"
+
 # Wrap lines to 80 columns
 --terminal-width 80
 
 # Set how to display non printable characters
---nonprintable-notation=unicode
+--nonprintable-notation unicode
