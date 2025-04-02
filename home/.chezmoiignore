@@ -12,4 +12,7 @@
 
 # Terminal Settings
 .config/kitty
+
+# Filter for less
+.lessfilter
 {{- end -}}
