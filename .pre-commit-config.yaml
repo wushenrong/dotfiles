@@ -18,6 +18,7 @@ repos:
       - id: pretty-format-json
         args:
           - --autofix
+          - --no-ensure-ascii
       - id: trailing-whitespace
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
