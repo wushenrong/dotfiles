@@ -15,8 +15,5 @@
 --max-columns=80
 --max-columns-preview
 
-# Show links
---hyperlink-format=default
-
 # Match all instances unless there is uppercase
 --smart-case

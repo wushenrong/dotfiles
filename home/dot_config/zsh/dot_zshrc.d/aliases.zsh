@@ -16,7 +16,7 @@ alias cd..='cd ..'
 alias cls=clear
 
 # ls
-alias ls='eza -F -sName --group-directories-first --git --icons --color-scale --hyperlink'
+alias ls='eza -F -sName --group-directories-first --git --icons --color-scale'
 alias ll='ls -lh'
 
 alias la='ll -a'
@@ -30,6 +30,11 @@ alias lxa='lx -Z@'
 
 alias lt='ls -T'
 alias tree=lt
+
+# find
+alias find='fd'
+alias fD='fd --type d'
+alias fF='fd --type f'
 
 # diff
 alias diff=delta

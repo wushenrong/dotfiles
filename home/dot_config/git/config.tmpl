@@ -45,6 +45,28 @@
 	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
 	signOff = true
 
+[pager]
+	diff = delta
+
+[merge]
+	autoStash = true
+	conflictStyle = zdiff3
+
+[submodule]
+	recurse = true
+
+[diff]
+	colorMoved = default
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	line-numbers = true
+	navigate = true
+	syntax-theme = Visual Studio Dark+
+	tabs = 4
+
 [alias]
 	alias = config get --all --global --regexp alias
 	amend = commit -as --amend
@@ -113,24 +135,6 @@
 	subs = submodule status
 	subu = submodule update --recursive --remote --rebase
 
-[pager]
-	diff = delta
-
-[merge]
-	autoStash = true
-	conflictStyle = zdiff3
-
-[submodule]
-	recurse = true
-
-[interactive]
-	diffFilter = delta --color-only
-
-[delta]
-	hyperlinks = true
-	navigate = true
-    side-by-side = true
-
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -139,11 +143,11 @@
 
 {{ if (eq .chezmoi.os "windows") -}}
 [gpg]
-    program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
+	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
 {{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
 [gpg]
 	program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
 
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
-{{ end -}}
+{{ end }}
