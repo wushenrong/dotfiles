@@ -34,9 +34,9 @@ alias tree=lt
 # diff
 alias diff=delta
 
-# grep and ack
+# grep
 alias grep=rg
-alias ack=ag
+alias grap=ag
 
 # tar
 alias tarls='tar -tvf'
