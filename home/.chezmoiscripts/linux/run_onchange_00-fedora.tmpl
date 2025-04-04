@@ -1,4 +1,4 @@
-{{ if (and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "fedora") (.chezmoi.osRelease.idLike | contains "fedora"))) -}}
+{{ if (and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "fedora") ((get .chezmoi.osRelease "idLike") | contains "fedora"))) -}}
 #!/bin/sh
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
