@@ -2,17 +2,18 @@
 #
 # SPDX-License-Identifier: 0BSD
 
+{{ if (eq .chezmoi.os "windows") }}
 # Linux Config
-
-{{- if (eq .chezmoi.os "windows") -}}
-# Shell Settings
 .zshenv
 .config/zsh
-.config/tmux
 
 # Terminal Settings
 .config/kitty
 
 # Filter for less
 .lessfilter
-{{- end -}}
+{{ end }}
+
+{{- if (or (ne .chezmoi.os "linux") (and (ne .chezmoi.osRelease.id "debian") (not ((get .chezmoi.osRelease "idLike") | contains "debian")))) -}}
+.vim
+{{ end }}

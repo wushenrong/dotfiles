@@ -47,6 +47,9 @@ alias grap=ag
 alias tarls='tar -tvf'
 alias untar='tar -xvf'
 
+# top
+alias top=btop
+
 # xdg support
 alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
 
