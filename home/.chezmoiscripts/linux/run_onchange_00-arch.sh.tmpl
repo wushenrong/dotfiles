@@ -1,0 +1,23 @@
+{{ if (and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "arch") (.chezmoi.osRelease.idLike | contains "arch"))) -}}
+#!/bin/sh
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Update Arch
+sudo pacman -Syu --noconfirm
+
+# Install CLI tools
+sudo pacman -S --needed --noconfirm bat bfs chafa eza fastfetch fd fzf \
+  github-cli git-delta glow htop imagemagick jq lesspipe micro navi pandoc \
+  perl-image-exiftool ripgrep tealdeer the_silver_searcher vivid zoxide zsh
+
+# Install C/C++ compilers and development tools
+sudo pacman -S --needed --noconfirm base-devel clang
+
+# Install python tools
+sudo pacman -S --needed --noconfirm pre-commit python-cpplint reuse uv
+
+uv tool install cmakelang[YAML]
+
+{{ end }}

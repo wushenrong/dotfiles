@@ -1,0 +1,24 @@
+{{ if (and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "fedora") (.chezmoi.osRelease.idLike | contains "fedora"))) -}}
+#!/bin/sh
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Update Fedora
+sudo dnf upgrade -y
+
+# Install CLI tools
+sudo dnf install -y bat bfs chafa eza fastfetch fd-find fzf gh git-delta glow \
+  htop imagemagick jq micro navi pandoc perl-Image-ExifTool ripgrep tealdeer \
+  the_silver_searcher zoxide zsh
+
+# Install C/C++ compilers and development tools
+sudo dnf group install -y c-development development-tools
+
+# Install python tools
+sudo dnf install pre-commit reuse uv
+
+uv tools install cpplint
+uv tools install cmakelang[YAML]
+
+{{ end }}
