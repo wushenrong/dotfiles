@@ -3,6 +3,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-sudo pacman -S --needed --noconfirm act actionlint golang
+sudo pacman -S --needed --noconfirm act actionlint go
 
 go install github.com/boyter/scc/v3@latest
