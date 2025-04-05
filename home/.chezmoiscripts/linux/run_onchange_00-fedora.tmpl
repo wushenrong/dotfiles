@@ -16,9 +16,17 @@ sudo dnf install -y bat bfs btop chafa eza fastfetch fd-find fzf gh git-delta \
 sudo dnf group install -y c-development development-tools
 
 # Install python tools
-sudo dnf install pre-commit reuse uv
+sudo dnf install -y pre-commit reuse uv
 
 uv tools install cpplint
 uv tools install cmakelang[YAML]
+
+# Install nodejs tools
+sudo dnf install nodejs
+
+npm install -g markdownlint-cli
+
+# Install linters and formatters
+sudo dnf install -y ShellCheck shfmt
 
 {{ end }}

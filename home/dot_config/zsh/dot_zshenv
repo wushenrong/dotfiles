@@ -35,10 +35,13 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=true
 
 export NUGET_PACKAGES=$XDG_CACHE_HOME/NuGetPackages
 
-# npm
-export NPM_CONFIG_INIT_MODULE=$XDG_CONFIG_HOME/npm/config/npm-init.js
-export NPM_CONFIG_CACHE=$XDG_CACHE_HOME/npm
-export NPM_CONFIG_TMP=$XDG_RUNTIME_DIR/npm
+# Nodejs
+export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
+
+export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+# wget
+export WGETRC=$XDG_CONFIG_HOME/wgetrc
 
 # Ensure path arrays do not contain duplicates.
 typeset -gU path fpath
@@ -47,6 +50,7 @@ typeset -gU path fpath
 path=(
   $HOME/{,s}bin(N)
   $HOME/.local/{,s}bin(N)
+  $XDG_DATA_HOME/npm/bin
   /usr/local/{,s}bin(N)
   /snap/{,s}bin(N)
   $path

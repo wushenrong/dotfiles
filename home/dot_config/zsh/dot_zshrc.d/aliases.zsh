@@ -50,9 +50,6 @@ alias untar='tar -xvf'
 # top
 alias top=btop
 
-# xdg support
-alias wget='wget --hsts-file=$XDG_DATA_HOME/wget-hsts'
-
 # print paths and functions
 alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
 alias print-path='echo $PATH | tr ":" "\n"'

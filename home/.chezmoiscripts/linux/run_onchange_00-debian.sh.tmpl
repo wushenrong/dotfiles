@@ -18,7 +18,7 @@ sudo apt install -y autotools-dev autoconf build-essential clang-format \
   clang-tidy
 
 # Install python tools
-sudo apt install -y pipx 
+sudo apt install -y pipx
 
 pipx install uv
 
@@ -26,5 +26,13 @@ uv tool install cpplint
 uv tool install cmakelang[YAML]
 uv tool install pre-commit
 uv tool install reuse
+
+# Install nodejs tools
+sudo apt install -y nodejs npm
+
+npm install -g markdownlint-cli
+
+# Install linters and formatters
+sudo apt install -y shellcheck shfmt
 
 {{ end }}

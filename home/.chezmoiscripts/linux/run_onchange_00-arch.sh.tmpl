@@ -20,4 +20,10 @@ sudo pacman -S --needed --noconfirm pre-commit python-cpplint reuse uv
 
 uv tool install cmakelang[YAML]
 
+# Install nodejs tools
+sudo pacman -S --needed --noconfirm markdownlint-cli
+
+# Install linters/formatters
+sudo pacman -S --needed --noconfirm act actionlint shellcheck shfmt
+
 {{ end }}

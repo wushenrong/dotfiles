@@ -15,4 +15,12 @@ winget install -e aristocratos.btop4win ajeetdsouza.zoxide `
 
 winget install --accept-package-agreements -e XP8K0HKJFRXGCK
 
+# Install Nodejs tools
+winget install -e OpenJS.NodeJS
+
+npm install -g markdownlint-cli
+
+# Install linters and formatters
+winget install -e koalaman.shellcheck mvdan.shfmt nektos.act rhysd.actionlint
+
 {{ end }}
