@@ -1,0 +1,13 @@
+{{ if (and (eq .chezmoi.os "linux") (or (eq .chezmoi.osRelease.id "debian") ((get .chezmoi.osRelease "idLike") | contains "debian"))) -}}
+#!/bin/zsh
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: MIT
+#
+# .zprofile - Zsh file loaded on login.
+#
+
+# Execute profile scripts that zsh does not
+emulate sh -c 'source /etc/profile'
+
+{{ end }}

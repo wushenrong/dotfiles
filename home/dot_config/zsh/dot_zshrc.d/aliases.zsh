@@ -32,16 +32,15 @@ alias lt='ls -T'
 alias tree=lt
 
 # find
-alias find='fd'
-alias fD='fd --type d'
-alias fF='fd --type f'
+alias find=fd
+alias fD='find -t d'
+alias fF='find -t f'
 
 # diff
 alias diff=delta
 
 # grep
 alias grep=rg
-alias grap=ag
 
 # tar
 alias tarls='tar -tvf'

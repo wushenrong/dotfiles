@@ -31,7 +31,9 @@ export PYTHON_HISTORY=$XDG_STATE_HOME/python_history
 
 # Dotnet
 export DOTNET_CLI_HOME=$XDG_DATA_HOME/dotnet
+
 export DOTNET_CLI_TELEMETRY_OPTOUT=true
+export POWERSHELL_TELEMETRY_OPTOUT=true
 
 export NUGET_PACKAGES=$XDG_CACHE_HOME/NuGetPackages
 
@@ -39,6 +41,14 @@ export NUGET_PACKAGES=$XDG_CACHE_HOME/NuGetPackages
 export NODE_REPL_HISTORY=$XDG_DATA_HOME/node_repl_history
 
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
+
+# Rust
+export RUSTUP_HOME=$XDG_DATA_HOME/rustup
+export CARGO_HOME=$XDG_DATA_HOME/cargo
+
+# Go
+export GOPATH=$XDG_DATA_HOME/go
+export GOMODCACHE=$XDG_CACHE_HOME/go/mod
 
 # wget
 export WGETRC=$XDG_CONFIG_HOME/wgetrc
