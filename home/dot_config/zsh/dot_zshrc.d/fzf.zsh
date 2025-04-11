@@ -17,6 +17,7 @@ else
     --color fg:252,hl:67,fg+:252,hl+:81
     --color info:144,prompt:161,spinner:135,pointer:135,marker:118
   "
+
   source /usr/share/doc/fzf/examples/key-bindings.zsh
   source /usr/share/doc/fzf/examples/completion.zsh
 fi
