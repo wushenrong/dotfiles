@@ -10,4 +10,3 @@ sudo apt upgrade -y
 # Install CLI tools
 sudo apt install -y bat bfs eza fd-find fzf gh git-delta jq ripgrep tokei \
   vivid zoxide
-
