@@ -1,54 +1,34 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
-
+# Git Setup
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
 	signingKey = 5C5400B08A9A51A3BF1BC1176DA8EF9135CAA64C
 
-[commit]
-	gpgSign = true
-	verbose = true
-
-[tag]
-	gpgSign = true
-
-[branch]
-	sort = -committerdate
-
 [core]
+	compression = 9
 	editor = code -w
+	whitespace = error
+	preloadindex = true
+
+[advice]
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
 
 [init]
 	defaultBranch = main
 
-[fetch]
-	prune = true
-
-[pull]
-	rebase = true
-
-[push]
-	autoSetupRemote = true
-	autoSquash = true
-
-[rebase]
-	abbreviateCommands = true
-	autoStash = true
-	autoSquash = true
-
-[rerere]
-	autoUpdate = true
-	enabled = true
-
+# Git Status
 [status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
 	submoduleSummary = true
 
-[format]
-	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
-	signOff = true
-
+# Git Diff
 [pager]
 	diff = delta
 
@@ -56,14 +36,15 @@
 	autoStash = true
 	conflictStyle = zdiff3
 
-[submodule]
-	recurse = true
-
-[diff]
-	colorMoved = default
-
 [interactive]
 	diffFilter = delta --color-only
+	singlekey = true
+
+[diff]
+	context = 3
+	colorMoved = default
+	interHunkContext = 10
+	renames = copies
 
 [delta]
 	line-numbers = true
@@ -71,6 +52,56 @@
 	syntax-theme = Visual Studio Dark+
 	tabs = 4
 
+# Git Commit
+[commit]
+	gpgSign = true
+	template = ~/.config/git/template
+	verbose = true
+
+# Git Pull, Push, and Rebase
+[fetch]
+	prune = true
+
+[pull]
+	default = current
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	autoSquash = true
+	default = current
+	followTags = true
+
+[submodule]
+	fetchJobs = 16
+	recurse = true
+
+[rebase]
+	abbreviateCommands = true
+	autoStash = true
+	autoSquash = true
+	missingCommitsCheck = true
+
+[rerere]
+	autoUpdate = true
+	enabled = true
+
+# Git Branch, Tag, and Log
+[branch]
+	sort = -committerdate
+
+[tag]
+	gpgSign = true
+	sort = -taggerdate
+
+[log]
+	abbrevCommit = true
+
+[format]
+	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
+	signOff = true
+
+# Git Alias
 [alias]
 	alias = config get --all --global --regexp alias
 	amend = commit -as --amend
@@ -104,8 +135,7 @@
 
 	f = fetch
 
-	l = log --abbrev-commit -10
-	lg = log --graph --abbrev-commit --decorate
+	l = log --all --graph
 
 	p = push
 	pf = push --force-with-lease --force-if-includes
