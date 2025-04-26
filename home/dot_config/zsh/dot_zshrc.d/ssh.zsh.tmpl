@@ -1,0 +1,8 @@
+{{ if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+export SSH_SK_HELPER="/mnt/c/Windows/System32/OpenSSH/ssh-sk-helper.exe"
+
+{{ end }}

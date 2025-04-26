@@ -5,7 +5,7 @@
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
-	signingKey = 5C5400B08A9A51A3BF1BC1176DA8EF9135CAA64C
+	signingKey = ~/.ssh/id_main_key
 
 [core]
 	compression = 9
@@ -175,13 +175,10 @@
 	process = git-lfs filter-process
 	required = true
 
-{{ if (eq .chezmoi.os "windows") -}}
 [gpg]
-	program = C:\\Program Files (x86)\\GnuPG\\bin\\gpg.exe
-{{ else if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
-[gpg]
-	program = /mnt/c/Program Files (x86)/GnuPG/bin/gpg.exe
+	format = ssh
 
+{{ if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 {{ end }}
