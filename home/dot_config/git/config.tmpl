@@ -64,7 +64,7 @@
 
 [pull]
 	default = current
-	rebase = true
+	rebase = interactive
 
 [push]
 	autoSetupRemote = true
@@ -99,34 +99,29 @@
 
 [format]
 	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
-	signOff = true
 
 # Git Alias
 [alias]
 	alias = config get --all --global --regexp alias
-	amend = commit -as --amend
+	amend = commit -p --amend
 
-	a = add
-	aa = add -A
+	a = add -p
 
 	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
 	ba = branch -a
 	bd = branch -d
 	bdf = branch -df
 
-	c = commit -s
-	ca = commit -as
-	caa = commit -as --amend
-	cm = commit -sm
-	cam = commit -asm
+	c = commit -p
+	ca = commit -p --amend
 
 	cl = clone
 	clrs = clone --recurse-submodules
 
-	co = checkout
-	cob = checkout -b
-	cop = checkout -
-	com = checkout main
+	co = checkout -p
+	cob = checkout -pb
+	cop = checkout -p -
+	com = checkout -p main
 
 	d = diff --stat
 	dl = diff
@@ -142,21 +137,20 @@
 
 	pl = pull
 
-	r = reset
-	rhard = reset --hard
-	rk = reset --keep
-	rs = reset --soft
+	re = reset -p
+	reh = reset -p --hard
+	rek = reset -p --keep
+	res = reset -p --soft
 
-	rb = rebase
+	rb = rebase -i
 	rba = rebase --abort
 	rbc = rebase --continue
-	rbi = rebase -i
-	rbir = rebase -i --root
+	rbr = rebase -i --root
 
 	s = status -sb
 	sl = status
 
-	st = stash
+	st = stash -p
 	sta = stash apply
 	std = stash drop
 	stl = stash list
