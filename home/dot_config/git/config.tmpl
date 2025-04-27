@@ -105,15 +105,15 @@
 	alias = config get --all --global --regexp alias
 	amend = commit -p --amend
 
-	a = add -p
+	a = add -i
 
 	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
 	ba = branch -a
 	bd = branch -d
 	bdf = branch -df
 
-	c = commit -p
-	ca = commit -p --amend
+	c = commit --interactive
+	ca = commit --interactive --amend
 
 	cl = clone
 	clrs = clone --recurse-submodules
@@ -150,7 +150,7 @@
 	s = status -sb
 	sl = status
 
-	st = stash -p
+	st = stash -i
 	sta = stash apply
 	std = stash drop
 	stl = stash list
