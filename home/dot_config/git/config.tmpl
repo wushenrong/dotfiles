@@ -71,6 +71,7 @@
 	autoSquash = true
 	default = current
 	followTags = true
+	recurseSubmodules on-demand
 
 [submodule]
 	fetchJobs = 16
@@ -115,8 +116,7 @@
 	c = commit --interactive
 	ca = commit --interactive --amend
 
-	cl = clone
-	clrs = clone --recurse-submodules
+	cl = clone --recursive
 
 	co = checkout -p
 	cob = checkout -pb
@@ -159,9 +159,8 @@
 
 	sub = submodule
 	suba = submodule add
-	subi = submodule update --init --recursive
 	subs = submodule status
-	subu = submodule update --recursive --remote --rebase
+	subu = submodule update --init --recursive
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
