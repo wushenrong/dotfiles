@@ -71,7 +71,7 @@
 	autoSquash = true
 	default = current
 	followTags = true
-	recurseSubmodules on-demand
+	recurseSubmodules = on-demand
 
 [submodule]
 	fetchJobs = 16
@@ -150,17 +150,17 @@
 	s = status -sb
 	sl = status
 
+	sm = submodule
+	sma = submodule add
+	sms = submodule status
+	smu = submodule update --init --recursive
+
 	st = stash -i
 	sta = stash apply
 	std = stash drop
 	stl = stash list
 	stm = stash -m
 	stp = stash pop
-
-	sub = submodule
-	suba = submodule add
-	subs = submodule status
-	subu = submodule update --init --recursive
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
