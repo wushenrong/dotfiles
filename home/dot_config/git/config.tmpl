@@ -11,6 +11,7 @@
 	compression = 9
 	editor = code -w
 	whitespace = error
+	pager = delta
 	preloadindex = true
 
 [advice]
@@ -29,9 +30,6 @@
 	submoduleSummary = true
 
 # Git Diff
-[pager]
-	diff = delta
-
 [merge]
 	autoStash = true
 	conflictStyle = zdiff3
@@ -61,6 +59,7 @@
 # Git Pull, Push, and Rebase
 [fetch]
 	prune = true
+	pruneTags = true
 
 [pull]
 	default = current
@@ -114,7 +113,6 @@
 	bdf = branch -df
 
 	c = commit -p
-	ca = commit -p --amend --no-edit
 
 	cl = clone --recursive
 
@@ -127,8 +125,6 @@
 	dl = diff
 	dc = diff --cached --stat
 	dcl = diff --cached
-
-	f = fetch
 
 	l = log --all --graph
 
@@ -155,11 +151,10 @@
 	sms = submodule status
 	smu = submodule update --init --recursive
 
-	st = stash -i
+	st = stash -p
 	sta = stash apply
 	std = stash drop
 	stl = stash list
-	stm = stash -m
 	stp = stash pop
 
 [filter "lfs"]
