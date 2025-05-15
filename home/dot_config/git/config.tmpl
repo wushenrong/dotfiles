@@ -106,15 +106,15 @@
 	alias = config get --all --global --regexp alias
 	amend = commit -p --amend
 
-	a = add -i
+	a = add -p
 
 	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
 	ba = branch -a
 	bd = branch -d
 	bdf = branch -df
 
-	c = commit --interactive
-	ca = commit --interactive --amend
+	c = commit -p
+	ca = commit -p --amend --no-edit
 
 	cl = clone --recursive
 
