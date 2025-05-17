@@ -105,20 +105,15 @@
 [log]
 	abbrevCommit = true
 
-[format]
-	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
-
 # Git Alias
 [alias]
-	alias = config get --all --global --regexp alias
 	amend = commit -p --amend
+	graph = log --oneline --graph --all
 
 	a = add -p
 
-	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
+	b = branch
 	ba = branch -a
-	bd = branch -d
-	bdf = branch -df
 
 	c = commit -p
 
@@ -126,20 +121,19 @@
 
 	d = diff --stat
 	dl = diff
-	dc = diff --cached --stat
-	dcl = diff --cached
+	ds = diff --stat --staged
+	dsl = diff --staged
 
-	l = log --all --graph
+	l = log
 
 	p = push
 	pf = push --force-with-lease --force-if-includes
 
 	pl = pull
 
-	re = reset -p
-	reh = reset -p --hard
-	rek = reset -p --keep
-	res = reset -p --soft
+	r = restore -p
+	rs = restore -p --staged
+	rsw = restore -p --staged --worktree
 
 	rb = rebase -i
 	rba = rebase --abort
