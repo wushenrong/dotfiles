@@ -22,6 +22,12 @@
 [init]
 	defaultBranch = main
 
+[column]
+	ui = auto
+
+[help]
+	autocorrect = prompt
+
 # Git Status
 [status]
 	branch = true
@@ -39,10 +45,12 @@
 	singlekey = true
 
 [diff]
+	algorithm = histogram
 	context = 3
-	colorMoved = default
+	colorMoved = plain
 	interHunkContext = 10
-	renames = copies
+	mnemonicPrefix = true
+	renames = true
 
 [delta]
 	line-numbers = true
@@ -58,17 +66,16 @@
 
 # Git Pull, Push, and Rebase
 [fetch]
+	all = true
 	prune = true
 	pruneTags = true
 
 [pull]
-	default = current
 	rebase = interactive
 
 [push]
 	autoSetupRemote = true
 	autoSquash = true
-	default = current
 	followTags = true
 	recurseSubmodules = on-demand
 
@@ -81,6 +88,7 @@
 	autoStash = true
 	autoSquash = true
 	missingCommitsCheck = error
+	updateRefs = true
 
 [rerere]
 	autoUpdate = true
@@ -92,7 +100,7 @@
 
 [tag]
 	gpgSign = true
-	sort = -taggerdate
+	sort = version:refname
 
 [log]
 	abbrevCommit = true
