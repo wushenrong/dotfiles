@@ -116,11 +116,6 @@
 
 	cl = clone --recursive
 
-	co = checkout
-	cob = checkout -b
-	cop = checkout -
-	com = checkout main
-
 	d = diff --stat
 	dl = diff
 	dc = diff --cached --stat
@@ -156,6 +151,11 @@
 	std = stash drop
 	stl = stash list
 	stp = stash pop
+
+	sw = switch
+	swc = switch -c
+	swp = switch -
+	swm = switch main
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
