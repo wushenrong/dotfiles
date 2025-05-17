@@ -7,13 +7,8 @@
   [[ $ID == "ubuntu" ]] || [[ $ID == "debian" ]] || return 1
 )
 
-
 if (( $+commands[chezmoi] )); then
   source <(chezmoi completion zsh)
-fi
-
-if (( $+commands[gh] )); then
-  source <(gh completion --shell zsh)
 fi
 
 if (( $+commands[glow] )); then
