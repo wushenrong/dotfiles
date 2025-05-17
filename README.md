@@ -8,17 +8,19 @@ This repository contains configuration for:
 
 - Chezmoi
 - Bat
-- Fastfetch
+- Fzf
 - Git
+- GnuPG
 - Kitty
-- Lazygit
+- Micro
 - Nano
-- Glow
 - Ripgrep
-- Tmux
+- Vim
 - Zsh
+- and more
 
-All inside the default `XDG_CONFIG_HOME` directory, `~/.config`.
+All configurations are stored in the default XDG Home Directories,
+`~/.config` and `~/.local/share`.
 
 The `etc` folder contains some configuration for running OpenSSH.
 
