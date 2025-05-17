@@ -11,6 +11,7 @@
 	compression = 9
 	editor = code -w
 	whitespace = error
+	pager = delta
 	preloadindex = true
 
 [advice]
@@ -21,6 +22,12 @@
 [init]
 	defaultBranch = main
 
+[column]
+	ui = auto
+
+[help]
+	autocorrect = prompt
+
 # Git Status
 [status]
 	branch = true
@@ -29,9 +36,6 @@
 	submoduleSummary = true
 
 # Git Diff
-[pager]
-	diff = delta
-
 [merge]
 	autoStash = true
 	conflictStyle = zdiff3
@@ -41,10 +45,12 @@
 	singlekey = true
 
 [diff]
+	algorithm = histogram
 	context = 3
-	colorMoved = default
+	colorMoved = plain
 	interHunkContext = 10
-	renames = copies
+	mnemonicPrefix = true
+	renames = true
 
 [delta]
 	line-numbers = true
@@ -60,16 +66,16 @@
 
 # Git Pull, Push, and Rebase
 [fetch]
+	all = true
 	prune = true
+	pruneTags = true
 
 [pull]
-	default = current
 	rebase = interactive
 
 [push]
 	autoSetupRemote = true
 	autoSquash = true
-	default = current
 	followTags = true
 	recurseSubmodules = on-demand
 
@@ -81,7 +87,8 @@
 	abbreviateCommands = true
 	autoStash = true
 	autoSquash = true
-	missingCommitsCheck = true
+	missingCommitsCheck = error
+	updateRefs = true
 
 [rerere]
 	autoUpdate = true
@@ -93,54 +100,40 @@
 
 [tag]
 	gpgSign = true
-	sort = -taggerdate
+	sort = version:refname
 
 [log]
 	abbrevCommit = true
 
-[format]
-	pretty = %C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n          %C(white)%s%C(reset) %C(dim white)[%an]%C(reset)
-
 # Git Alias
 [alias]
-	alias = config get --all --global --regexp alias
 	amend = commit -p --amend
+	graph = log --oneline --graph --all
 
-	a = add -i
+	a = add -p
 
-	b = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:bold green)(%(committerdate:relative))%(color:reset) %(color:dim white)[%(authorname)]%(color:reset)'
+	b = branch
 	ba = branch -a
-	bd = branch -d
-	bdf = branch -df
 
-	c = commit --interactive
-	ca = commit --interactive --amend
+	c = commit -p
 
 	cl = clone --recursive
 
-	co = checkout -p
-	cob = checkout -pb
-	cop = checkout -p -
-	com = checkout -p main
-
 	d = diff --stat
 	dl = diff
-	dc = diff --cached --stat
-	dcl = diff --cached
+	ds = diff --stat --staged
+	dsl = diff --staged
 
-	f = fetch
-
-	l = log --all --graph
+	l = log
 
 	p = push
 	pf = push --force-with-lease --force-if-includes
 
 	pl = pull
 
-	re = reset -p
-	reh = reset -p --hard
-	rek = reset -p --keep
-	res = reset -p --soft
+	r = restore -p
+	rs = restore -p --staged
+	rsw = restore -p --staged --worktree
 
 	rb = rebase -i
 	rba = rebase --abort
@@ -155,12 +148,16 @@
 	sms = submodule status
 	smu = submodule update --init --recursive
 
-	st = stash -i
+	st = stash -p
 	sta = stash apply
 	std = stash drop
 	stl = stash list
-	stm = stash -m
 	stp = stash pop
+
+	sw = switch
+	swc = switch -c
+	swp = switch -
+	swm = switch main
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f

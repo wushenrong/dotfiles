@@ -45,9 +45,15 @@ alias fF='find -t f'
 alias diff=delta
 
 # grep
-alias grep=rg
+function grep() {
+  rg --json -C 2 "$@" | delta
+}
 
 # tar
+function tar() {
+  command tar --posix "$@"
+}
+
 alias tarls='tar -tvf'
 alias untar='tar -xvf'
 

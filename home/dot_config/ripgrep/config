@@ -2,15 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Make ripgrep look like the silver searcher
---colors=line:fg:yellow
---colors=line:style:bold
---colors=path:fg:green
---colors=path:style:bold
---colors=match:fg:black
---colors=match:bg:yellow
---colors=match:style:nobold
-
 # Set max column length for lines
 --max-columns=80
 --max-columns-preview
