@@ -17,7 +17,6 @@ alias vi=vim
 
 # fix common typos
 alias quit=exit
-alias cd..='cd ..'
 alias cls=clear
 
 # ls
@@ -45,12 +44,15 @@ alias fF='find -t f'
 alias diff=delta
 
 # grep
-function grep() {
+# remove grep alias set by zsh-util
+unalias grep
+
+grep() {
   rg --json -C 2 "$@" | delta
 }
 
 # tar
-function tar() {
+tar() {
   command tar --posix "$@"
 }
 
