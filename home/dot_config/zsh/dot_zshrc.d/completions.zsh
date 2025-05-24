@@ -4,7 +4,7 @@
 
 (
   source /etc/os-release
-  [[ $ID == "ubuntu" ]] || [[ $ID == "debian" ]] || return 1
+  [[ "$ID" == "debian" ]] || [[ "$ID_LIKE" == *"debian"* ]] || return 1
 )
 
 if (( $+commands[chezmoi] )); then
