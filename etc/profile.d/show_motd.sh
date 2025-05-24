@@ -3,7 +3,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# shellcheck source=/etc/os-release
 . /etc/os-release
 
 if [ -f "$HOME/.hushlogin" ]; then
