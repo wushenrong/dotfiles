@@ -13,7 +13,8 @@ if command fzf --zsh >/dev/null 2>&1; then
   source <(fzf --zsh)
 else
   export FZF_DEFAULT_OPTS="
-    --preview-window=right:60%,wrap
+    --height 100%
+    --preview-window=right:70%,wrap
     --color fg:252,hl:67,fg+:252,hl+:81
     --color info:144,prompt:161,spinner:135,pointer:135,marker:118
   "
