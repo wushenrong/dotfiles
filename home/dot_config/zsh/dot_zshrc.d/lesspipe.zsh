@@ -2,6 +2,8 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-(( $+commands[lesspipe.sh] )) || return 1
-
-source <(lesspipe.sh)
+if (( $+commands[lesspipe.sh] )); then
+  source <(lesspipe.sh)
+elif (( $+commands[lesspipe] )); then
+  source <(lesspipe)
+fi
