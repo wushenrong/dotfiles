@@ -19,6 +19,10 @@ alias vi=vim
 alias quit=exit
 alias cls=clear
 
+# aliases belak/zsh-utils
+alias type="type -a"
+alias mkdir="mkdir -p"
+
 # ls
 alias ls='eza -F -sName --group-directories-first --git --icons --color-scale'
 alias ll='ls -lh'
@@ -44,9 +48,6 @@ alias fF='find -t f'
 alias diff=delta
 
 # grep
-# remove grep alias set by zsh-util
-unalias grep
-
 grep() {
   rg --json -C 2 "$@" | delta
 }

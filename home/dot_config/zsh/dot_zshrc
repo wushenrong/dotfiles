@@ -7,8 +7,8 @@
 # .zshrc - Zsh file loaded on interactive shell sessions.
 #
 
-# Show fetch if it is available and we are not using VSCode
-if (( $+commands[fastfetch] )) && [[ "$TERM_PROGRAM" != "vscode" ]]; then
+# Show fetch if we are not using VSCode
+if [[ "$TERM_PROGRAM" != "vscode" ]]; then
   fastfetch
 fi
 
@@ -23,7 +23,7 @@ fi
 source $ZDOTDIR/.zstyles
 
 # Clone antidote if necessary.
-if [[ ! -d $ZDOTDIR/.antidote ]]; then
+if [[ ! -d "$ZDOTDIR/.antidote" ]]; then
   git clone https://github.com/mattmc3/antidote $ZDOTDIR/.antidote
 fi
 
@@ -40,7 +40,7 @@ for _rc in $ZDOTDIR/.zshrc.d/*.zsh; do
 done
 unset _rc
 
-# Set colors for ls and find
+# Set colors for ls, find, grep, etc
 export LS_COLORS="$(vivid generate molokai)"
 
 # Use zoxide as replacement for cd

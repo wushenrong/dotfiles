@@ -26,7 +26,6 @@ belak/zsh-utils path:history
 romkatv/powerlevel10k
 
 # Utilities
-belak/zsh-utils path:utility
 romkatv/zsh-bench kind:path
 
 # Other Fish-like features

@@ -1,0 +1,13 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+if [[ -n "$TTY" ]]; then
+  export GPG_TTY=$TTY
+else
+  export GPG_TTY=$(tty)
+fi
+
+{{ if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
+export SSH_SK_HELPER="/mnt/c/Windows/System32/OpenSSH/ssh-sk-helper.exe"
+{{ end }}
