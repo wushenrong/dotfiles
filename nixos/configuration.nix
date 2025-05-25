@@ -38,7 +38,7 @@
     isNormalUser = true;
     shell = pkgs.zsh;
     extraGroups = [ "wheel" "networkmanager" ];
-    hashedPassword = "$y$j9T$NQj2SGo2x.4dC9KKMNNk90$SnMfPmGhKimMs2pdncMNRSoK7Bo61oKrAbusWgBMwFA";
+    hashedPassword = "INSERT_HASHED_PASSWORD_HERE";
   };
 
   ## Services
