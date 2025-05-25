@@ -36,5 +36,5 @@ elif [ "$category" = "text" ]; then
   *) bat --color=always -p "$1" ;;
   esac
 else
-  return 1
+  exit 1
 fi
