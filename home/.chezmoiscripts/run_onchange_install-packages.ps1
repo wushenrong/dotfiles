@@ -1,3 +1,4 @@
+{{- if (eq .chezmoi.os "windows") -}}
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
@@ -14,3 +15,5 @@ winget install -e aristocratos.btop4win ajeetdsouza.zoxide `
   sharkdp.hyperfine sharkdp.vivid XAMPPRocky.tokei
 
 winget install --accept-package-agreements -e XP8K0HKJFRXGCK
+
+{{- end -}}

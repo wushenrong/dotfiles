@@ -1,3 +1,4 @@
+{{- if eq .chezmoi.os "linux" -}}
 #!/bin/bash
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
@@ -72,8 +73,13 @@ case "$ID $ID_LIKE" in
   sudo dnf upgrade -y
   sudo dnf install -y "${packages[@]}"
   ;;
+*"nixos"*)
+  echo "NixOS is not supported by this script."
+  echo "However, you can use the configurations in the \`nixos\` folder."
+  exit 1
+  ;;
 *)
-  echo "Sorry your distribution is not supported."
+  echo "Sorry your distribution is not supported by this script."
   echo "Please create an issue or pull request to add your distribution."
   exit 1
   ;;
@@ -90,4 +96,4 @@ if ! command -v vivid >/dev/null; then
     tar -xz --strip-components=1 -C "$HOME/.local/bin" vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
 fi
 
-echo "${packages[@]}"
+{{- end -}}

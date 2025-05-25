@@ -30,7 +30,7 @@ First install [chezmoi](https://chezmoi.io/install) and run the following
 commands:
 
 ```bash
-# Download the config and initialize chezmoi to use this config
+# Download and initialize chezmoi to use this dotfiles configuration
 chezmoi init wushenrong
 # Apply the config
 chezmoi apply
