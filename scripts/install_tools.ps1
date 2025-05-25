@@ -9,8 +9,8 @@ winget update --all --accept-package-agreements
 winget install -e aristocratos.btop4win ajeetdsouza.zoxide `
   BurntSushi.ripgrep.MSVC charmbracelet.glow dandavison.delta `
   Fastfetch-cli.Fastfetch hpjansson.Chafa ImageMagick.ImageMagick jftuga.less `
-  junegunn.fzf koalaman.shellcheck mvdan.shfmt nektos.act rhysd.actionlint `
-  sharkdp.bat sharkdp.fd sharkdp.hexyl sharkdp.hyperfine sharkdp.vivid `
-  XAMPPRocky.tokei
+  junegunn.fzf koalaman.shellcheck Microsoft.OpenSSH.Preview mvdan.shfmt `
+  nektos.act rhysd.actionlint sharkdp.bat sharkdp.fd sharkdp.hexyl `
+  sharkdp.hyperfine sharkdp.vivid XAMPPRocky.tokei
 
 winget install --accept-package-agreements -e XP8K0HKJFRXGCK
