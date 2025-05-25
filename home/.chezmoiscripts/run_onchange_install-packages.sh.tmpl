@@ -1,4 +1,4 @@
-{{- if eq .chezmoi.os "linux" -}}
+{{ if (eq .chezmoi.os "linux") -}}
 #!/bin/bash
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
@@ -96,4 +96,4 @@ if ! command -v vivid >/dev/null; then
     tar -xz --strip-components=1 -C "$HOME/.local/bin" vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
 fi
 
-{{- end -}}
+{{ end -}}
