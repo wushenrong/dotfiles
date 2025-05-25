@@ -57,8 +57,8 @@ case "$ID $ID_LIKE" in
 
   packages+=(base-devel clang)
 
-  sudo pacman -Syu --no-confirm
-  sudo pacman -S --no-confirm --needed "${packages[@]}"
+  sudo pacman -Syu --noconfirm
+  sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
   substitute_package exiftool perl-Image-ExifTool
@@ -78,7 +78,9 @@ case "$ID $ID_LIKE" in
   ;;
 esac
 
+mkdir -p "$HOME/.local/bin"
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/vivid"
+
 curl -fsSLo "${XDG_CONFIG_HOME:-$HOME/.config}/vivid/filetype.yml" \
   https://raw.githubusercontent.com/sharkdp/vivid/refs/heads/master/config/filetypes.yml
 
