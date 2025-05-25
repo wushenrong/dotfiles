@@ -29,7 +29,7 @@ elif [ "$category" = "image" ]; then
 elif [ "$kind" = "json" ]; then
   jq -r . "$1" | bat --color=always -pljson
 elif [ "$kind" = "javascript" ]; then
-  bat --color=always -pjs "$1"
+  bat --color=always -pljs "$1"
 elif [ "$category" = "text" ]; then
   case "$1" in
   *.md) CLICOLOR_FORCE=1 COLORTERM=truecolor glow -s dark "$1" ;;
