@@ -44,6 +44,7 @@ case "$ID $ID_LIKE" in
     autotools-dev
     autoconf
     build-essential
+    ccache
     clang-format
     clang-tidy
   )
@@ -55,7 +56,7 @@ case "$ID $ID_LIKE" in
   substitute_package exiftool perl-image-exiftool
   substitute_package fd-find fd
 
-  packages+=(base-devel clang)
+  packages+=(base-devel ccache clang)
 
   sudo pacman -Syu --noconfirm
   sudo pacman -S --noconfirm --needed "${packages[@]}"
@@ -66,7 +67,7 @@ case "$ID $ID_LIKE" in
   substitute_package shellcheck ShellCheck
   substitute_package vivid
 
-  packages+=(@c-development @development-tools clang-tools-extra)
+  packages+=(@c-development @development-tools ccache clang-tools-extra)
 
   sudo dnf upgrade -y
   sudo dnf install -y "${packages[@]}"
