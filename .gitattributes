@@ -2,8 +2,9 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-*       text=auto
-*.sh    text eol=lf
-*.zsh   text eol=lf
-dot_z*  text eol=lf
-executable_* text eol=lf
+*             text=auto
+*.nix         text eol=lf
+*.sh          text eol=lf
+*.zsh         text eol=lf
+dot_z*        text eol=lf
+executable_*  text eol=lf
