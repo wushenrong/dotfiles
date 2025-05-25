@@ -57,8 +57,8 @@ case "$ID $ID_LIKE" in
 
   packages+=(base-devel clang)
 
-  sudo dnf upgrade -y
-  sudo dnf install -y "${packages[@]}"
+  sudo pacman -Syu --no-confirm
+  sudo pacman -S --no-confirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
   substitute_package exiftool perl-Image-ExifTool
@@ -68,8 +68,8 @@ case "$ID $ID_LIKE" in
 
   packages+=(@c-development @development-tools clang-tools-extra)
 
-  sudo pacman -Syu --no-confirm
-  sudo pacman -S --no-confirm --needed "${packages[@]}"
+  sudo dnf upgrade -y
+  sudo dnf install -y "${packages[@]}"
   ;;
 *)
   echo "Sorry your distribution is not supported."
