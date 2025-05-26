@@ -8,7 +8,7 @@
 #
 
 # Show fetch if we are not using VSCode
-if [[ "${TERM_PROGRAM}" != "vscode" ]]; then
+if (( $+commands[fastfetch] )) && [[ "${TERM_PROGRAM}" != "vscode" ]]; then
   fastfetch
 fi
 
@@ -39,12 +39,6 @@ for _rc in ${ZDOTDIR:-$HOME}/.zshrc.d/*.zsh; do
   fi
 done
 unset _rc
-
-# Set colors for ls, find, grep, etc
-export LS_COLORS="$(vivid generate molokai)"
-
-# Use zoxide as replacement for cd
-source <(zoxide init zsh --cmd cd)
 
 # To customize prompt, run `p10k configure` or edit .p10k.zsh.
 [[ ! -f "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/.p10k.zsh"
