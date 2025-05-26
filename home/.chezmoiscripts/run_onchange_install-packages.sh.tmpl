@@ -14,10 +14,8 @@ packages=(
   curl
   duf
   elinks
-  exiftool
   eza
   fastfetch
-  fd-find
   fzf
   gdu
   git-delta
@@ -33,21 +31,15 @@ packages=(
   shfmt
   tokei
   vim
-  vivid
   wget
   zoxide
 )
 
-substitute_package() {
-  packages=("${packages[@]/$1/}")
-  [[ -n "$2" ]] && packages+=("$2")
-}
-
 case "$ID $ID_LIKE" in
 *"debian"*)
-  substitute_package exiftool libimage-exiftool-perl
-  substitute_package lesspipe
+  packages+=(fd-find libimage-exiftool-perl vivid)
 
+  # Compilers
   packages+=(
     autotools-dev
     autoconf
@@ -61,9 +53,9 @@ case "$ID $ID_LIKE" in
   sudo apt upgrade -y
   ;;
 *"arch"*)
-  substitute_package exiftool perl-image-exiftool
-  substitute_package fd-find fd
+  packages+=(fd lesspipe perl-image-exiftool vivid)
 
+  # Compilers
   packages+=(base-devel ccache clang)
 
   # Package manager tools
@@ -73,11 +65,9 @@ case "$ID $ID_LIKE" in
   sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
-  substitute_package exiftool perl-Image-ExifTool
-  substitute_package lesspipe
-  substitute_package shellcheck ShellCheck
-  substitute_package vivid
+  packages+=(fd-find perl-Image-ExifTool ShellCheck vivid)
 
+  # Compilers
   packages+=(@c-development @development-tools ccache clang-tools-extra)
 
   sudo dnf upgrade -y
