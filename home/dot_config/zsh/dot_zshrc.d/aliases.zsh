@@ -7,11 +7,6 @@
 # .aliases - Set whatever shell aliases you want.
 #
 
-# single character aliases - be sparing!
-alias _=sudo
-alias l=ls
-alias g=git
-
 # mask built-ins with better defaults
 alias vi=vim
 
@@ -24,7 +19,8 @@ alias type="type -a"
 alias mkdir="mkdir -p"
 
 # ls
-alias ls='eza -F -sName --group-directories-first --git --icons --color-scale'
+alias ls='eza -F -sName --group-directories-first --git --icons --color-scale all'
+alias l=ls
 alias ll='ls -lh'
 
 alias la='ll -a'
