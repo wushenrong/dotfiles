@@ -11,6 +11,7 @@
     git.enable = true;
     less.enable = true;
     nano.enable = true;
+    tmux.enable = true;
     vim.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
@@ -24,6 +25,7 @@
 
   # Additional System Packages
   environment.systemPackages = with pkgs; [
+    aspell
     bfs
     btop
     chafa
