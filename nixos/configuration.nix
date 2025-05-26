@@ -1,10 +1,29 @@
 { config, lib, pkgs, ... }:
 {
+  # Import configurations for hardware and base packages
   imports = [
     ./hardware-configuration.nix
-    ./base-packages.nix
-    ./amitie.nix
+    ./packages.nix
   ];
+
+  ## nix
+  nix = {
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    optimise = {
+      automatic = true;
+      dates = [ "13:30" ];
+    };
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 30d";
+    };
+  };
+  system.autoUpgrade = {
+    enable = true;
+    allowReboot = true;
+    dates = "daily";
+  };
 
   ## Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -12,32 +31,31 @@
 
   ## Networking
   networking.networkmanager.enable = true;
+  hardware.bluetooth.enable = true;
 
   # Firewall
-  networking.firewall.allowedUDPPorts = [ 5353 ];
+  networking.nftables.enable = true;
 
   ## Timezone
   time.timeZone = "America/New_York";
 
   ## Locale
   i18n.defaultLocale = "en_US.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us";
-  #   useXkbConfig = true; # use xkb.options in tty.
-  # };
+  i18n.defaultCharset = "UTF-8";
+  location.provider = "geoclue2";
 
   ## User Management
   # Disable root account
   users.mutableUsers = false;
   users.users.root.hashedPassword = "!";
   security.sudo.execWheelOnly = true;
+  security.polkit.enable = true;
 
   # Users
   users.users.samgo = {
     isNormalUser = true;
     shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" ];
+    extraGroups = [ "wheel" "networkmanager" "audio" ];
     hashedPassword = "INSERT_HASHED_PASSWORD_HERE";
   };
 
@@ -58,11 +76,15 @@
   services.avahi = {
     enable = true;
     nssmdns4 = true;
+    publish = {
+      enable = true;
+      addresses = true;
+    };
   };
 
   # OpenSSH
   services.openssh.enable = true;
 
-  # Inital NixOS Config Version
+  # Initial NixOS Config Version
   system.stateVersion = "25.05";
 }

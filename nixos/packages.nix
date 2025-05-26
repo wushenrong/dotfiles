@@ -1,6 +1,6 @@
 { config, lib, pkgs, ... }:
 {
-  # System Packages
+  # System Specific Packages
   programs = {
     bat.enable = true;
     ccache.enable = true;
@@ -17,6 +17,7 @@
     };
   };
 
+  # Additional tools
   environment.systemPackages = with pkgs; [
     bfs
     btop
@@ -24,12 +25,14 @@
     chezmoi
     curl
     delta
+    elinks
     exiftool
     eza
     fastfetch
     fd
+    file
     fzf
-    flow
+    glow
     hexyl
     hyperfine
     imagemagick
@@ -40,8 +43,15 @@
     shfmt
     tokei
     vivid
+    wget
   ];
 
   # Allow nonfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # Fonts
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [ cascadia-code ];
+  };
 }

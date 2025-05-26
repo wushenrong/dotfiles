@@ -21,9 +21,17 @@
         nix-ld.nixosModules.nix-ld
         lix-module.nixosModules.default
         ./configuration.nix
-        { programs.nix-ld.dev.enable = true; }
+        ({ pkgs, ... }: {
+          networking.hostName = "amitie";
+
+          programs.nix-ld.dev.enable = true;
+
+          hardware.graphics = {
+            enable = true;
+            extraPackages = with pkgs; [ intel-vaapi-driver ];
+          };
+        })
       ];
     };
   };
 }
-
