@@ -2,121 +2,28 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-## Make 'nextword' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
-## stop at word ends instead of at beginnings.
 set afterends
-
-## Automatically indent a newly created line to the same number of
-## tabs and/or spaces as the preceding line -- or as the next line
-## if the preceding line is the beginning of a paragraph.
 set autoindent
-
-## Use bold text instead of reverse video text.
 set boldtext
-
-## The characters treated as closing brackets when justifying paragraphs.
-## This may not include any blank characters.  Only closing punctuation,
-## optionally followed by these closing brackets, can end sentences.
-set brackets ""')>]}"
-
-## Automatically hard-wrap the current line when it becomes overlong.
 set breaklonglines
-
-## Interpret digits given on the command line after a colon after a filename
-## as the line number to go to in that file.
 set colonparsing
-
-## Constantly report the cursor position, in the status bar or minibar.
 set constantshow
-
-## Do not use the line below the title bar, leaving it entirely blank.
 set emptyline
-
-## Set the target width for automatic hard-wrapping and for justifying
-## paragraphs.  If the specified value is 0 or less, the wrapping point
-## will be the terminal's width minus this number.
 set fill 80
-
-## Draw a vertical stripe at the given column, to help judge text width.
-## (This option does not have a default value.)
 set guidestripe 80
-
-## Display a "scrollbar" on the righthand side of the edit window.
 set indicator
-
-## Scroll the buffer contents per half-screen instead of per line.
 set jumpyscrolling
-
-## Display line numbers to the left (and any anchors in the margin).
 set linenumbers
-
-## The opening and closing brackets that are found by a matching-bracket
-## search.  This may not contain blank characters.  The opening brackets
-## must come before the closing ones, and they must be in the same order.
-set matchbrackets "(<[{)>]}"
-
-## Enable mouse support, if available for your system.  When enabled,
-## mouse clicks can be used to place the cursor, set the mark (with
-## two clicks), and execute shortcuts.  The mouse will work in the
-## X Window System, and on the console when gpm is running.
 set mouse
-
-## Switch on multiple file buffers (inserting a file will put it into
-## a separate buffer).
 set multibuffer
-
-## The characters treated as closing punctuation when justifying paragraphs.
-## This may not contain blank characters.  Only these terminating characters,
-## optionally followed by closing brackets, can end sentences.
-set punct "!.?"
-
-## The regular expression that matches quoting characters in email
-## or line-comment introducers in source code.  The default is:
-set quotestr "^([ 	]*([!#%:;>|}]|//))+"
-
-## Make the Home key smarter: when Home is pressed anywhere but at the
-## very beginning of non-whitespace characters on a line, the cursor
-## will jump to that beginning (either forwards or backwards).  If the
-## cursor is already at that position, it will jump to the true start
-## of the line (the left edge).
 set smarthome
-
-## Use this spelling checker instead of the internal one.  This option
-## does not have a default value.
 set speller "aspell -x -c"
-
-## Use the end of the title bar for some state flags: I = auto-indenting,
-## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
 set stateflags
-
-## Use this tab size instead of the default; it must be greater than 0.
 set tabsize 2
-
-## Convert each typed tab to the fitting number of spaces.
 set tabstospaces
-
-## Snip whitespace at the end of lines when justifying or hard-wrapping.
 set trimblanks
-
-## The two single-column characters used to display the first characters
-## of tabs and spaces.  187 in ISO 8859-1 (0000BB in Unicode) and 183 in
-## ISO-8859-1 (0000B7 in Unicode) seem to be good values for these.
-## The default when in a UTF-8 locale:
 set whitespace "»·"
-## The default otherwise:
-# set whitespace ">."
-
-## Detect word boundaries differently by treating punctuation
-## characters as parts of words.
 set wordbounds
-
-## The characters (besides alphanumeric ones) that should be considered
-## as parts of words.  This option does not have a default value.  When
-## set, it overrides option 'set wordbounds'.
-set wordchars "<_>."
-
-## Let an unmodified Backspace or Delete erase the marked region (instead
-## of a single character, and without affecting the cutbuffer).
 set zap
 
 ## Paint the interface elements of nano.  These are examples; there are
@@ -134,46 +41,8 @@ set keycolor cyan
 set functioncolor green
 
 ## === Syntax coloring ===
-## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
-
-## To include most of the existing syntax definitions, you can do:
-include /usr/share/nano/*.nanorc
-include /usr/share/nano/extra/*.nanorc
-include ~/.config/nano/extras/*.nanorc
+include "~/.config/nano/extras/*.nanorc"
 
 ## === Key bindings ===
-## For all details, see 'man nanorc', section REBINDING KEYS.
-
-## If you would like nano to have keybindings that are more "usual",
-## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
-## then uncomment these:
-bind ^X cut main
-bind ^C copy main
-bind ^V paste all
-bind ^Q exit all
-bind ^S savefile main
-bind ^W writeout main
-bind ^O insert main
-bind ^H help all
-bind ^H exit help
-bind ^F whereis all
-bind ^G findnext all
-bind ^B wherewas all
-bind ^D findprevious all
-bind ^R replace main
-unbind ^U all
-unbind ^N main
-unbind ^Y all
-unbind M-J main
-unbind M-T main
-bind ^A mark main
-bind ^P location main
-bind ^T gotoline main
-bind ^T gotodir browser
-bind ^T cutrestoffile execute
-bind ^L linter execute
-bind ^E execute main
-bind ^K "{mark}{end}{zap}" main
-bind ^U "{mark}{home}{zap}" main
-bind ^Z undo main
-bind ^Y redo main
+## If you want to suspend nano with one keystroke (instead of with ^T^Z):
+bind ^Z suspend main
