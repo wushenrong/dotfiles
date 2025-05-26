@@ -58,8 +58,8 @@
     hashedPassword = "INSERT_HASHED_PASSWORD_HERE";
   };
 
-  # CUPS
-  services.printing.enable = true;
+  # Video
+  hardware.graphics.enable = true;
 
   # Audio
   security.rtkit.enable = true;
@@ -70,6 +70,12 @@
     pulse.enable = true;
   };
 
+  # OpenSSH
+  services.openssh.enable = true;
+
+  # CUPS
+  services.printing.enable = true;
+
   # mDNS
   services.avahi = {
     enable = true;
@@ -79,9 +85,6 @@
       addresses = true;
     };
   };
-
-  # OpenSSH
-  services.openssh.enable = true;
 
   # Initial NixOS Config Version
   system.stateVersion = "25.05";

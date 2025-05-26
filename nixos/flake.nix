@@ -30,10 +30,7 @@
 
           programs.nix-ld.dev.enable = true;
 
-          hardware.graphics = {
-            enable = true;
-            extraPackages = with pkgs; [ intel-vaapi-driver ];
-          };
+          hardware.graphics.extraPackages = with pkgs; [ intel-vaapi-driver ];
         })
       ];
     };
