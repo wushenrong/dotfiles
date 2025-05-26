@@ -6,20 +6,20 @@
 # From belak/zsh-utils
 
 # macOS utils everywhere
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ "${OSTYPE}" == darwin* ]]; then
   alias o='open'
-elif [[ "$OSTYPE" == cygwin* ]]; then
+elif [[ "${OSTYPE}" == cygwin* ]]; then
   alias o='cygstart'
   alias pbcopy='tee > /dev/clipboard'
   alias pbpaste='cat /dev/clipboard'
-elif [[ "$OSTYPE" == linux-android ]]; then
+elif [[ "${OSTYPE}" == linux-android ]]; then
   alias o='termux-open'
   alias pbcopy='termux-clipboard-set'
   alias pbpaste='termux-clipboard-get'
 else
   alias o='xdg-open'
 
-  if [[ -n $DISPLAY ]]; then
+  if [[ -n "${DISPLAY}" ]]; then
     if (( $+commands[xclip] )); then
       alias pbcopy='xclip -selection clipboard -in'
       alias pbpaste='xclip -selection clipboard -out'

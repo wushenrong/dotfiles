@@ -2,10 +2,10 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-if [[ -n "$TTY" ]]; then
-  export GPG_TTY=$TTY
+if [[ -n "${TTY}" ]]; then
+  export GPG_TTY="${TTY}"
 else
-  export GPG_TTY=$(tty)
+  export GPG_TTY="$(tty)"
 fi
 
 {{ if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}

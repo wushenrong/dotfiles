@@ -8,17 +8,12 @@ repos:
     hooks:
       - id: check-added-large-files
       - id: check-illegal-windows-names
-      - id: check-json
       - id: check-toml
       - id: check-yaml
       - id: destroyed-symlinks
       - id: end-of-file-fixer
       - id: fix-byte-order-marker
       - id: mixed-line-ending
-      - id: pretty-format-json
-        args:
-          - --autofix
-          - --no-ensure-ascii
       - id: trailing-whitespace
 
   - repo: https://github.com/DavidAnson/markdownlint-cli2
@@ -42,7 +37,7 @@ repos:
     rev: v0.10.0.1
     hooks:
       - id: shellcheck
-        exclude: .*\.zsh
+        exclude: (.*\.zsh|dot_z.*)
 
   - repo: https://github.com/scop/pre-commit-shfmt
     rev: v3.11.0-1

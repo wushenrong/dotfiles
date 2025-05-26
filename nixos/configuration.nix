@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 { config, lib, pkgs, ... }:
 {
   # Import configurations for hardware and base packages
@@ -25,26 +29,21 @@
     dates = "daily";
   };
 
-  ## Bootloader
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  ## Networking
+  # Networking
   networking.networkmanager.enable = true;
+  networking.nftables.enable = true;
   hardware.bluetooth.enable = true;
 
-  # Firewall
-  networking.nftables.enable = true;
-
-  ## Timezone
+  # Locale
   time.timeZone = "America/New_York";
-
-  ## Locale
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.defaultCharset = "UTF-8";
   location.provider = "geoclue2";
 
-  ## User Management
   # Disable root account
   users.mutableUsers = false;
   users.users.root.hashedPassword = "!";
@@ -59,7 +58,6 @@
     hashedPassword = "INSERT_HASHED_PASSWORD_HERE";
   };
 
-  ## Services
   # CUPS
   services.printing.enable = true;
 

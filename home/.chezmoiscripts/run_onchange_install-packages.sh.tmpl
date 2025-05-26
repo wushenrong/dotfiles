@@ -25,10 +25,12 @@ packages=(
   imagemagick
   jq
   lesspipe
+  nano
   ripgrep
   shellcheck
   shfmt
   tokei
+  vim
   vivid
   wget
   zoxide
@@ -62,6 +64,9 @@ case "$ID $ID_LIKE" in
 
   packages+=(base-devel ccache clang)
 
+  # Package manager tools
+  packages+=(pacman-contrib)
+
   sudo pacman -Syu --noconfirm
   sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
@@ -88,7 +93,7 @@ case "$ID $ID_LIKE" in
   ;;
 esac
 
-mkdir -p "$HOME/.local/bin"
+mkdir -p "${HOME}/.local/bin"
 mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/vivid"
 
 curl -fsSLo "${XDG_CONFIG_HOME:-$HOME/.config}/vivid/filetype.yml" \
@@ -96,7 +101,7 @@ curl -fsSLo "${XDG_CONFIG_HOME:-$HOME/.config}/vivid/filetype.yml" \
 
 if ! command -v vivid >/dev/null; then
   curl -fsSL https://github.com/sharkdp/vivid/releases/download/v0.10.1/vivid-v0.10.1-x86_64-unknown-linux-gnu.tar.gz |
-    tar -xz --strip-components=1 -C "$HOME/.local/bin" vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
+    tar -xz --strip-components=1 -C "${HOME}/.local/bin" vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
 fi
 
 {{ end -}}

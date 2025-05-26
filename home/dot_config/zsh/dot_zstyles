@@ -11,7 +11,7 @@
 # Antidote
 #
 
-zstyle ':antidote:bundle' file $ZDOTDIR/.zsh_plugins.txt
+zstyle ':antidote:bundle' file "${ZDOTDIR:-$HOME}/.zsh_plugins.txt"
 zstyle ':antidote:bundle' use-friendly-names yes
 
 #
@@ -19,7 +19,7 @@ zstyle ':antidote:bundle' use-friendly-names yes
 #
 
 zstyle ':completion:*:git-checkout:*' sort false
-zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 
 zstyle ':fzf-tab:*' switch-group '<' '>'

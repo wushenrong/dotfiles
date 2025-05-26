@@ -45,11 +45,11 @@ alias fD='find -t d'
 alias fF='find -t f'
 
 # diff
-alias diff=delta
+(( $+commands[delta] )) && alias diff=delta
 
 # grep
-grep() {
-  rg --json -C 2 "$@" | delta
+(( $+commands[rg] )) && grep() {
+  rg --json -C 2 "$@" | diff
 }
 
 # tar
@@ -61,14 +61,14 @@ alias tarls='tar -tvf'
 alias untar='tar -xvf'
 
 # top
-alias top=btop
+(( $+commands[btop] )) && alias top=btop
 
 # print paths and functions
 alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
-alias print-path='echo $PATH | tr ":" "\n"'
+alias print-path='echo ${PATH} | tr ":" "\n"'
 alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 
 # misc
-alias zshrc='$EDITOR $ZDOTDIR/.zshrc'
+alias zshrc='${EDITOR} ${ZDOTDIR}/.zshrc'
 alias zbench='for i in {1..10}; do /usr/bin/time zsh -lic exit; done'
-alias zdot='cd $ZDOTDIR'
+alias zdot='cd ${ZDOTDIR}'

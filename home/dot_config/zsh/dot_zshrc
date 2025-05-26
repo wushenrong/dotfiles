@@ -8,7 +8,7 @@
 #
 
 # Show fetch if we are not using VSCode
-if [[ "$TERM_PROGRAM" != "vscode" ]]; then
+if [[ "${TERM_PROGRAM}" != "vscode" ]]; then
   fastfetch
 fi
 
@@ -20,19 +20,19 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Set any zstyles you might use for configuration.
-source $ZDOTDIR/.zstyles
+[[ ! -f "${ZDOTDIR:-$HOME}/.zstyles" ]] || source "${ZDOTDIR:-$HOME}/.zstyles"
 
 # Clone antidote if necessary.
-if [[ ! -d "$ZDOTDIR/.antidote" ]]; then
-  git clone https://github.com/mattmc3/antidote $ZDOTDIR/.antidote
+if [[ ! -d "${ZDOTDIR:-$HOME}/.antidote" ]]; then
+  git clone https://github.com/mattmc3/antidote "${ZDOTDIR:-$HOME}/.antidote"
 fi
 
 # Create an amazing Zsh config using antidote plugins.
-source $ZDOTDIR/.antidote/antidote.zsh
+source "${ZDOTDIR:-$HOME}/.antidote/antidote.zsh"
 antidote load
 
 # Source anything in .zshrc.d.
-for _rc in $ZDOTDIR/.zshrc.d/*.zsh; do
+for _rc in "$ZDOTDIR/.zshrc.d/*.zsh"; do
   # Ignore tilde files.
   if [[ $_rc:t != '~'* ]]; then
     source "$_rc"
@@ -47,4 +47,4 @@ export LS_COLORS="$(vivid generate molokai)"
 source <(zoxide init zsh --cmd cd)
 
 # To customize prompt, run `p10k configure` or edit .p10k.zsh.
-source $ZDOTDIR/.p10k.zsh
+[[ ! -f "${ZDOTDIR:-$HOME}/.p10k.zsh" ]] || source "${ZDOTDIR:-$HOME}/.p10k.zsh"
