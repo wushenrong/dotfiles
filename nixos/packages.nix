@@ -11,6 +11,7 @@
     git.enable = true;
     less.enable = true;
     nano.enable = true;
+    vim.enable = true;
     zoxide.enable = true;
     zsh.enable = true;
     # Some programs need SUID wrappers, can be configured further or are
@@ -29,6 +30,7 @@
     chezmoi
     curl
     delta
+    duf
     elinks
     exiftool
     eza
@@ -36,6 +38,7 @@
     fd
     file
     fzf
+    gdu
     glow
     hexyl
     hyperfine
