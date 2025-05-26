@@ -1,6 +1,6 @@
 [submodule "home/dot_config/nano/external_extras"]
 	path = home/dot_config/nano/external_extras
 	url = https://github.com/galenguyer/nano-syntax-highlighting.git
-[submodule "home/dot_config/tmux/plugins/tpm"]
-	path = home/dot_config/tmux/plugins/tpm
+[submodule "home/dot_config/tmux/plugins/external_tpm"]
+	path = home/dot_config/tmux/plugins/external_tpm
 	url = https://github.com/tmux-plugins/tpm.git
