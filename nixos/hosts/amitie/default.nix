@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
-{pkgs}: {
+{pkgs, ...}: {
   users.users.samgo = {
     isNormalUser = true;
     shell = pkgs.zsh;
@@ -13,7 +13,6 @@
     enable = true;
     settings = {
       PermitRootLogin = "no";
-      UsePAM = false;
     };
   };
 
