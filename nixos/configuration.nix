@@ -71,7 +71,13 @@
   };
 
   # OpenSSH
-  services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PermitRootLogin = "no";
+      UsePAM = false;
+    };
+  };
 
   # CUPS
   services.printing.enable = true;
