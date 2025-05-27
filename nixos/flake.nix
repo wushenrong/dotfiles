@@ -1,7 +1,6 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
-
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -18,21 +17,34 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = inputs@{ self, nix-ld, nixpkgs, lix-module, ... }: {
-    nixosConfigurations.amitie = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      modules = [
-        nix-ld.nixosModules.nix-ld
-        lix-module.nixosModules.default
-        ./configuration.nix
-        ({ pkgs, ... }: {
-          networking.hostName = "amitie";
-
-          programs.nix-ld.dev.enable = true;
-
-          hardware.graphics.extraPackages = with pkgs; [ intel-vaapi-driver ];
-        })
-      ];
+  # Simple Shearable Config
+  # From https://www.reddit.com/r/NixOS/comments/yk4n8d/comment/iurkkxv
+  outputs = {
+    nix-ld,
+    nixpkgs,
+    lix-module,
+    ...
+  } @ attrs: let
+    commonModules = name: [
+      nix-ld.nixosModules.nix-ld
+      lix-module.nixosModules.default
+      ./configuration.nix
+      ./hosts/${name}
+      {
+        networking.hostName = name;
+        programs.nix-ld.dev.enable = true;
+      }
+    ];
+    mkSystem = name: cfg:
+      nixpkgs.lib.nixosSystem {
+        system = cfg.system or "x86_64-linux";
+        modules = (commonModules name) ++ (cfg.modules or []);
+        specialArgs = attrs;
+      };
+    systems = {
+      amitie = {};
     };
+  in {
+    nixosConfigurations = nixpkgs.lib.mapAttrs mkSystem systems;
   };
 }

@@ -1,9 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
-
-{ config, lib, pkgs, ... }:
-{
+{pkgs, ...}: {
   # System Specific Packages
   programs = {
     bat.enable = true;
@@ -61,6 +59,6 @@
   # Fonts
   fonts = {
     enableDefaultPackages = true;
-    packages = with pkgs; [ cascadia-code ];
+    packages = with pkgs; [cascadia-code];
   };
 }

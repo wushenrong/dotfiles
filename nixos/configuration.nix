@@ -1,9 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
-
-{ config, lib, pkgs, ... }:
-{
+{pkgs, ...}: {
   # Import configurations for hardware and base packages
   imports = [
     ./hardware-configuration.nix
@@ -12,22 +10,16 @@
 
   ## nix
   nix = {
-    settings.experimental-features = [ "nix-command" "flakes" ];
-    optimise = {
-      automatic = true;
-      dates = [ "13:30" ];
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 30d";
-    };
+    settings.experimental-features = ["nix-command" "flakes"];
+    optimise.automatic = true;
+    optimise.dates = ["13:30"];
+    gc.automatic = true;
+    gc.dates = "weekly";
+    gc.options = "--delete-older-than 30d";
   };
-  system.autoUpgrade = {
-    enable = true;
-    allowReboot = true;
-    dates = "daily";
-  };
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
+  system.autoUpgrade.dates = "daily";
 
   # Bootloader
   boot.loader.systemd-boot.enable = true;
@@ -50,14 +42,6 @@
   security.sudo.execWheelOnly = true;
   security.polkit.enable = true;
 
-  # Users
-  users.users.samgo = {
-    isNormalUser = true;
-    shell = pkgs.zsh;
-    extraGroups = [ "wheel" "networkmanager" "audio" ];
-    hashedPassword = "INSERT_HASHED_PASSWORD_HERE";
-  };
-
   # Video
   hardware.graphics.enable = true;
 
@@ -70,17 +54,9 @@
     pulse.enable = true;
   };
 
-  # OpenSSH
-  services.openssh = {
-    enable = true;
-    settings = {
-      PermitRootLogin = "no";
-      UsePAM = false;
-    };
-  };
-
   # CUPS
   services.printing.enable = true;
+  services.printing.drivers = with pkgs; [epson-escpr];
 
   # mDNS
   services.avahi = {
@@ -91,7 +67,4 @@
       addresses = true;
     };
   };
-
-  # Initial NixOS Config Version
-  system.stateVersion = "25.05";
 }
