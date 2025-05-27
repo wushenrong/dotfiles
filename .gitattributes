@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: 0BSD
 
 *             text=auto
-*.nix         text eol=lf
 *.sh          text eol=lf
 *.sh.tmpl     text eol=lf
 *.zsh         text eol=lf
