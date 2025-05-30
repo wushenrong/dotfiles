@@ -16,5 +16,3 @@ set relativenumber
 set laststatus=2
 set ignorecase
 set viminfofile=~/.cache/viminfo
-
-color habamax
