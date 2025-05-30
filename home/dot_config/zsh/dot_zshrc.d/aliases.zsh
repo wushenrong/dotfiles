@@ -49,12 +49,9 @@ alias fF='find -t f'
 }
 
 # tar
-tar() {
-  command tar --posix "$@"
-}
-
-alias tarls='tar -tvf'
-alias untar='tar -xvf'
+alias tar='bsdtar --posix'
+alias tarls='bsdtar -tvf'
+alias untar='bsdtar -xvf'
 
 # top
 (( $+commands[btop] )) && alias top=btop
