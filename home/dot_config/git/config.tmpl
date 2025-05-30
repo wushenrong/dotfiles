@@ -108,6 +108,7 @@
 [alias]
 	amend = commit -p --amend
 	graph = log --oneline --graph --all
+	unstage = restore --staged
 
 	a = add -p
 
@@ -123,7 +124,8 @@
 	ds = diff --stat --staged
 	dsl = diff --staged
 
-	l = log
+	l = graph
+	ll = log
 
 	p = push
 	pf = push --force-with-lease --force-if-includes
