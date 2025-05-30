@@ -17,7 +17,7 @@ set linenumbers
 set mouse
 set multibuffer
 set smarthome
-set speller "aspell -x -c"
+set speller "hunspell"
 set stateflags
 set tabsize 2
 set tabstospaces
@@ -42,6 +42,9 @@ set functioncolor green
 
 ## === Syntax coloring ===
 include "~/.config/nano/extras/*.nanorc"
+
+extendsyntax git-config tabgives "	"
+extendsyntax python tabgives "    "
 
 ## === Key bindings ===
 ## If you want to suspend nano with one keystroke (instead of with ^T^Z):

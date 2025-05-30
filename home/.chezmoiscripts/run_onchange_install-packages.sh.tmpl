@@ -7,7 +7,6 @@
 source /etc/os-release
 
 packages=(
-  aspell
   bat
   bfs
   btop
@@ -39,7 +38,7 @@ packages=(
 
 case "$ID $ID_LIKE" in
 *"debian"*)
-  packages+=(fd-find libimage-exiftool-perl vivid)
+  packages+=(fd-find hunspell-en-us libimage-exiftool-perl vivid)
 
   # Compilers
   packages+=(
@@ -55,7 +54,7 @@ case "$ID $ID_LIKE" in
   sudo apt upgrade -y
   ;;
 *"arch"*)
-  packages+=(fd lesspipe perl-image-exiftool vivid)
+  packages+=(fd hunspell-en_us lesspipe man-db perl-image-exiftool vivid)
 
   # Compilers
   packages+=(base-devel ccache clang)
@@ -67,7 +66,7 @@ case "$ID $ID_LIKE" in
   sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
-  packages+=(fd-find perl-Image-ExifTool ShellCheck vivid)
+  packages+=(fd-find hunspell-en perl-Image-ExifTool ShellCheck vivid)
 
   # Compilers
   packages+=(@c-development @development-tools ccache clang-tools-extra)
