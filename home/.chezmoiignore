@@ -5,9 +5,13 @@
 {{ if (eq .chezmoi.os "windows") }}
 .lessfilter
 .zshenv
-.config/zsh
+.config/elinks
 .config/kitty
+.config/nano
+.config/nixpkgs
 .config/tmux
+.config/vim
+.config/zsh
 {{ end }}
 
 {{ if (or (ne .chezmoi.os "linux") (and (ne .chezmoi.osRelease.id "debian") (not ((get .chezmoi.osRelease "idLike") | contains "debian")))) }}
