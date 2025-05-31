@@ -1,6 +1,20 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
+[plugin]
+append_previewers = [{ name = "*", run = "hexyl" }]
+prepend_preloaders = [
+  { mime = "application/subrip", run = "mediainfo" },
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+]
+prepend_previewers = [
+  { mime = "application/subrip", run = "mediainfo" },
+  { mime = "{audio,video,image}/*", run = "mediainfo" },
+  { name = "*.md", run = "glow" },
+]
+
+[mgr]
+linemode = "size"
 
 [opener]
 edit = [
