@@ -25,7 +25,7 @@ elif [ "$category" = "image" ]; then
   else
     chafa -f sixel "$1"
   fi
-  exiftool "$1" | bat --color=always -plyaml
+  mediainfo "$1" | bat --color=always -plyaml
 elif [ "$kind" = "json" ]; then
   jq -r . "$1" | bat --color=always -pljson
 elif [ "$kind" = "javascript" ]; then

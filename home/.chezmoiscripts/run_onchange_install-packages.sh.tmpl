@@ -27,6 +27,7 @@ packages=(
   imagemagick
   jq
   lesspipe
+  mediainfo
   nano
   ripgrep
   shellcheck
@@ -45,7 +46,6 @@ case "$ID $ID_LIKE" in
     fd-find
     hunspell-en-us
     libarchive-tools
-    libimage-exiftool-perl
     vivid
   )
 
@@ -63,15 +63,7 @@ case "$ID $ID_LIKE" in
   sudo apt upgrade -y
   ;;
 *"arch"*)
-  packages+=(
-    fd
-    hunspell-en_us
-    lesspipe
-    man-db
-    perl-image-exiftool
-    vivid
-    yazi
-  )
+  packages+=(fd hunspell-en_us lesspipe man-db vivid yazi)
 
   # Compilers
   packages+=(base-devel ccache clang)
@@ -83,7 +75,7 @@ case "$ID $ID_LIKE" in
   sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
-  packages+=(bsdtar fd-find hunspell-en perl-Image-ExifTool ShellCheck vivid)
+  packages+=(bsdtar fd-find hunspell-en ShellCheck vivid)
 
   # Compilers
   packages+=(@c-development @development-tools ccache clang-tools-extra)
