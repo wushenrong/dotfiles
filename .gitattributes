@@ -6,6 +6,7 @@
 *.sh          text eol=lf
 *.sh.tmpl     text eol=lf
 *.zsh         text eol=lf
+.gitmodules   text eol=lf
 .shellcheckrc text eol=lf
 dot_z*        text eol=lf
 executable_*  text eol=lf

@@ -4,3 +4,6 @@
 [submodule "home/dot_config/tmux/plugins/external_tpm"]
 	path = home/dot_config/tmux/plugins/external_tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "home/dot_config/yazi/flavors/external_vscode-dark-modern.yazi"]
+	path = home/dot_config/yazi/flavors/external_vscode-dark-modern.yazi
+	url = https://github.com/956MB/vscode-dark-modern.yazi.git
