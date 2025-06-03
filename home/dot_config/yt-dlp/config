@@ -11,7 +11,10 @@
 
 # Subtitles
 --sub-langs "en.*"
+--write-subs
+--write-auto-subs
 --embed-subs
+--compat-options no-keep-subs
 
 # Get Browser Cookies
 --cookies-from-browser=firefox
