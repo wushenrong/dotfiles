@@ -16,6 +16,7 @@ This repository contains configuration for:
 - Nano
 - Ripgrep
 - Vim
+- yt-dlp
 - Zsh
 - and more
 
@@ -38,13 +39,15 @@ chezmoi apply
 
 ## License
 
-This most of the configuration is licensed under the BSD Zero Clause License
-using [SPDX](https://spdx.dev) expressions. Except for external git modules
-which are under their own licenses. The Zsh configuration is based on the
-[antidote sample configuration][antidote], which is under the MIT License. And
-the `VSCode_Dark` theme for Kitty by huabeiyou which is the MIT License. Check
-for SPDX expressions for which license the configuration is under or use the
-[REUSE tool](https://reuse.software) and run `reuse spdx` to get a bill of
+Most of the configuration is licensed under the BSD Zero Clause License using
+[SPDX](https://spdx.dev) expressions. Except for git modules which are
+under their own licenses, please check those repositories for their license.
+Some of the [antidote configuration][antidote] for zsh is under the MIT License.
+And the `VSCode_Dark` theme for Kitty by huabeiyou is also under the
+MIT License.
+
+Check for SPDX expressions for which license the configuration is under or use
+the [REUSE tool](https://reuse.software) and run `reuse spdx` to get a bill of
 materials.
 
 [antidote]: https://github.com/getantidote/zdotdir
