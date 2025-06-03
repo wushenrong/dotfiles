@@ -16,3 +16,6 @@
 [submodule "home/dot_config/yazi/plugins/external_mediainfo.yazi"]
 	path = home/dot_config/yazi/plugins/external_mediainfo.yazi
 	url = https://github.com/boydaihungst/mediainfo.yazi.git
+[submodule "home/dot_config/external_mpv"]
+	path = home/dot_config/external_mpv
+	url = https://github.com/wushenrong/mpv-config.git

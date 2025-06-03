@@ -12,6 +12,7 @@ This repository contains configuration for:
 - Git
 - GnuPG
 - Kitty
+- mpv
 - nano
 - ripgrep
 - vim
@@ -40,7 +41,8 @@ chezmoi apply
 ## External configuration
 
 Configuration for NixOS can be found at
-[wsixor](https://github.com/wushenrong/wsixor).
+[wsixor](https://github.com/wushenrong/wsixor). My mpv configuration is a
+[separate repository](https://github.com/wushenrong/mpv-config) as a git module.
 
 ## License
 
