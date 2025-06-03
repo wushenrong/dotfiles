@@ -6,18 +6,18 @@ My actual configuration for Linux and Windows, managed by [chezmoi](https://chez
 
 This repository contains configuration for:
 
-- Chezmoi
-- Bat
-- Fzf
+- chezmoi
+- bat
+- fzf
 - Git
 - GnuPG
 - Kitty
-- Micro
-- Nano
-- Ripgrep
-- Vim
+- nano
+- ripgrep
+- vim
+- yazi
 - yt-dlp
-- Zsh
+- zsh
 - and more
 
 All configurations are stored in the default XDG Home Directories,
@@ -36,6 +36,11 @@ chezmoi init wushenrong
 # Apply the config
 chezmoi apply
 ```
+
+## External configuration
+
+Configuration for NixOS can be found at
+[wsixor](https://github.com/wushenrong/wsixor).
 
 ## License
 
