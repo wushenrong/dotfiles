@@ -12,6 +12,8 @@
 .config/tmux
 .config/vim
 .config/zsh
+{{ else }}
+.glzr
 {{ end }}
 
 {{ if (or (ne .chezmoi.os "linux") (and (ne .chezmoi.osRelease.id "debian") (not ((get .chezmoi.osRelease "idLike") | contains "debian")))) }}
