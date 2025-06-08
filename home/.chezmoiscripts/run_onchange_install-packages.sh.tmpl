@@ -55,7 +55,6 @@ case "$ID $ID_LIKE" in
     autotools-dev
     autoconf
     build-essential
-    ccache
     clang-format
     clang-tidy
   )
@@ -67,7 +66,7 @@ case "$ID $ID_LIKE" in
   packages+=(fd hunspell-en_us lesspipe man-db vivid yazi)
 
   # Compilers
-  packages+=(base-devel ccache clang)
+  packages+=(base-devel clang)
 
   # Package manager tools
   packages+=(pacman-contrib)
@@ -79,7 +78,7 @@ case "$ID $ID_LIKE" in
   packages+=(bsdtar fd-find hunspell-en ShellCheck vivid)
 
   # Compilers
-  packages+=(@c-development @development-tools ccache clang-tools-extra)
+  packages+=(@c-development @development-tools clang-tools-extra)
 
   sudo dnf upgrade -y
   sudo dnf install -y "${packages[@]}"
