@@ -1,4 +1,4 @@
-#!/usr/bin/zsh
+#!/usr/bin/env zsh
 # SPDX-FileCopyrightText: 2023 mattmc3
 # SPDX-FileCopyrightText: 2024 Samuel Wu
 #
