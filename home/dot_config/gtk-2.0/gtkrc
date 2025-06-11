@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+gtk-cursor-theme-name="Paprius-Dark"
+gtk-font-name="DejaVu Sans 12"
+gtk-icon-theme-name="Papirus-Dark"
+{{- if (eq .chezmoi.hostname "amitie") -}}
+gtk-theme-name="Matcha-Aliz-dark"
+{{- else -}}
+gtk-theme-name="Matcha-Azul-dark"
+{{- end -}}

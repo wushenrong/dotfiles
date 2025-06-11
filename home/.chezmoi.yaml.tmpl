@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-{{ $codespaces:= env "CODESPACES" | not | not -}}
+{{- $codespaces := env "CODESPACES" | not | not -}}
 sourceDir: {{ .chezmoi.sourceDir | quote }}
 
 progress: true

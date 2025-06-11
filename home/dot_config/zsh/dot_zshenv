@@ -17,7 +17,7 @@ export ZDOTDIR="${ZDOTDIR:-$XDG_CONFIG_HOME/zsh}"
 export FZF_DEFAULT_OPTS_FILE="${XDG_CONFIG_HOME}/fzf/config"
 
 # GTK
-export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME}/gtk-2.0/gtkrc:${XDG_CONFIG_HOME}/gtk-2.0/gtkrc.mine"
 
 # GPG
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"

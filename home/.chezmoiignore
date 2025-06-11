@@ -6,6 +6,7 @@
 .lessfilter
 .zshenv
 .config/elinks
+.config/gtk-*
 .config/kitty
 .config/nano
 .config/nixpkgs

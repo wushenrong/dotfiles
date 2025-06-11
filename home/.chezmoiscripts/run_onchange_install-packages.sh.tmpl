@@ -45,6 +45,8 @@ case "$ID $ID_LIKE" in
 *"debian"*)
   packages+=(
     fd-find
+    fonts-cascadia-code
+    fonts-dejavu
     hunspell-en-us
     libarchive-tools
     vivid
@@ -63,7 +65,16 @@ case "$ID $ID_LIKE" in
   sudo apt upgrade -y
   ;;
 *"arch"*)
-  packages+=(fd hunspell-en_us lesspipe man-db vivid yazi)
+  packages+=(
+    fd
+    hunspell-en_us
+    lesspipe
+    man-db
+    ttf-cascadia-code
+    ttf-dejavu
+    vivid
+    yazi
+  )
 
   # Compilers
   packages+=(base-devel clang)
@@ -75,7 +86,15 @@ case "$ID $ID_LIKE" in
   sudo pacman -S --noconfirm --needed "${packages[@]}"
   ;;
 *"fedora"*)
-  packages+=(bsdtar fd-find hunspell-en ShellCheck vivid)
+  packages+=(
+    bsdtar
+    cascadia-code-fonts
+    dejavu-fonts-all
+    fd-find
+    hunspell-en
+    ShellCheck
+    vivid
+  )
 
   # Compilers
   packages+=(@c-development @development-tools clang-tools-extra)
