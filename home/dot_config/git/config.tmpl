@@ -31,6 +31,7 @@
 # Git Status
 [status]
 	branch = true
+	short = true
 	showStash = true
 	showUntrackedFiles = all
 	submoduleSummary = true
@@ -46,10 +47,10 @@
 [diff]
 	algorithm = histogram
 	context = 3
-	colorMoved = plain
+	colorMoved = default
 	interHunkContext = 10
 	mnemonicPrefix = true
-	renames = true
+	renames = copies
 
 [delta]
 	line-numbers = true
@@ -106,59 +107,72 @@
 
 # Git Alias
 [alias]
-	amend = commit -p --amend
-	graph = log --oneline --graph --all
-	unstage = restore --staged
+	amend = ca
+	unstage = rs
 
-	a = add -p
+	a = add
+	ap = a --patch
 
 	b = branch
-	ba = branch -a
+	ba = b --all
 
-	c = commit -p
+	c = commit
+	ca = cae --no-edit
+	cae = commit --amend
 
 	cl = clone --recursive
 
-	d = diff --stat
+	d = dl --stat
 	dl = diff
-	ds = diff --stat --staged
-	dsl = diff --staged
+	ds = dsl --stat
+	dsl = dl --staged
 
-	l = graph
-	ll = log
+	i = init
+
+	l = log --graph --all
+
+	m = merge
 
 	p = push
-	pf = push --force-with-lease --force-if-includes
+	pf = p --force-with-lease --force-if-includes
 
 	pl = pull
 
-	r = restore -p
-	rs = restore -p --staged
-	rsw = restore -p --staged --worktree
+	r = restore
+	rp = r --patch
+	rs = r --staged
+	rsp = rs --patch
+	rsw = rs --worktree
 
-	rb = rebase -i
-	rba = rebase --abort
-	rbc = rebase --continue
-	rbr = rebase -i --root
+	rb = rebase
+	rba = rb --abort
+	rbc = rb --continue
+	rbi = rb --interactive
+	rbr = rbi --root
 
-	s = status -sb
-	sl = status
+	s = status
+	sl = s --no-short
 
 	sm = submodule
-	sma = submodule add
-	sms = submodule status
-	smu = submodule update --init --recursive
+	sma = sm add
+	sms = sm status
+	smu = sm update --init --recursive
 
-	st = stash -p
-	sta = stash apply
-	std = stash drop
-	stl = stash list
-	stp = stash pop
+	st = stash
+	sta = st apply
+	std = st drop
+	stl = st list
+	stp = st pop
 
 	sw = switch
-	swc = switch -c
-	swp = switch -
-	swm = switch main
+	swc = sw --create
+	swp = sw -
+	swm = sw main
+
+# Formatting
+[format]
+	pretty = %C(auto)%h  %an  %ar  %d%n%s%n
+	signOff = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
