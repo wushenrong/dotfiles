@@ -10,6 +10,7 @@
 .config/kitty
 .config/nano
 .config/nixpkgs
+.config/sway
 .config/tmux
 .config/vim
 .config/zsh
