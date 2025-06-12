@@ -19,7 +19,7 @@ alias type="type -a"
 alias mkdir="mkdir -p"
 
 # ls
-alias ls='eza -F -sName --group-directories-first --git --icons --color-scale all'
+alias ls='eza -F -sName --time-style=long-iso --group-directories-first --git --icons --color-scale all'
 alias l=ls
 alias ll='ls -lh'
 
