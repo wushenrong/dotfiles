@@ -165,6 +165,14 @@ window_rules:
         window_class:
           regex: "HwndWrapper"
 
+      # Ignore Task Manager
+      - window_process:
+          equals: "Taskmgr"
+
+      # Ignore WSLg
+      - window_process:
+          equals: "msrdc"
+
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
   - name: "resize"
