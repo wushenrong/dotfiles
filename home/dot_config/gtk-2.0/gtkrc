@@ -2,10 +2,10 @@
 #
 # SPDX-License-Identifier: 0BSD
 gtk-cursor-theme-name="Paprius-Dark"
-gtk-font-name="DejaVu Sans 12"
+gtk-font-name="Sans 12"
 gtk-icon-theme-name="Papirus-Dark"
 {{- if (eq .chezmoi.hostname "amitie") -}}
-gtk-theme-name="Matcha-Aliz-dark"
+gtk-theme-name="Matcha-dark-aliz"
 {{- else -}}
-gtk-theme-name="Matcha-Azul-dark"
+gtk-theme-name="Matcha-dark-azul"
 {{- end -}}

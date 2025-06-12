@@ -3,12 +3,11 @@
 # SPDX-License-Identifier: 0BSD
 
 [Settings]
-gtk-application-prefer-dark-theme=true
-gtk-cursor-theme-name=Papirus
-gtk-font-name=DejaVu Sans 12
-gtk-icon-theme-name=Papirus
-{{- if (eq .chezmoi.hostname "amitie") -}}
-gtk-theme-name=Matcha-Aliz
-{{- else -}}
-gtk-theme-name=Matcha-Azul
-{{- end -}}
+gtk-cursor-theme-name=Papirus-Dark
+gtk-font-name=Sans 12
+gtk-icon-theme-name=Papirus-Dark
+{{ if (eq .chezmoi.hostname "amitie") -}}
+gtk-theme-name=Matcha-dark-aliz
+{{ else -}}
+gtk-theme-name=Matcha-dark-azul
+{{ end -}}
