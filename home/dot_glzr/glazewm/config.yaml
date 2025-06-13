@@ -30,7 +30,7 @@ window_effects:
       style: "rounded"
     transparency:
       enabled: true
-      opacity: "95%"
+      opacity: "90%"
 
   other_windows:
     border:
@@ -41,71 +41,41 @@ window_effects:
       style: "rounded"
     transparency:
       enabled: true
-      opacity: "95%"
+      opacity: "90%"
 
 window_behavior:
   state_defaults:
     floating:
       centered: true
       shown_on_top: true
+
     fullscreen:
       maximized: true
 
-workspaces:
-  - name: "1"
-    display_name: "Web"
-    keep_alive: true
-
-  - name: "2"
-    display_name: "Code"
-    keep_alive: true
-
-  - name: "3"
-    display_name: "Terminal"
-    keep_alive: true
-
-  - name: "4"
-    display_name: "Discord"
-
-  - name: "5"
-    display_name: "Gaming"
-
-  - name: "6"
-    display_name: "Media"
-
-  - name: "7"
-  - name: "8"
-  - name: "9"
-  - name: "10"
-
-# Rules for window
+# Rules for processes
 window_rules:
   - commands:
-      - "move --workspace 1"
+      - "move --workspace Web"
     match:
       - window_process:
           equals: "firefox"
-
   - commands:
-      - "move --workspace 2"
+      - "move --workspace Code"
     match:
       - window_process:
           equals: "Code"
-
   - commands:
-      - "move --workspace 3"
+      - "move --workspace Terminal"
     match:
       - window_process:
           equals: "WindowsTerminal"
-
   - commands:
-      - "move --workspace 4"
+      - "move --workspace Discord"
     match:
       - window_process:
           equals: "Discord"
-
   - commands:
-      - "move --workspace 5"
+      - "move --workspace Gaming"
     match:
       - window_process:
           equals: "steam"
@@ -144,6 +114,24 @@ window_rules:
       # Ignore WSLg
       - window_process:
           equals: "msrdc"
+
+workspaces:
+  - name: "Web"
+    keep_alive: true
+
+  - name: "Code"
+    keep_alive: true
+
+  - name: "Terminal"
+    keep_alive: true
+
+  - name: "Discord"
+  - name: "Gaming"
+  - name: "Media"
+  - name: "7"
+  - name: "8"
+  - name: "9"
+  - name: "10"
 
 keybindings:
   # Basic keybindings
@@ -215,27 +203,27 @@ keybindings:
 
   # Switch to workspace
   - commands:
-      - "focus --workspace 1"
+      - "focus --workspace Web"
     bindings:
       - "alt+1"
   - commands:
-      - "focus --workspace 2"
+      - "focus --workspace Code"
     bindings:
       - "alt+2"
   - commands:
-      - "focus --workspace 3"
+      - "focus --workspace Terminal"
     bindings:
       - "alt+3"
   - commands:
-      - "focus --workspace 4"
+      - "focus --workspace Discord"
     bindings:
       - "alt+4"
   - commands:
-      - "focus --workspace 5"
+      - "focus --workspace Gaming"
     bindings:
       - "alt+5"
   - commands:
-      - "focus --workspace 6"
+      - "focus --workspace Media"
     bindings:
       - "alt+6"
   - commands:
@@ -257,27 +245,27 @@ keybindings:
 
   # Move focused window to workspace
   - commands:
-      - "move --workspace 1"
+      - "move --workspace Web"
     bindings:
       - "alt+shift+1"
   - commands:
-      - "move --workspace 2"
+      - "move --workspace Code"
     bindings:
       - "alt+shift+2"
   - commands:
-      - "move --workspace 3"
+      - "move --workspace Terminal"
     bindings:
       - "alt+shift+3"
   - commands:
-      - "move --workspace 4"
+      - "move --workspace Discord"
     bindings:
       - "alt+shift+4"
   - commands:
-      - "move --workspace 5"
+      - "move --workspace Gaming"
     bindings:
       - "alt+shift+5"
   - commands:
-      - "move --workspace 6"
+      - "move --workspace Media"
     bindings:
       - "alt+shift+6"
   - commands:
