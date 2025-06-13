@@ -13,8 +13,6 @@ path = [
   ".chezmoiversion",
   ".gitmodules",
   "README.md",
-  "etc/issue",
-  "home/dot_config/micro/bindings.json",
-  "home/dot_config/micro/settings.json",
   "home/dot_config/zsh/dot_p10k.zsh",
+  "home/dot_glzr/zebar/**",
 ]
