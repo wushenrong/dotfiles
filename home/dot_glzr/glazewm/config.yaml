@@ -55,30 +55,37 @@ window_behavior:
 # Rules for processes
 window_rules:
   - commands:
-      - "move --workspace Web"
+      - "move --workspace 1"
     match:
       - window_process:
           equals: "firefox"
   - commands:
-      - "move --workspace Code"
+      - "move --workspace 2"
     match:
       - window_process:
           equals: "Code"
   - commands:
-      - "move --workspace Terminal"
+      - "move --workspace 3"
     match:
       - window_process:
           equals: "WindowsTerminal"
   - commands:
-      - "move --workspace Discord"
+      - "move --workspace 4"
     match:
       - window_process:
           equals: "Discord"
   - commands:
-      - "move --workspace Gaming"
+      - "move --workspace 5"
     match:
       - window_process:
           equals: "steam"
+
+  # Float windows that should not be tiled
+  - commands:
+      - "set-floating"
+    match:
+      - window_process:
+          equals: "Taskmgr"
 
   - commands:
       - "ignore"
@@ -107,27 +114,32 @@ window_rules:
         window_class:
           regex: "HwndWrapper"
 
-      # Ignore Task Manager
-      - window_process:
-          equals: "Taskmgr"
-
       # Ignore WSLg
       - window_process:
           equals: "msrdc"
 
 workspaces:
-  - name: "Web"
+  - name: "1"
+    display_name: "Web"
     keep_alive: true
 
-  - name: "Code"
+  - name: "2"
+    display_name: "Code"
     keep_alive: true
 
-  - name: "Terminal"
+  - name: "3"
+    display_name: "Terminal"
     keep_alive: true
 
-  - name: "Discord"
-  - name: "Gaming"
-  - name: "Media"
+  - name: "4"
+    display_name: "Discord"
+
+  - name: "5"
+    display_name: "Gaming"
+
+  - name: "6"
+    display_name: "Media"
+
   - name: "7"
   - name: "8"
   - name: "9"
@@ -203,27 +215,27 @@ keybindings:
 
   # Switch to workspace
   - commands:
-      - "focus --workspace Web"
+      - "focus --workspace 1"
     bindings:
       - "alt+1"
   - commands:
-      - "focus --workspace Code"
+      - "focus --workspace 2"
     bindings:
       - "alt+2"
   - commands:
-      - "focus --workspace Terminal"
+      - "focus --workspace 3"
     bindings:
       - "alt+3"
   - commands:
-      - "focus --workspace Discord"
+      - "focus --workspace 4"
     bindings:
       - "alt+4"
   - commands:
-      - "focus --workspace Gaming"
+      - "focus --workspace 5"
     bindings:
       - "alt+5"
   - commands:
-      - "focus --workspace Media"
+      - "focus --workspace 6"
     bindings:
       - "alt+6"
   - commands:
@@ -245,27 +257,27 @@ keybindings:
 
   # Move focused window to workspace
   - commands:
-      - "move --workspace Web"
+      - "move --workspace 1"
     bindings:
       - "alt+shift+1"
   - commands:
-      - "move --workspace Code"
+      - "move --workspace 2"
     bindings:
       - "alt+shift+2"
   - commands:
-      - "move --workspace Terminal"
+      - "move --workspace 3"
     bindings:
       - "alt+shift+3"
   - commands:
-      - "move --workspace Discord"
+      - "move --workspace 4"
     bindings:
       - "alt+shift+4"
   - commands:
-      - "move --workspace Gaming"
+      - "move --workspace 5"
     bindings:
       - "alt+shift+5"
   - commands:
-      - "move --workspace Media"
+      - "move --workspace 6"
     bindings:
       - "alt+shift+6"
   - commands:

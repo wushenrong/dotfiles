@@ -13,6 +13,8 @@
 .config/sway*
 .config/tmux
 .config/vim
+.config/waybar
+.config/wofi
 .config/zsh
 {{ else }}
 .glzr

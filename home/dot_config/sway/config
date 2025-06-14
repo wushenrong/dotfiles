@@ -23,11 +23,11 @@ corner_radius 8
 for_window [all] opacity 0.9
 
 # Rules for processes
-assign [app_id="firefox"] Web
-assign [app_id="code"] Code
-assign [app_id="kitty"] Terminal
-assign [app_id="discord"] Discord
-assign [app_id="steam"] Gaming
+assign [app_id="firefox"] 1:Web
+assign [app_id="code"] 2:Code
+assign [app_id="kitty"] 3:Terminal
+assign [app_id="discord"] 4:Discord
+assign [app_id="steam"] 5:Gaming
 
 #
 # Display configuration
@@ -75,7 +75,7 @@ set $up k
 set $right l
 
 set $term kitty
-set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi --show drun
+set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi
 set $file_explorer nautilus
 set $screenshot grim -g "$(slurp)" - | swappy -f -
 
@@ -116,24 +116,24 @@ bindsym $mod+Shift+$right move right
 #
 
 # Switch to workspace
-bindsym $mod+1 workspace Web
-bindsym $mod+2 workspace Code
-bindsym $mod+3 workspace Terminal
-bindsym $mod+4 workspace Discord
-bindsym $mod+5 workspace Gaming
-bindsym $mod+6 workspace Media
+bindsym $mod+1 workspace number 1:Web
+bindsym $mod+2 workspace number 2:Code
+bindsym $mod+3 workspace number 3:Terminal
+bindsym $mod+4 workspace number 4:Discord
+bindsym $mod+5 workspace number 5:Gaming
+bindsym $mod+6 workspace number 6:Media
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace Web
-bindsym $mod+Shift+2 move container to workspace Code
-bindsym $mod+Shift+3 move container to workspace Terminal
-bindsym $mod+Shift+4 move container to workspace Discord
-bindsym $mod+Shift+5 move container to workspace Gaming
-bindsym $mod+Shift+6 move container to workspace Media
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
@@ -203,7 +203,7 @@ bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
 
 # Import theme from settings.ini
-exec_always import-gsettings
+exec_always ~/.local/bin/import-gsettings
 
 # Load additional configuration for loading environment variables
 include /etc/sway/config.d/*
