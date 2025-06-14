@@ -113,6 +113,8 @@ window_rules:
           equals: "Lively"
         window_class:
           regex: "HwndWrapper"
+      - window_title:
+          regex: ".*Palette.*"
 
       # Ignore WSLg
       - window_process:
