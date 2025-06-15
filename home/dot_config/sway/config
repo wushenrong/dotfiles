@@ -9,6 +9,13 @@ font pango:Cascadia Code NF 12
 focus_follows_mouse no
 workspace_auto_back_and_forth yes
 
+# Import gtk theme
+exec_always ~/.local/bin/import-gsettings
+
+# Start programs
+exec wl-paste --watch cliphist store
+exec nm-applet
+
 # Gaps between windows
 gaps inner 8px
 gaps outer 8px
@@ -77,6 +84,7 @@ set $right l
 set $term kitty
 set $menu pgrep wofi >/dev/null 2>&1 && killall wofi || wofi
 set $file_explorer nautilus
+set $clipboard cliphist list | wofi -S dmenu | cliphist decode | wl-copy
 set $screenshot grim -g "$(slurp)" - | swappy -f -
 
 # Basic keybindings
@@ -85,6 +93,7 @@ floating_modifier $mod normal
 bindsym $mod+Return exec $term
 bindsym $mod+d exec $menu
 bindsym $mod+e exec $file_explorer
+bindsym $mod+v exec $clipboard
 bindsym Print exec $screenshot
 
 bindsym $mod+Shift+r reload
@@ -140,7 +149,7 @@ bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
 # Change tiling direction
-bindsym $mod+v split toggle
+bindsym $mod+t split toggle
 
 # Make the current focus fullscreen
 bindsym $mod+f fullscreen
@@ -201,9 +210,6 @@ bindsym --locked XF86AudioMicMute exec wpctl set-mute \@DEFAULT_AUDIO_SOURCE@  t
 # Special keys to adjust brightness via brightnessctl
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
-
-# Import theme from settings.ini
-exec_always ~/.local/bin/import-gsettings
 
 # Load additional configuration for loading environment variables
 include /etc/sway/config.d/*
