@@ -12,9 +12,10 @@ workspace_auto_back_and_forth yes
 # Import gtk theme
 exec_always ~/.local/bin/import-gsettings
 
-# Start programs
+# Start programs and applets
 exec wl-paste --watch cliphist store
 exec nm-applet
+exec blueman-applet
 
 # Gaps between windows
 gaps inner 8px
@@ -34,7 +35,7 @@ assign [app_id="firefox"] 1:Web
 assign [app_id="code"] 2:Code
 assign [app_id="kitty"] 3:Terminal
 assign [app_id="discord"] 4:Discord
-assign [app_id="steam"] 5:Gaming
+assign [class="steam"] 5:Gaming
 
 #
 # Display configuration
