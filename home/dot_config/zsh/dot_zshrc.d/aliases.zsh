@@ -57,8 +57,8 @@ alias untar='bsdtar -xvf'
 (( $+commands[btop] )) && alias top=btop
 
 # print paths and functions
-alias print-fpath='for fp in $fpath; do echo $fp; done; unset fp'
-alias print-path='echo ${PATH} | tr ":" "\n"'
+alias print-fpath='for fp in $fpath; do printf "%s\n" "$fp"; done; unset fp'
+alias print-path='printf "%s\n" "$PATH" | tr ":" "\n"'
 alias print-functions='print -l ${(k)functions[(I)[^_]*]} | sort'
 
 # misc

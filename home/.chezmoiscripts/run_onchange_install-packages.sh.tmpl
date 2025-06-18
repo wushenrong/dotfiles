@@ -100,13 +100,13 @@ case "$ID $ID_LIKE" in
   sudo dnf install -y "${packages[@]}"
   ;;
 *"nixos"*)
-  echo "NixOS is not supported by this script."
-  echo "However, the 'wsixor' repository contains an equivalent configuration."
+  printf "NixOS is not supported by this script.\n"
+  printf "However, the 'wsixor' repository contains an equivalent configuration.\n"
   exit
   ;;
 *)
-  echo "Sorry your distribution is not supported by this script."
-  echo "Please create an issue or pull request to add your distribution."
+  printf >&2 "Sorry your distribution is not supported by this script.\n"
+  printf >&2 "Please create an issue or pull request to add your distribution.\n"
   exit 1
   ;;
 esac
