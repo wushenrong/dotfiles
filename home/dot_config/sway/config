@@ -28,6 +28,7 @@ default_floating_border pixel 2px
 # Requires swayfx
 corner_radius 8
 
+# Transparency
 for_window [all] opacity 0.9
 
 # Rules for processes
@@ -92,7 +93,7 @@ set $screenshot grim -g "$(slurp)" - | swappy -f -
 floating_modifier $mod normal
 
 bindsym $mod+Return exec $term
-bindsym $mod+d exec $menu
+bindsym $mod+Mod1+space exec $menu
 bindsym $mod+e exec $file_explorer
 bindsym $mod+v exec $clipboard
 bindsym Print exec $screenshot
