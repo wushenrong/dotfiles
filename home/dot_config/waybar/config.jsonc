@@ -142,7 +142,7 @@
     ]
   },
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%, {bandwidthDownBits}) ",
+    "format-wifi": "{essid} ({bandwidthDownBits})",
     "format-ethernet": "{bandwidthDownBits} ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
