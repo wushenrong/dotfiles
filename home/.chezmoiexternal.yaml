@@ -13,6 +13,13 @@
   stripComponents: 1
   refreshPeriod: 168h
 
+".config/nano/extras":
+  type: archive
+  url: https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz
+  exact: true
+  stripComponents: 1
+  refreshPeriod: 168h
+
 ".config/vivid/filetype.yml":
   type: file
   url: https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml
