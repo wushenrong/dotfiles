@@ -1,0 +1,24 @@
+{{ if (eq .chezmoi.os "windows") -}}
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Update packages
+winget update --all --accept-package-agreements
+
+# Install CLI tools
+{{ range .packages.windows.cli -}}
+winget install -e {{ . | quote }}
+{{ end -}}
+
+# Install GUI applications
+{{ range .packages.windows.gui -}}
+winget install -e {{ . | quote }}
+{{ end -}}
+
+# Install MSStore applications
+{{ range .packages.windows.msstore -}}
+winget install --accept-package-agreements -e {{ . | quote }}
+{{ end -}}
+
+{{ end -}}

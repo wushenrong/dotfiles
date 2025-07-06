@@ -6,94 +6,40 @@
 
 source /etc/os-release
 
-packages=(
-  bat
-  bfs
-  btop
-  chafa
-  curl
-  duf
-  elinks
-  eza
-  fastfetch
-  ffmpeg
-  fzf
-  gdu
-  git-delta
-  glow
-  hexyl
-  hyperfine
-  imagemagick
-  jq
-  lesspipe
-  mediainfo
-  mpv
-  nano
-  ripgrep
-  tmux
-  tokei
-  vim
-  wget
-  yt-dlp
-  zoxide
-)
-
 case "$ID $ID_LIKE" in
 *"debian"*)
-  packages+=(
-    fd-find
-    fonts-cascadia-code
-    hunspell-en-us
-    libarchive-tools
-    vivid
-  )
-
-  # Compilers
-  packages+=(
-    autotools-dev
-    autoconf
-    build-essential
-    clang-format
-    clang-tidy
-  )
-
   sudo apt update -y
   sudo apt upgrade -y
+
+  {{ range .packages.linux.common -}}
+  sudo apt install {{ . | quote }}
+  {{ end -}}
+
+  {{ range .packages.linux.debian -}}
+  sudo apt install {{ . | quote }}
+  {{ end -}}
   ;;
 *"arch"*)
-  packages+=(
-    fd
-    hunspell-en_us
-    lesspipe
-    man-db
-    ttf-cascadia-code
-    vivid
-  )
-
-  # Compilers
-  packages+=(base-devel clang)
-
-  # Package manager tools
-  packages+=(pacman-contrib)
-
   sudo pacman -Syu --noconfirm
-  sudo pacman -S --noconfirm --needed "${packages[@]}"
+
+  {{ range .packages.linux.common -}}
+  sudo pacman -S --noconfirm --needed {{ . | quote }}
+  {{ end -}}
+
+  {{ range .packages.linux.arch -}}
+  sudo pacman -S --noconfirm --needed {{ . | quote }}
+  {{ end -}}
   ;;
 *"fedora"*)
-  packages+=(
-    bsdtar
-    cascadia-code-fonts
-    fd-find
-    hunspell-en
-    ShellCheck
-    vivid
-  )
-
-  # Compilers
-  packages+=(@c-development @development-tools clang-tools-extra)
-
   sudo dnf upgrade -y
-  sudo dnf install -y "${packages[@]}"
+
+  {{ range .packages.linux.common -}}
+  sudo dnf install -y {{ . | quote }}
+  {{ end -}}
+
+  {{ range .packages.linux.fedora -}}
+  sudo dnf install -y {{ . | quote }}
+  {{ end -}}
   ;;
 *"nixos"*)
   printf "NixOS is not supported by this script.\n"

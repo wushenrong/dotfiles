@@ -1,0 +1,113 @@
+packages:
+  linux:
+    common:
+      - bat
+      - bfs
+      - btop
+      - chafa
+      - curl
+      - duf
+      - elinks
+      - eza
+      - fastfetch
+      - ffmpeg
+      - fzf
+      - gdu
+      - git-delta
+      - glow
+      - hexyl
+      - hyperfine
+      - imagemagick
+      - jq
+      - lesspipe
+      - mediainfo
+      - mpv
+      - nano
+      - ripgrep
+      - tmux
+      - tokei
+      - vim
+      - wget
+      - yt-dlp
+      - zoxide
+
+    arch:
+      - base-devel
+      - clang
+      - fd
+      - hunspell-en_us
+      - lesspipe
+      - man-db
+      - pacman-contrib
+      - ttf-cascadia-code
+      - openssh
+      - vivid
+
+    debian:
+      - autoconf
+      - autotools-dev
+      - build-essential
+      - clang-format
+      - clang-tidy
+      - fd-find
+      - fonts-cascadia-code
+      - hunspell-en-us
+      - libarchive-tools
+      - openssh-client
+      - vivid
+
+    fedora:
+      - "@c-development"
+      - "@development-tools"
+      - bsdtar
+      - cascadia-code-fonts
+      - clang-tools-extra
+      - fd-find
+      - hunspell-en
+      - openssh
+      - vivid
+
+  windows:
+    cli:
+      - aristocratos.btop4win ajeetdsouza.zoxide
+      - BurntSushi.ripgrep.MSVC
+      - charmbracelet.glow
+      - cURL.cURL
+      - dandavison.delta
+      - dundee.gdu
+      - Fastfetch-cli.Fastfetch
+      - Git.Git
+      - Gyan.FFmpeg hpjansson.Chafa
+      - ImageMagick.ImageMagick
+      - jftuga.less
+      - jqlang.jq
+      - junegunn.fzf
+      - MediaArea.MediaInfo
+      - Microsoft.OpenSSH.Preview
+      - muesli.duf
+      - sharkdp.bat
+      - sharkdp.fd
+      - sharkdp.hexyl
+      - sharkdp.hyperfine
+      - sharkdp.vivid
+      - yt-dlp.yt-dlp
+      - XAMPPRocky.tokei
+
+    gui:
+      - glzr-io.glazewm
+      - GnuPG.Gpg4win
+      - KDE.Glaxnimate
+      - KDE.Kdenlive
+      - Microsoft.WindowsTerminal
+      - namazso.OpenHashTab
+      - M2Team.NanaZip
+      - Valve.Steam
+      - YutakaSawada.MultiPar
+
+    msstore:
+      - 9N41MSQ1WNM8
+      - XP89DCGQ3K6VLD
+      - XP8K0HKJFRXGCK
+      - XP9KHM4BK9FZ7Q
+      - XPDC2RH70K22MN
+      - XPDCFJDKLZJLP8
