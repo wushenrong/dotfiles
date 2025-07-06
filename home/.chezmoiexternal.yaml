@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 ".config/kitty/VSCode_Dark.conf":
   type: file
   url: https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes/VSCode_Dark.conf
@@ -17,6 +21,13 @@
 ".config/tmux/plugins/tpm":
   type: archive
   url: https://github.com/tmux-plugins/tpm/archive/refs/heads/master.tar.gz
+  exact: true
+  stripComponents: 1
+  refreshPeriod: 168h
+
+".config/zsh":
+  type: archive
+  url: https://github.com/wushenrong/zdotdir/archive/main.tar.gz
   exact: true
   stripComponents: 1
   refreshPeriod: 168h

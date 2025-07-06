@@ -13,6 +13,5 @@ path = [
   ".chezmoiversion",
   ".gitmodules",
   "README.md",
-  "home/dot_config/zsh/dot_p10k.zsh",
   "home/dot_glzr/zebar/**",
 ]
