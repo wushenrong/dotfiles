@@ -54,10 +54,6 @@ case "$ID $ID_LIKE" in
 esac
 
 mkdir -p "${HOME}/.local/bin"
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/vivid"
-
-curl -fsSLo "${XDG_CONFIG_HOME:-$HOME/.config}/vivid/filetype.yml" \
-  https://raw.githubusercontent.com/sharkdp/vivid/refs/heads/master/config/filetypes.yml
 
 if ! command -v vivid >/dev/null; then
   curl -fsSL https://github.com/sharkdp/vivid/releases/download/v0.10.1/vivid-v0.10.1-x86_64-unknown-linux-gnu.tar.gz |
