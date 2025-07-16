@@ -59,4 +59,4 @@ link-image-style:
   url_inline: false
 
 table-pipe-style:
-  style: no_leading_or_trailing
+  style: leading_and_trailing
