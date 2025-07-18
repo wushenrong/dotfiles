@@ -16,4 +16,5 @@ chezmoi apply
 ## License
 
 This repostory is licensed under the BSD Zero Clause License using
-[SPDX](https://spdx.dev) expressions.
+[SPDX](https://spdx.dev) expressions. Although there are external dependencies
+that are under a different license.
