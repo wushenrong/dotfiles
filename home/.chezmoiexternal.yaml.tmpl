@@ -2,10 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-".config/kitty/VSCode_Dark.conf":
-  type: file
-  url: https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes/VSCode_Dark.conf
-
 ".config/mpv":
   type: archive
   url: https://github.com/wushenrong/mpv-config/archive/main.tar.gz
@@ -13,16 +9,21 @@
   stripComponents: 1
   refreshPeriod: 168h
 
+".config/vivid/filetype.yml":
+  type: file
+  url: https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml
+  refreshPeriod: 168h
+
+{{ if (eq .chezmoi.os "linux") -}}
+".config/kitty/VSCode_Dark.conf":
+  type: file
+  url: https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes/VSCode_Dark.conf
+
 ".config/nano/extras":
   type: archive
   url: https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz
   exact: true
   stripComponents: 1
-  refreshPeriod: 168h
-
-".config/vivid/filetype.yml":
-  type: file
-  url: https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml
   refreshPeriod: 168h
 
 ".config/tmux/plugins/tpm":
@@ -44,3 +45,4 @@
   exact: true
   stripComponents: 1
   refreshPeriod: 168h
+{{ end -}}

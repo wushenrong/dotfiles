@@ -87,6 +87,7 @@ packages:
       - jqlang.jq
       - junegunn.fzf
       - MediaArea.MediaInfo
+      - Microsoft.Edit
       - Microsoft.OpenSSH.Preview
       - muesli.duf
       - sharkdp.bat
