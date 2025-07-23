@@ -107,7 +107,7 @@
 
 # Git Alias
 [alias]
-	amend = ca
+	amend = cam
 	unstage = rs
 
 	a = add
@@ -120,10 +120,11 @@
 	bm = b --move
 
 	c = commit
-	ca = cae --no-edit
-	cae = commit --amend
+	ca = c --all
+	cam = commit --amend
 
 	co = checkout
+	com = co main
 
 	cl = clone --recursive
 
@@ -140,10 +141,8 @@
 
 	p = push
 	pf = p --force-with-lease --force-if-includes
-	pu = p -u origin
 
 	pl = pull
-	plo = pl origin
 
 	r = restore
 	rp = r --patch
