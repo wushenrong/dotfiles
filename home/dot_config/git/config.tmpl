@@ -126,6 +126,7 @@
 	co = checkout
 	cob = co -b
 	com = co main
+	cop = co -
 
 	cl = clone --recursive
 
@@ -154,8 +155,10 @@
 	rb = rebase
 	rba = rb --abort
 	rbc = rb --continue
+	rbs = rb --skip
+
 	rbi = rb --interactive
-	rbr = rbi --root
+	rbir = rbi --root
 
 	s = status
 	sl = s --no-short
@@ -166,10 +169,13 @@
 	smu = sm update --init --recursive
 
 	st = stash
-	sta = st apply
 	std = st drop
 	stl = st list
 	stp = st pop
+
+	sta = st --all
+	sts = st --staged
+	stu = st --include-untracked
 
 	sw = switch
 	swc = sw --create
