@@ -1,6 +1,7 @@
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
+
 # Git Setup
 [user]
 	name = {{ .name }}
@@ -47,7 +48,7 @@
 [diff]
 	algorithm = histogram
 	context = 3
-	colorMoved = default
+	colorMoved = plain
 	interHunkContext = 10
 	mnemonicPrefix = true
 	renames = copies
@@ -71,7 +72,7 @@
 	pruneTags = true
 
 [pull]
-	rebase = interactive
+	rebase = true
 
 [push]
 	autoSetupRemote = true
