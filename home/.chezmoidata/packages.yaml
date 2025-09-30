@@ -83,6 +83,7 @@ packages:
       - Git.Git
       - Gyan.FFmpeg hpjansson.Chafa
       - ImageMagick.ImageMagick
+      - JanDeDobbeleer.OhMyPosh
       - jftuga.less
       - jqlang.jq
       - junegunn.fzf
@@ -110,9 +111,7 @@ packages:
       - YutakaSawada.MultiPar
 
     msstore:
-      - 9N41MSQ1WNM8
       - XP89DCGQ3K6VLD
-      - XP8K0HKJFRXGCK
       - XP9KHM4BK9FZ7Q
       - XPDC2RH70K22MN
       - XPDCFJDKLZJLP8

@@ -14,3 +14,6 @@
 
 # Show context around each match
 --context=2
+
+# Hyperlinks
+--hyperlink-format=vscode
