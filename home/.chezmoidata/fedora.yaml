@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+packages:
+  fedora:
+    - "@c-development"
+    - "@development-tools"
+    - bsdtar
+    - cascadia-code-fonts
+    - clang-tools-extra
+    - fd-find
+    - hunspell-en
+    - openssh
+    - vivid
