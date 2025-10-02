@@ -11,5 +11,6 @@ packages:
     - clang-tools-extra
     - fd-find
     - hunspell-en
+    - ImageMagick
     - openssh
     - vivid

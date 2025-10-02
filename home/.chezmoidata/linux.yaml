@@ -20,16 +20,14 @@ packages:
     - glow
     - hexyl
     - hyperfine
-    - imagemagick
     - jq
-    - lesspipe
     - mediainfo
     - mpv
     - nano
     - ripgrep
     - tmux
     - tokei
-    - vim
     - wget
     - yt-dlp
     - zoxide
+    - zsh

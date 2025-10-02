@@ -12,6 +12,7 @@ packages:
     - fd-find
     - fonts-cascadia-code
     - hunspell-en-us
+    - imagemagick
     - libarchive-tools
     - openssh-client
     - vivid

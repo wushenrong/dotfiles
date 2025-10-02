@@ -8,6 +8,7 @@ packages:
     - clang
     - fd
     - hunspell-en_us
+    - imagemagick
     - lesspipe
     - man-db
     - pacman-contrib
