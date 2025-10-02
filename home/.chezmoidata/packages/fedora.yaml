@@ -12,4 +12,5 @@ packages:
     - fd-find
     - hunspell-en
     - ImageMagick
+    - msedit
     - openssh

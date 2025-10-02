@@ -6,6 +6,7 @@ packages:
   windows:
     cli:
       - aristocratos.btop4win ajeetdsouza.zoxide
+      - benboyter.scc
       - BurntSushi.ripgrep.MSVC
       - charmbracelet.glow
       - cURL.cURL

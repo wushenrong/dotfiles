@@ -11,6 +11,7 @@ packages:
     - imagemagick
     - lesspipe
     - man-db
+    - msedit
     - pacman-contrib
     - ttf-cascadia-code
     - openssh
