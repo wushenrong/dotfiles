@@ -12,33 +12,33 @@ case "$ID $ID_LIKE" in
   sudo apt update -y
   sudo apt upgrade -y
 
-  {{ range .packages.linux.common -}}
+  {{ range .packages.common -}}
   sudo apt install {{ . | quote }}
   {{ end -}}
 
-  {{ range .packages.linux.debian -}}
+  {{ range .packages.debian -}}
   sudo apt install {{ . | quote }}
   {{ end -}}
   ;;
 *"arch"*)
   sudo pacman -Syu --noconfirm
 
-  {{ range .packages.linux.common -}}
+  {{ range .packages.common -}}
   sudo pacman -S --noconfirm --needed {{ . | quote }}
   {{ end -}}
 
-  {{ range .packages.linux.arch -}}
+  {{ range .packages.arch -}}
   sudo pacman -S --noconfirm --needed {{ . | quote }}
   {{ end -}}
   ;;
 *"fedora"*)
   sudo dnf upgrade -y
 
-  {{ range .packages.linux.common -}}
+  {{ range .packages.common -}}
   sudo dnf install -y {{ . | quote }}
   {{ end -}}
 
-  {{ range .packages.linux.fedora -}}
+  {{ range .packages.fedora -}}
   sudo dnf install -y {{ . | quote }}
   {{ end -}}
   ;;
