@@ -9,6 +9,10 @@ source /etc/os-release
 
 case "$ID $ID_LIKE" in
 *"debian"*)
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+
   sudo apt update -y
   sudo apt upgrade -y
 
@@ -32,6 +36,13 @@ case "$ID $ID_LIKE" in
   {{ end -}}
   ;;
 *"fedora"*)
+  echo '[charm]
+name=Charm
+baseurl=https://repo.charm.sh/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
+
   sudo dnf upgrade -y
 
   {{ range .packages.linux -}}
@@ -53,12 +64,5 @@ case "$ID $ID_LIKE" in
   exit 1
   ;;
 esac
-
-mkdir -p "${HOME}/.local/bin"
-
-if ! command -v vivid >/dev/null; then
-  curl -fsSL https://github.com/sharkdp/vivid/releases/download/v0.10.1/vivid-v0.10.1-x86_64-unknown-linux-gnu.tar.gz |
-    tar -xz --strip-components=1 -C "${HOME}/.local/bin" vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
-fi
 
 {{ end -}}

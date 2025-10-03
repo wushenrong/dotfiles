@@ -13,6 +13,7 @@ packages:
     - man-db
     - msedit
     - pacman-contrib
+    - scc
     - ttf-cascadia-code
     - openssh
     - vivid

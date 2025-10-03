@@ -18,6 +18,7 @@ packages:
     - gdu
     - git-delta
     - glow
+    - groff
     - hexyl
     - hyperfine
     - jq
