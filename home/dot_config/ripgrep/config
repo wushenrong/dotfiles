@@ -9,9 +9,6 @@
 # Match all instances unless there is uppercase
 --smart-case
 
-# Output json to pipe into delta
---json
-
 # Show context around each match
 --context=2
 
