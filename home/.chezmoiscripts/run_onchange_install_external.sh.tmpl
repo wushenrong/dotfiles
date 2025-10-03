@@ -1,3 +1,9 @@
+{{ if (eq .chezmoi.os "linux") -}}
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
 mkdir -p "${HOME}/.local/bin"
 
 if ! command -v vivid >/dev/null; then
@@ -14,3 +20,5 @@ if ! command -v scc >/dev/null; then
   curl -fsSL https://github.com/boyter/scc/releases/download/v3.5.0/scc_Linux_x86_64.tar.gz  |
     tar -xz -C "${HOME}/.local/bin" scc
 fi
+
+{{ end -}}
