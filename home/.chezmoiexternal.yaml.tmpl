@@ -49,8 +49,8 @@
 ".local/bin/vivid":
   type: archive-file
   url: https://github.com/sharkdp/vivid/releases/download/v0.10.1/vivid-v0.10.1-x86_64-unknown-linux-gnu.tar.gz
-  executable = true
-  path = vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
+  executable: true
+  path: vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
 {{ end }}
 
 {{ if (not (findExecutable "eza" (list "/usr/bin" ".local/bin") ))}}
@@ -66,6 +66,6 @@
   type: archive-file
   url: {{ gitHubLatestReleaseAssetURL "boyter/scc" "scc_Linux_x86_64.tar.gz" }}
   executable: true
-  path: ./eza
+  path: scc
 {{ end -}}
 {{ end -}}
