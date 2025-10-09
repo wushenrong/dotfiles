@@ -25,6 +25,7 @@ packages:
     - mediainfo
     - mpv
     - nano
+    - procs
     - ripgrep
     - tmux
     - tokei

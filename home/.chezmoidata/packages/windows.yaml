@@ -11,6 +11,7 @@ packages:
       - BurntSushi.ripgrep.MSVC
       - charmbracelet.glow
       - cURL.cURL
+      - dalance.procs
       - dandavison.delta
       - dundee.gdu
       - Fastfetch-cli.Fastfetch
