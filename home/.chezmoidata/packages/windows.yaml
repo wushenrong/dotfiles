@@ -25,6 +25,7 @@ packages:
       - Microsoft.Edit
       - Microsoft.OpenSSH.Preview
       - muesli.duf
+      - OliverBetz.ExifTool
       - sharkdp.bat
       - sharkdp.fd
       - sharkdp.hexyl

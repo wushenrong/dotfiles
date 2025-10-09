@@ -16,4 +16,5 @@ packages:
     - scc
     - ttf-cascadia-code
     - openssh
+    - perl-image-exiftool
     - vivid

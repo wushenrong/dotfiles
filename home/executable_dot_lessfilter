@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 # SPDX-FileCopyrightText: 2025 Samuel Wu
 #
 # SPDX-License-Identifier: 0BSD
@@ -25,6 +25,7 @@ elif [ "$category" = image ]; then
   else
     chafa -f sixel "$1"
   fi
+  exiftool "$1" | bat --color=always -plyaml
   mediainfo "$1" | bat --color=always -plyaml
 elif [ "$kind" = json ]; then
   jq -r . "$1" | bat --color=always -pljson
@@ -32,7 +33,7 @@ elif [ "$kind" = javascript ]; then
   bat --color=always -pljs "$1"
 elif [ "$category" = text ]; then
   case $1 in
-  *.md) CLICOLOR_FORCE=1 COLORTERM=truecolor glow -s dark "$1" ;;
+  *.md) glow -s dark "$1" ;;
   *) bat --color=always -p "$1" ;;
   esac
 else

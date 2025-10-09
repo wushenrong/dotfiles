@@ -44,4 +44,28 @@
   exact: true
   stripComponents: 1
   refreshPeriod: 168h
+
+{{ if (not (findExecutable "vivid" (list "/usr/bin" ".local/bin") ))}}
+".local/bin/vivid":
+  type: archive-file
+  url: https://github.com/sharkdp/vivid/releases/download/v0.10.1/vivid-v0.10.1-x86_64-unknown-linux-gnu.tar.gz
+  executable = true
+  path = vivid-v0.10.1-x86_64-unknown-linux-gnu/vivid
+{{ end }}
+
+{{ if (not (findExecutable "eza" (list "/usr/bin" ".local/bin") ))}}
+".local/bin/eza":
+  type: archive-file
+  url: {{ gitHubLatestReleaseAssetURL "eza-community/eza" "eza_x86_64-unknown-linux-gnu.tar.gz" }}
+  executable: true
+  path: ./eza
+{{ end }}
+
+{{ if (not (findExecutable "scc" (list "/usr/bin" ".local/bin") ))}}
+".local/bin/scc":
+  type: archive-file
+  url: {{ gitHubLatestReleaseAssetURL "boyter/scc" "scc_Linux_x86_64.tar.gz" }}
+  executable: true
+  path: ./eza
+{{ end -}}
 {{ end -}}
