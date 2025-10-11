@@ -30,6 +30,7 @@ packages:
     - tmux
     - tokei
     - wget
+    - yq
     - yt-dlp
     - zoxide
     - zsh
