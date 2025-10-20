@@ -18,7 +18,6 @@ packages:
       - Git.Git
       - Gyan.FFmpeg
       - hpjansson.Chafa
-      - ImageMagick.ImageMagick
       - JanDeDobbeleer.OhMyPosh
       - jftuga.less
       - jqlang.jq

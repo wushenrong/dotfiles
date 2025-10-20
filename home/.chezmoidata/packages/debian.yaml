@@ -12,7 +12,6 @@ packages:
     - fd-find
     - fonts-cascadia-code
     - hunspell-en-us
-    - imagemagick
     - libarchive-tools
     - openssh-client
     - libimage-exiftool-perl
