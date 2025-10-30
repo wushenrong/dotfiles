@@ -16,24 +16,14 @@ case "$ID $ID_LIKE" in
   sudo apt update -y
   sudo apt upgrade -y
 
-  {{ range .packages.linux -}}
-  sudo apt install {{ . | quote }}
-  {{ end -}}
-
-  {{ range .packages.debian -}}
-  sudo apt install {{ . | quote }}
-  {{ end -}}
+  sudo apt install {{ .packages.linux | quoteList | join " " }}
+  sudo apt install {{ .packages.debian | quoteList | join " " }}
   ;;
 *"arch"*)
   sudo pacman -Syu --noconfirm
 
-  {{ range .packages.linux -}}
-  sudo pacman -S --noconfirm --needed {{ . | quote }}
-  {{ end -}}
-
-  {{ range .packages.arch -}}
-  sudo pacman -S --noconfirm --needed {{ . | quote }}
-  {{ end -}}
+  sudo pacman -S --noconfirm --needed {{ .packages.linux | quoteList | join " " }}
+  sudo pacman -S --noconfirm --needed {{ .packages.arch | quoteList | join " " }}
   ;;
 *"fedora"*)
   echo '[charm]
@@ -45,13 +35,8 @@ gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
 
   sudo dnf upgrade -y
 
-  {{ range .packages.linux -}}
-  sudo dnf install -y {{ . | quote }}
-  {{ end -}}
-
-  {{ range .packages.fedora -}}
-  sudo dnf install -y {{ . | quote }}
-  {{ end -}}
+  sudo dnf install -y {{ .packages.linux | quoteList | join " " }}
+  sudo dnf install -y {{ .packages.fedora | quoteList | join " " }}
   ;;
 *"nixos"*)
   printf "NixOS is not supported by this script.\n"
