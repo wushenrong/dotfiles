@@ -16,7 +16,6 @@ packages:
       - dundee.gdu
       - Fastfetch-cli.Fastfetch
       - Git.Git
-      - Gyan.FFmpeg
       - hpjansson.Chafa
       - JanDeDobbeleer.OhMyPosh
       - jftuga.less
