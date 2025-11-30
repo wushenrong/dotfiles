@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+if command -v bat >/dev/null; then
+  bat() {
+    command bat "$@"
+  }
+elif command -v batcat >/dev/null; then
+  bat() {
+    command batcat "$@"
+  }
+fi
+
+mime=$(file -Lbs --mime-type "$1")
+category=${mime%%/*}
+kind=${mime##*/}
+
+if [ -d "$1" ]; then
+  eza -1F -sName --group-directories-first --icons --color=always "$1"
+elif [ "$category" = image ]; then
+  if [ "$TERM" = xterm-kitty ]; then
+    kitten icat "$1"
+  else
+    chafa -f sixel "$1"
+  fi
+  exiftool "$1" | yq -C
+  mediainfo --Output=JSON "$1" | yq -PC
+elif [ "$kind" = json ]; then
+  jq -Cr . "$1"
+elif [ "$kind" = javascript ]; then
+  bat --color=always -pljs "$1"
+elif [ "$category" = text ]; then
+  case $1 in
+  *.md) glow -s dark "$1" ;;
+  *) bat --color=always -p "$1" ;;
+  esac
+else
+  exit 1
+fi

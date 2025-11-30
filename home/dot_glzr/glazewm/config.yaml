@@ -1,0 +1,365 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# General settings for glazewm
+general:
+  startup_commands:
+    - "shell-exec zebar"
+  shutdown_commands:
+    - "shell-exec taskkill /IM zebar.exe /F"
+
+# Gaps between windows
+gaps:
+  scale_with_dpi: true
+  inner_gap: "8px"
+  outer_gap:
+    top: "8px"
+    right: "8px"
+    bottom: "8px"
+    left: "8px"
+
+# Window effects
+window_effects:
+  focused_window:
+    border:
+      enabled: true
+      color: "#8dbcff"
+    corner_style:
+      enabled: true
+      style: "rounded"
+    transparency:
+      enabled: true
+      opacity: "90%"
+
+  other_windows:
+    border:
+      enabled: true
+      color: "#a1a1a1"
+    corner_style:
+      enabled: true
+      style: "rounded"
+    transparency:
+      enabled: true
+      opacity: "90%"
+
+window_behavior:
+  state_defaults:
+    floating:
+      centered: true
+      shown_on_top: true
+
+    fullscreen:
+      maximized: true
+
+# Rules for processes
+window_rules:
+  - commands:
+      - "move --workspace 1"
+    match:
+      - window_process:
+          equals: "firefox"
+  - commands:
+      - "move --workspace 2"
+    match:
+      - window_process:
+          equals: "Code"
+  - commands:
+      - "move --workspace 3"
+    match:
+      - window_process:
+          equals: "WindowsTerminal"
+  - commands:
+      - "move --workspace 4"
+    match:
+      - window_process:
+          equals: "Discord"
+  - commands:
+      - "move --workspace 5"
+    match:
+      - window_process:
+          equals: "steam"
+
+  # Float windows that should not be tiled
+  - commands:
+      - "set-floating"
+    match:
+      - window_process:
+          equals: "Taskmgr"
+
+  - commands:
+      - "ignore"
+    match:
+      # Ignores any Zebar windows.
+      - window_process:
+          equals: "zebar"
+
+      # Ignores picture-in-picture windows for browsers.
+      - window_title:
+          regex: "[Pp]icture.in.[Pp]icture"
+        window_class:
+          regex: "Chrome_WidgetWin_1|MozillaDialogClass"
+
+      # Ignore rules for various 3rd-party apps.
+      - window_process:
+          equals: "PowerToys"
+        window_class:
+          regex: 'HwndWrapper\[PowerToys\.PowerAccent.*?\]'
+      - window_process:
+          equals: "PowerToys"
+        window_title:
+          regex: ".*? - Peek"
+      - window_process:
+          equals: "Lively"
+        window_class:
+          regex: "HwndWrapper"
+      - window_title:
+          regex: ".*Palette.*"
+
+      # Ignore WSLg
+      - window_process:
+          equals: "msrdc"
+
+workspaces:
+  - name: "1"
+    display_name: "Web"
+    keep_alive: true
+
+  - name: "2"
+    display_name: "Code"
+    keep_alive: true
+
+  - name: "3"
+    display_name: "Terminal"
+    keep_alive: true
+
+  - name: "4"
+    display_name: "Discord"
+
+  - name: "5"
+    display_name: "Gaming"
+
+  - name: "6"
+    display_name: "Media"
+
+  - name: "7"
+  - name: "8"
+  - name: "9"
+  - name: "10"
+
+keybindings:
+  # Basic keybindings
+  - commands:
+      - "shell-exec wt"
+    bindings:
+      - "alt+enter"
+  - commands:
+      - "wm-reload-config"
+    bindings:
+      - "alt+shift+r"
+  - commands:
+      - "wm-exit"
+    bindings:
+      - "alt+shift+e"
+  - commands:
+      - "wm-redraw"
+    bindings:
+      - "alt+shift+w"
+  - commands:
+      - "wm-toggle-pause"
+    bindings:
+      - "alt+shift+p"
+
+  - commands:
+      - "close"
+    bindings:
+      - "alt+q"
+
+  # Moving focus
+  - commands:
+      - "focus --direction left"
+    bindings:
+      - "alt+h"
+  - commands:
+      - "focus --direction right"
+    bindings:
+      - "alt+l"
+  - commands:
+      - "focus --direction up"
+    bindings:
+      - "alt+k"
+  - commands:
+      - "focus --direction down"
+    bindings:
+      - "alt+j"
+
+  # Moving focused window
+  - commands:
+      - "move --direction left"
+    bindings:
+      - "alt+shift+h"
+  - commands:
+      - "move --direction right"
+    bindings:
+      - "alt+shift+l"
+  - commands:
+      - "move --direction up"
+    bindings:
+      - "alt+shift+k"
+  - commands:
+      - "move --direction down"
+    bindings:
+      - "alt+shift+j"
+
+  #
+  # Workspaces
+  #
+
+  # Switch to workspace
+  - commands:
+      - "focus --workspace 1"
+    bindings:
+      - "alt+1"
+  - commands:
+      - "focus --workspace 2"
+    bindings:
+      - "alt+2"
+  - commands:
+      - "focus --workspace 3"
+    bindings:
+      - "alt+3"
+  - commands:
+      - "focus --workspace 4"
+    bindings:
+      - "alt+4"
+  - commands:
+      - "focus --workspace 5"
+    bindings:
+      - "alt+5"
+  - commands:
+      - "focus --workspace 6"
+    bindings:
+      - "alt+6"
+  - commands:
+      - "focus --workspace 7"
+    bindings:
+      - "alt+7"
+  - commands:
+      - "focus --workspace 8"
+    bindings:
+      - "alt+8"
+  - commands:
+      - "focus --workspace 9"
+    bindings:
+      - "alt+9"
+  - commands:
+      - "focus --workspace 10"
+    bindings:
+      - "alt+0"
+
+  # Move focused window to workspace
+  - commands:
+      - "move --workspace 1"
+    bindings:
+      - "alt+shift+1"
+  - commands:
+      - "move --workspace 2"
+    bindings:
+      - "alt+shift+2"
+  - commands:
+      - "move --workspace 3"
+    bindings:
+      - "alt+shift+3"
+  - commands:
+      - "move --workspace 4"
+    bindings:
+      - "alt+shift+4"
+  - commands:
+      - "move --workspace 5"
+    bindings:
+      - "alt+shift+5"
+  - commands:
+      - "move --workspace 6"
+    bindings:
+      - "alt+shift+6"
+  - commands:
+      - "move --workspace 7"
+    bindings:
+      - "alt+shift+7"
+  - commands:
+      - "move --workspace 8"
+    bindings:
+      - "alt+shift+8"
+  - commands:
+      - "move --workspace 9"
+    bindings:
+      - "alt+shift+9"
+  - commands:
+      - "move --workspace 10"
+    bindings:
+      - "alt+shift+0"
+
+  # Change tiling direction
+  - commands:
+      - "toggle-tiling-direction"
+    bindings:
+      - "alt+t"
+
+  # Change the focused window to be fullscreen.
+  - commands:
+      - "toggle-fullscreen"
+    bindings:
+      - "alt+f"
+
+  # Change the focused window to be floating
+  - commands:
+      - "toggle-floating --centered"
+    bindings:
+      - "alt+shift+space"
+
+  # Change focus from tiling windows -> floating -> fullscreen.
+  - commands:
+      - "wm-cycle-focus"
+    bindings:
+      - "alt+space"
+
+  # Resizing containers
+  - commands:
+      - "wm-enable-binding-mode --name resize"
+    bindings:
+      - "alt+r"
+
+binding_modes:
+  - name:
+      "resize"
+      # left will shrink the containers width
+      # right will grow the containers width
+      # up will shrink the containers height
+      # down will grow the containers height
+    keybindings:
+      - commands:
+          - "resize --width -10"
+        bindings:
+          - "h"
+          - "left"
+      - commands:
+          - "resize --width +10"
+        bindings:
+          - "l"
+          - "right"
+      - commands:
+          - "resize --height -10"
+        bindings:
+          - "k"
+          - "up"
+      - commands:
+          - "resize --height +10"
+        bindings:
+          - "j"
+          - "down"
+      # Return to default mode
+      - commands:
+          - "wm-disable-binding-mode --name resize"
+        bindings:
+          - "escape"
+          - "enter"

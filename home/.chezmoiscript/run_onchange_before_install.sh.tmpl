@@ -1,0 +1,52 @@
+{{ if (eq .chezmoi.os "linux") -}}
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# shellcheck disable=SC1091
+source /etc/os-release
+
+case "$ID $ID_LIKE" in
+*"debian"*)
+  sudo mkdir -p /etc/apt/keyrings
+  curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+  echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+
+  sudo apt update -y
+  sudo apt upgrade -y
+
+  sudo apt install {{ .packages.linux | quoteList | join " " }}
+  sudo apt install {{ .packages.debian | quoteList | join " " }}
+  ;;
+*"arch"*)
+  sudo pacman -Syu --noconfirm
+
+  sudo pacman -S --noconfirm --needed {{ .packages.linux | quoteList | join " " }}
+  sudo pacman -S --noconfirm --needed {{ .packages.arch | quoteList | join " " }}
+  ;;
+*"fedora"*)
+  echo '[charm]
+name=Charm
+baseurl=https://repo.charm.sh/yum/
+enabled=1
+gpgcheck=1
+gpgkey=https://repo.charm.sh/yum/gpg.key' | sudo tee /etc/yum.repos.d/charm.repo
+
+  sudo dnf upgrade -y
+
+  sudo dnf install -y {{ .packages.linux | quoteList | join " " }}
+  sudo dnf install -y {{ .packages.fedora | quoteList | join " " }}
+  ;;
+*"nixos"*)
+  printf >&2 "NixOS is not supported by this script.\n"
+  printf >&2 "However, the 'wsixor' repository contains an equivalent configuration.\n"
+  exit
+  ;;
+*)
+  printf >&2 "Sorry your distribution is not supported by this script.\n"
+  printf >&2 "Please create an issue or pull request to add your distribution.\n"
+  exit 1
+  ;;
+esac
+{{ end -}}

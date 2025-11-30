@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Set max column length for lines
+--max-columns=80
+--max-columns-preview
+
+# Match all instances unless there is uppercase
+--smart-case
+
+# Show context around each match
+--context=2
+
+# Hyperlinks
+--hyperlink-format=vscode

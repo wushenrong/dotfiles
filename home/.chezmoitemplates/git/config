@@ -1,0 +1,211 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Git Setup
+[user]
+	name = {{ .name }}
+	email = {{ .email }}
+	signingKey = ~/.ssh/id_main_key
+
+[core]
+	compression = 9
+	editor = code --wait
+	whitespace = error
+	pager = delta
+	preloadindex = true
+
+[advice]
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
+
+[init]
+	defaultBranch = main
+
+[column]
+	ui = auto
+
+[help]
+	autocorrect = prompt
+
+# Git Status
+[status]
+	branch = true
+	short = true
+	showStash = true
+	showUntrackedFiles = all
+	submoduleSummary = true
+
+# Git Diff
+[merge]
+	autoStash = true
+	conflictStyle = zdiff3
+
+[interactive]
+	diffFilter = delta --color-only
+
+[diff]
+	algorithm = histogram
+	context = 3
+	colorMoved = plain
+	interHunkContext = 10
+	mnemonicPrefix = true
+	renames = copies
+
+[delta]
+	line-numbers = true
+	hyperlinks = true
+	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+	navigate = true
+	syntax-theme = Visual Studio Dark+
+	tabs = 4
+
+# Git Commit
+[commit]
+	gpgSign = true
+{{- if (eq .chezmoi.os "linux")  }}
+	template = {{ .chezmoi.homeDir }}/.config/git/template
+{{- else }}
+	template = {{ .chezmoi.homeDir }}/AppData/Roaming/git/template
+{{- end }}
+	verbose = true
+
+# Git Pull, Push, and Rebase
+[fetch]
+	all = true
+	prune = true
+	pruneTags = true
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+	autoSquash = true
+	followTags = true
+	recurseSubmodules = on-demand
+
+[submodule]
+	fetchJobs = 16
+	recurse = true
+
+[rebase]
+	abbreviateCommands = true
+	autoStash = true
+	autoSquash = true
+	missingCommitsCheck = error
+	updateRefs = true
+
+[rerere]
+	autoUpdate = true
+	enabled = true
+
+# Git Branch, Tag, and Log
+[branch]
+	sort = -committerdate
+
+[tag]
+	gpgSign = true
+	sort = version:refname
+
+[log]
+	abbrevCommit = true
+
+# Git Alias
+[alias]
+	amend = cam
+	unstage = rs
+
+	a = add
+	aa = a --all
+	ap = a --patch
+
+	b = branch
+	ba = b --all
+	bd = b --delete
+	bm = b --move
+
+	c = commit
+	ca = c --all
+	cam = c --amend
+
+	co = checkout
+	cob = co -b
+	com = co main
+	cop = co -
+
+	cl = clone --recursive
+
+	d = dl --stat
+	dl = diff
+	ds = dsl --stat
+	dsl = dl --staged
+
+	i = init
+
+	l = log --graph --all
+
+	m = merge
+	ma = m --abort
+	mc = m --continue
+
+	p = push
+	pf = p --force-with-lease --force-if-includes
+
+	pl = pull
+
+	r = restore
+	rp = r --patch
+	rs = r --staged
+	rsp = rs --patch
+	rsw = rs --worktree
+
+	rb = rebase
+	rba = rb --abort
+	rbc = rb --continue
+	rbs = rb --skip
+
+	rbi = rb --interactive
+	rbir = rbi --root
+
+	s = status
+	sl = s --no-short
+
+	sm = submodule
+	sma = sm add
+	sms = sm status
+	smu = sm update --init --recursive
+
+	st = stash
+	std = st drop
+	stl = st list
+	stp = st pop
+
+	sta = st --all
+	sts = st --staged
+	stu = st --include-untracked
+
+	sw = switch
+	swc = sw --create
+	swp = sw -
+	swm = sw main
+
+# Formatting
+[format]
+	pretty = %C(auto)%h  %an  %ar  %d%n%s%n
+	signOff = true
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+[gpg]
+	format = ssh
+
+{{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) }}
+[credential]
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+{{- end }}

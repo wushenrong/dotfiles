@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+packages:
+  arch:
+    - base-devel
+    - clang
+    - fd
+    - hunspell-en_us
+    - lesspipe
+    - man-db
+    - msedit
+    - pacman-contrib
+    - scc
+    - ttf-cascadia-code
+    - openssh
+    - perl-image-exiftool
+    - vivid

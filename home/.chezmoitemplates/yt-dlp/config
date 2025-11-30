@@ -1,0 +1,23 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Embed video metadata
+--embed-thumbnail
+--embed-metadata
+
+# Get next video if it is apart of a playlist
+--yes-playlist
+
+# Subtitles
+--sub-langs "en.*"
+--write-subs
+--write-auto-subs
+--embed-subs
+--compat-options no-keep-subs
+
+# Get Browser Cookies
+--cookies-from-browser=firefox
+
+# SponsorBlock
+--sponsorblock-mark default

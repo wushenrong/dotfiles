@@ -1,0 +1,65 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# 🎉 Initial Commit
+
+# Features
+# ✨
+# ⚡
+# 🔒
+
+# Bugs
+# 🐛
+# 🩹
+# 🚑
+
+# Refactors
+# ♻️
+# 🔥
+# 🎨
+
+# Reverts
+# ⏪
+
+# Chores
+# 🔧
+# ⬆️
+
+# Dependencies
+# ⬇️
+# ➕
+# ➖
+# 📌
+
+# Documentation
+# 📝
+# 💡
+# 📄
+
+# CI
+# 👷
+# 💚
+
+# Tests
+# 🧪
+# ✅
+
+# Release
+# 🔖
+# 📦
+# 🚀
+
+# Breaking Changes
+# 💥
+
+# Fixes:
+# Closes:
+# Resolves:
+# References:
+# Relates-to:
+
+# Reported-by:
+Signed-off-by: {{ .name }} <{{ .email }}>
+# Reviewed-by:
+# Co-authored-by:

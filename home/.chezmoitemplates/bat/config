@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Set theme
+--theme "Visual Studio Dark+"
+
+# Use italic text on the terminal (not supported on all terminals)
+--italic-text=always
+
+# Wrap lines to 80 columns
+--terminal-width 80
+
+# Set how to display non printable characters
+--nonprintable-notation unicode

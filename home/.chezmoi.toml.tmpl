@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+{{ $codespaces:= env "CODESPACES" | not | not -}}
+sourceDir = {{ .chezmoi.sourceDir | quote }}
+
+[data]
+codespaces = {{ $codespaces }}
+email = "twopizza9621536@gmail.com"
+name = "Samuel Wu"
+
+[edit]
+command = "code"
+args = ["--wait"]
+
+[diff]
+pager = "delta"
+
+[interpreters.ps1]
+command = "pwsh"
+args = ["-NoLogo"]

@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2024 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+version = 1
+
+[[annotations]]
+SPDX-FileCopyrightText = "2024 Samuel Wu"
+SPDX-License-Identifier = "0BSD"
+path = [
+  "**/symlink_*",
+  "**/*.tmpl",
+  ".chezmoiroot",
+  ".chezmoiversion",
+  "README.md",
+  "home/dot_glzr/zebar/**",
+]

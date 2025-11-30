@@ -1,0 +1,53 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+packages:
+  windows:
+    cli:
+      - aristocratos.btop4win
+      - ajeetdsouza.zoxide
+      - BenBoyter.scc
+      - BurntSushi.ripgrep.MSVC
+      - charmbracelet.glow
+      - cURL.cURL
+      - dalance.procs
+      - dandavison.delta
+      - dundee.gdu
+      - Fastfetch-cli.Fastfetch
+      - Git.Git
+      - hpjansson.Chafa
+      - JanDeDobbeleer.OhMyPosh
+      - jftuga.less
+      - jqlang.jq
+      - junegunn.fzf
+      - MediaArea.MediaInfo
+      - Microsoft.Edit
+      - Microsoft.OpenSSH.Preview
+      - MikeFarah.yq
+      - muesli.duf
+      - OliverBetz.ExifTool
+      - sharkdp.bat
+      - sharkdp.fd
+      - sharkdp.hexyl
+      - sharkdp.hyperfine
+      - sharkdp.vivid
+      - yt-dlp.yt-dlp
+      - XAMPPRocky.tokei
+
+    gui:
+      - glzr-io.glazewm
+      - GnuPG.Gpg4win
+      - KDE.Glaxnimate
+      - KDE.Kdenlive
+      - Microsoft.WindowsTerminal
+      - namazso.OpenHashTab
+      - M2Team.NanaZip
+      - Valve.Steam
+      - YutakaSawada.MultiPar
+
+    msstore:
+      - XP89DCGQ3K6VLD
+      - XP9KHM4BK9FZ7Q
+      - XPDC2RH70K22MN
+      - XPDCFJDKLZJLP8

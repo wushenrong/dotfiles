@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+{{- if (eq .chezmoi.os "windows") }}
+.config/*
+!.config/fzf
+!.config/ripgrep
+.local/*
+
+.lessfilter
+.vim
+.zshenv
+{{- end }}
+
+{{- if (eq .chezmoi.os "linux") }}
+.glzr
+AppData
+{{- end }}
