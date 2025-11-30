@@ -20,6 +20,7 @@ packages:
     - glow
     - groff
     - hexyl
+    - hyfetch
     - hyperfine
     - jq
     - mediainfo
@@ -27,8 +28,11 @@ packages:
     - nano
     - procs
     - ripgrep
+    - ruby
+    - rustup
     - tmux
     - tokei
+    - vivid
     - wget
     - yq
     - yt-dlp

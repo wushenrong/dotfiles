@@ -11,8 +11,8 @@ packages:
     - clang-tidy
     - fd-find
     - fonts-cascadia-code
+    - golang
     - hunspell-en-us
     - libarchive-tools
     - openssh-client
     - libimage-exiftool-perl
-    - vivid

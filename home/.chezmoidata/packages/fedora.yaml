@@ -10,6 +10,7 @@ packages:
     - cascadia-code-fonts
     - clang-tools-extra
     - fd-find
+    - golang
     - hunspell-en
     - msedit
     - openssh

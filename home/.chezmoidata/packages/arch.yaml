@@ -7,6 +7,7 @@ packages:
     - base-devel
     - clang
     - fd
+    - go
     - hunspell-en_us
     - lesspipe
     - man-db
@@ -16,4 +17,3 @@ packages:
     - ttf-cascadia-code
     - openssh
     - perl-image-exiftool
-    - vivid

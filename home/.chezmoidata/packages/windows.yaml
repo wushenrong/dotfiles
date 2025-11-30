@@ -16,6 +16,7 @@ packages:
       - dundee.gdu
       - Fastfetch-cli.Fastfetch
       - Git.Git
+      - GoLang.Go
       - hpjansson.Chafa
       - JanDeDobbeleer.OhMyPosh
       - jftuga.less
@@ -27,6 +28,7 @@ packages:
       - MikeFarah.yq
       - muesli.duf
       - OliverBetz.ExifTool
+      - Rustlang.Rustup
       - sharkdp.bat
       - sharkdp.fd
       - sharkdp.hexyl
