@@ -10,7 +10,6 @@ packages:
     - chafa
     - curl
     - duf
-    - elinks
     - eza
     - fastfetch
     - ffmpeg

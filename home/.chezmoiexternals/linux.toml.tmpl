@@ -2,30 +2,15 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-{{ if (eq .chezmoi.os "windows") -}}
-["AppData/Roaming/mpv.net"]
-type = "archive"
-url = "https://github.com/wushenrong/mpvnet-config/archive/main.tar.gz"
-stripComponents = 1
-refreshPeriod = "168h"
-
-["AppData/Roaming/vivid/filetype.yml"]
-type = "file"
-url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
-refreshPeriod = "168h"
-{{ end -}}
-
 {{ if (eq .chezmoi.os "linux") -}}
 [".config/mpv"]
 type = "archive"
 url = "https://github.com/wushenrong/mpv-config/archive/main.tar.gz"
 stripComponents = 1
-refreshPeriod = "168h"
 
 [".config/vivid/filetype.yml"]
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
-refreshPeriod = "168h"
 
 [".config/kitty/VSCode_Dark.conf"]
 type = "file"
@@ -36,25 +21,21 @@ type = "archive"
 url = "https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz"
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
 
 [".config/tmux/plugins/tpm"]
 type = "archive"
 url = "https://github.com/tmux-plugins/tpm/archive/refs/heads/master.tar.gz"
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
 
 [".config/zsh"]
 type = "archive"
 url = "https://github.com/wushenrong/zdotdir/archive/main.tar.gz"
 stripComponents = 1
-refreshPeriod = "168h"
 
 [".config/zsh/antidote"]
 type = "archive"
 url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
 exact = true
 stripComponents = 1
-refreshPeriod = "168h"
 {{ end -}}

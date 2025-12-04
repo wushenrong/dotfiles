@@ -1,0 +1,14 @@
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+{{ if (eq .chezmoi.os "windows") -}}
+["AppData/Roaming/mpv.net"]
+type = "archive"
+url = "https://github.com/wushenrong/mpvnet-config/archive/main.tar.gz"
+stripComponents = 1
+
+["AppData/Roaming/vivid/filetype.yml"]
+type = "file"
+url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
+{{ end -}}

@@ -12,6 +12,5 @@ packages:
     - fd-find
     - golang
     - hunspell-en
-    - msedit
     - openssh
     - perl-Image-ExifTool

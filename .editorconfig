@@ -19,7 +19,3 @@ indent_size = 4
 
 [*.sh]
 end_of_line = lf
-
-[home/.chezmoitemplates/git/config]
-indent_style = tab
-indent_size = 4
