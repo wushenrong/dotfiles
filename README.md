@@ -26,6 +26,7 @@ other repositories:
 - [antidote](https://github.com/mattmc3/antidote)
 - [kitty-themes](https://github.com/kovidgoyal/kitty-themes)
 - [mpv-config](https://github.com/wushenrong/mpv-config)
+- [mpvnet-config](https://github.com/wushenrong/mpvnet-config)
 - [nano-syntax-highlighting](https://github.com/galenguyer/nano-syntax-highlighting)
 - [tpm](https://github.com/tmux-plugins/tpm)
 - [vivid](https://github.com/sharkdp/vivid)

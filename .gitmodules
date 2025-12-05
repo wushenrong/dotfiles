@@ -1,0 +1,6 @@
+[submodule "home/private_dot_config/private_external_mpv"]
+	path = home/private_dot_config/private_external_mpv
+	url = https://github.com/wushenrong/mpv-config.git
+[submodule "home/private_dot_config/private_external_zsh"]
+	path = home/private_dot_config/private_external_zsh
+	url = https://github.com/wushenrong/zdotdir.git

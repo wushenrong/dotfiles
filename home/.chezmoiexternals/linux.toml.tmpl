@@ -3,11 +3,6 @@
 # SPDX-License-Identifier: 0BSD
 
 {{ if (eq .chezmoi.os "linux") -}}
-[".config/mpv"]
-type = "archive"
-url = "https://github.com/wushenrong/mpv-config/archive/main.tar.gz"
-stripComponents = 1
-
 [".config/vivid/filetype.yml"]
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
@@ -26,11 +21,6 @@ stripComponents = 1
 type = "archive"
 url = "https://github.com/tmux-plugins/tpm/archive/refs/heads/master.tar.gz"
 exact = true
-stripComponents = 1
-
-[".config/zsh"]
-type = "archive"
-url = "https://github.com/wushenrong/zdotdir/archive/main.tar.gz"
 stripComponents = 1
 
 [".config/zsh/antidote"]
