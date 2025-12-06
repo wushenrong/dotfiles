@@ -3,12 +3,15 @@
 # SPDX-License-Identifier: 0BSD
 
 {{ if (eq .chezmoi.os "windows") -}}
-["AppData/Roaming/mpv.net"]
-type = "archive"
-url = "https://github.com/wushenrong/mpvnet-config/archive/main.tar.gz"
-stripComponents = 1
-
 ["AppData/Roaming/vivid/filetype.yml"]
+{{ else -}}
+[".config/vivid/filetype.yml"]
+{{ end -}}
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
+
+{{ if (eq .chezmoi.os "linux") -}}
+[".config/kitty/VSCode_Dark.conf"]
+type = "file"
+url = "https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes/VSCode_Dark.conf"
 {{ end -}}

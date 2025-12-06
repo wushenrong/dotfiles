@@ -76,6 +76,7 @@
 	all = true
 	prune = true
 	pruneTags = true
+	recurseSubmodules = on-demand
 
 [pull]
 	rebase = true

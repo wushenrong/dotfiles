@@ -6,8 +6,14 @@
 --embed-thumbnail
 --embed-metadata
 
+# Get all available formats
+--check-all-formats
+
 # Get next video if it is apart of a playlist
 --yes-playlist
+
+# Mark video as watched
+--mark-watched
 
 # Subtitles
 --sub-langs "en.*"
@@ -20,4 +26,4 @@
 --cookies-from-browser=firefox
 
 # SponsorBlock
---sponsorblock-mark default
+--sponsorblock-mark all

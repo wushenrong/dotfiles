@@ -4,3 +4,12 @@
 [submodule "home/private_dot_config/private_external_zsh"]
 	path = home/private_dot_config/private_external_zsh
 	url = https://github.com/wushenrong/zdotdir.git
+[submodule "home/private_dot_config/nano/external_extras"]
+	path = home/private_dot_config/nano/external_extras
+	url = https://github.com/galenguyer/nano-syntax-highlighting.git
+[submodule "home/private_dot_config/tmux/plugins/external_tpm"]
+	path = home/private_dot_config/tmux/plugins/external_tpm
+	url = https://github.com/tmux-plugins/tpm.git
+[submodule "home/AppData/Roaming/external_mpv.net"]
+	path = home/AppData/Roaming/external_mpv.net
+	url = https://github.com/wushenrong/mpvnet-config.git

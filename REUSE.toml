@@ -8,7 +8,6 @@ version = 1
 SPDX-FileCopyrightText = "2024 Samuel Wu"
 SPDX-License-Identifier = "0BSD"
 path = [
-  "**/*symlink*",
   "**/*.tmpl",
   ".chezmoiroot",
   ".chezmoiversion",
