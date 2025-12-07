@@ -2,7 +2,7 @@
 	path = home/private_dot_config/external_private_mpv
 	url = https://github.com/wushenrong/mpv-config.git
 [submodule "home/private_dot_config/external_private_zsh"]
-	path = home/private_dot_config/external_private_zsh
+	path = home/private_dot_config/private_zsh
 	url = https://github.com/wushenrong/zdotdir.git
 [submodule "home/private_dot_config/nano/external_extras"]
 	path = home/private_dot_config/nano/external_extras
