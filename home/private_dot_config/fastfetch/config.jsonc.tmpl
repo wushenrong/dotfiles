@@ -20,15 +20,21 @@
     "separator": ""
   },
   "logo": {
-    "height": 22,
     "padding": {
       "left": 2,
       "right": 2,
       "top": 5
     },
+    {{- if (eq .chezmoi.os "windows") }}
+    "width": 36,
+    "height": 22,
     "source": "~/Pictures/Terminal/sixel/feli_ppt2_7.sixel",
-    "type": "raw",
-    "width": 36
+    "type": "raw"
+    {{- else }}
+    "width": 32,
+    "source": "~/Pictures/Terminal/*.png",
+    "type": "kitty-direct"
+    {{- end }}
   },
   "modules": [
     "break",
