@@ -20,13 +20,13 @@
     "separator": ""
   },
   "logo": {
-    "height": 24,
+    "height": 22,
     "padding": {
       "left": 2,
       "right": 2,
       "top": 5
     },
-    "source": "~/Pictures/Terminal/feli_ppt2_7.sixel",
+    "source": "~/Pictures/Terminal/sixel/feli_ppt2_7.sixel",
     "type": "raw",
     "width": 36
   },
@@ -79,52 +79,52 @@
     },
     {
       "format": "╭─{$5}─╮",
-      "outputColor": "38;2;124;58;131",
+      "outputColor": "38;2;170;89;219",
       "type": "custom"
     },
     {
       "key": "│        DE:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "de"
     },
     {
       "key": "│        WM:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "wm"
     },
     {
       "key": "│     Theme:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "theme"
     },
     {
       "key": "│  WM Theme:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "wmtheme"
     },
     {
       "key": "│      Font:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "font"
     },
     {
       "key": "│ Term Font:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "terminalfont"
     },
     {
       "key": "│     Icons:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "icons"
     },
     {
       "key": "│    Cursor:{$1} │",
-      "keyColor": "38;2;124;58;131",
+      "keyColor": "38;2;170;89;219",
       "type": "cursor"
     },
     {
       "format": "╰─{$5}─╯",
-      "outputColor": "38;2;124;58;131",
+      "outputColor": "38;2;170;89;219",
       "type": "custom"
     },
     {
@@ -179,32 +179,37 @@
     },
     {
       "format": "╭─{$5}─╮",
-      "outputColor": "yellow",
+      "outputColor": "38;2;237;145;171",
       "type": "custom"
     },
     {
+      "color": {
+        "at": "bright_white",
+        "host": "bright_white",
+        "user": "bright_white"
+      },
       "key": "│      User:{$1} │",
-      "keyColor": "yellow",
+      "keyColor": "38;2;237;145;171",
       "type": "title"
     },
     {
       "key": "│  Local IP:{$1} │",
-      "keyColor": "yellow",
+      "keyColor": "38;2;237;145;171",
       "type": "localip"
     },
     {
       "key": "│    Locale:{$1} │",
-      "keyColor": "yellow",
+      "keyColor": "38;2;237;145;171",
       "type": "locale"
     },
     {
-      "format": "╰──{$5}{$4}┬─ {#black} {#red} {#green} {#yellow} {#blue} {#magenta} {#cyan} {#white}{#yellow} ─┤",
-      "outputColor": "yellow",
+      "format": "╰──{$5}{$4}┬─ {#black} {#red} {#green} {#yellow} {#blue} {#magenta} {#cyan} {#white}{#38;2;237;145;171} ─┤",
+      "outputColor": "38;2;237;145;171",
       "type": "custom"
     },
     {
-      "format": "{$3}{$4}╰─ {#bright_black} {#bright_red} {#bright_green} {#bright_yellow} {#bright_blue} {#bright_magenta} {#bright_cyan} {#bright_white}{#reset_default}{#yellow} ─╯",
-      "outputColor": "yellow",
+      "format": "{$3}{$4}╰─ {#bright_black} {#bright_red} {#bright_green} {#bright_yellow} {#bright_blue} {#bright_magenta} {#bright_cyan} {#bright_white}{#reset_default}{#38;2;237;145;171} ─╯",
+      "outputColor": "38;2;237;145;171",
       "type": "custom"
     },
     "break"
