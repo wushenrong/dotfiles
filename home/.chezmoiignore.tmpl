@@ -4,6 +4,7 @@
 
 {{- if (eq .chezmoi.os "windows") }}
 .config/*
+!.config/fastfetch
 !.config/fzf
 !.config/ripgrep
 .gnupg

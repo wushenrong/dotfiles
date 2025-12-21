@@ -9,9 +9,3 @@
 {{ end -}}
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
-
-{{ if (eq .chezmoi.os "linux") -}}
-[".config/kitty/VSCode_Dark.conf"]
-type = "file"
-url = "https://raw.githubusercontent.com/kovidgoyal/kitty-themes/master/themes/VSCode_Dark.conf"
-{{ end -}}
