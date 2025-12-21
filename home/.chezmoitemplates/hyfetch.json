@@ -1,0 +1,15 @@
+{
+  "args": "--logo-width 0 --logo-height 0",
+  "auto_detect_light_dark": true,
+  "backend": "fastfetch",
+  "color_align": {
+    "mode": "horizontal"
+  },
+  "custom_ascii_path": null,
+  "distro": "windows_11_small",
+  "light_dark": "dark",
+  "lightness": 0.65,
+  "mode": "rgb",
+  "preset": "beiyang",
+  "pride_month_disable": false
+}

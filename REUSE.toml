@@ -12,5 +12,6 @@ path = [
   ".chezmoiroot",
   ".chezmoiversion",
   "README.md",
+  "home/.chezmoitemplates/hyfetch.json",
   "home/dot_glzr/zebar/**",
 ]
