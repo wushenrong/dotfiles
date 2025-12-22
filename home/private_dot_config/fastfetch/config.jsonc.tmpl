@@ -17,24 +17,25 @@
     "key": {
       "width": 14
     },
-    "separator": ""
+    "separator": "",
+    "size": {
+      "binaryPrefix": "jedec"
+    }
   },
   "logo": {
     "padding": {
       "left": 2,
       "right": 2,
-      "top": 5
+      "top": 6
     },
     {{- if (eq .chezmoi.os "windows") }}
-    "width": 36,
-    "height": 22,
     "source": "~/Pictures/Terminal/sixel/feli_ppt2_7.sixel",
-    "type": "raw"
+    "type": "raw",
     {{- else }}
-    "width": 32,
     "source": "~/Pictures/Terminal/*.png",
-    "type": "kitty-direct"
+    "type": "kitty-direct",
     {{- end }}
+    "width": 36
   },
   "modules": [
     "break",
@@ -152,11 +153,6 @@
       "key": "│     Video:{$1} │",
       "keyColor": "38;2;209;111;179",
       "type": "display"
-    },
-    {
-      "key": "│     Audio:{$1} │",
-      "keyColor": "38;2;209;111;179",
-      "type": "sound"
     },
     {
       "key": "│    Memory:{$1} │",

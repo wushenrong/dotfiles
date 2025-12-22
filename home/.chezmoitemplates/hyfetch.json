@@ -1,5 +1,5 @@
 {
-  "args": "--logo-width 0 --logo-height 0",
+  "args": "--logo-width 0",
   "auto_detect_light_dark": true,
   "backend": "fastfetch",
   "color_align": {
