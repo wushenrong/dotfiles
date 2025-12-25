@@ -50,6 +50,7 @@ packages:
       - Microsoft.VisualStudioCode
       - Microsoft.WindowsTerminal
       - Mozilla.Firefox
+      - Mozilla.Thunderbird
       - M2Team.NanaZip
       - namazso.OpenHashTab
       - OBSProject.OBSStudio
