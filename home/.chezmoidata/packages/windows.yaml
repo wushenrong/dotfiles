@@ -23,6 +23,7 @@ packages:
       - jqlang.jq
       - junegunn.fzf
       - MediaArea.MediaInfo
+      - Meta.Zstandard
       - Microsoft.Edit
       - Microsoft.OpenSSH.Preview
       - MikeFarah.yq
