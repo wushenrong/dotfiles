@@ -39,18 +39,19 @@ packages:
       - XAMPPRocky.tokei
 
     gui:
+      - Discord.Discord
       - glzr-io.glazewm
       - GnuPG.Gpg4win
       - KDE.Glaxnimate
       - KDE.Kdenlive
+      - KDE.Krita
+      - Microsoft.PowerToys
+      - Microsoft.VisualStudio.Community
+      - Microsoft.VisualStudioCode
       - Microsoft.WindowsTerminal
-      - namazso.OpenHashTab
+      - Mozilla.Firefox
       - M2Team.NanaZip
+      - namazso.OpenHashTab
+      - OBSProject.OBSStudio
       - Valve.Steam
       - YutakaSawada.MultiPar
-
-    msstore:
-      - XP89DCGQ3K6VLD
-      - XP9KHM4BK9FZ7Q
-      - XPDC2RH70K22MN
-      - XPDCFJDKLZJLP8
