@@ -11,7 +11,4 @@ winget install -e {{ .packages.windows.cli | quoteList | join " " }}
 
 # Install GUI applications
 winget install -e {{ .packages.windows.gui | quoteList | join " " }}
-
-# Install MSStore applications
-winget install --accept-package-agreements -e {{  .packages.windows.msstore | quoteList | join " " }}
 {{ end -}}
