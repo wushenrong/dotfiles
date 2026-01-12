@@ -9,3 +9,11 @@
 {{ end -}}
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
+
+{{ if (eq .chezmoi.os "linux") -}}
+[".config/zsh/antidote"]
+type = "archive"
+url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
+exact = true
+stripComponents = 1
+{{ end -}}
