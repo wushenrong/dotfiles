@@ -10,6 +10,7 @@
 !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
+!.vscode/c_cpp_properties.json
 !*.code-workspace
 
 # Built Visual Studio Code Extensions
@@ -44,19 +45,6 @@
 
 # Log files created by default by the nohup command
 nohup.out
-
-# Virtualenv
-# https://realpython.com/python-virtual-environments-a-primer/#the-virtualenv-project
-.Python
-[Bb]in
-[Ii]nclude
-[Ll]ib
-[Ll]ib64
-[Ll]ocal
-[Ss]cripts
-pyvenv.cfg
-.venv
-pip-selfcheck.json
 
 # Windows thumbnail cache files
 Thumbs.db

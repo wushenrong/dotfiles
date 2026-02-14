@@ -11,21 +11,15 @@ case "$ID $ID_LIKE" in
 *"debian"*)
   sudo apt update -y
   sudo apt upgrade -y
-
-  sudo apt install {{ .packages.linux | quoteList | join " " }}
-  sudo apt install {{ .packages.debian | quoteList | join " " }}
+  sudo apt install -y {{ .packages.linux | concat (.packages.debian) | quoteList | join " " }}
   ;;
 *"arch"*)
   sudo pacman -Syu --noconfirm
-
-  sudo pacman -S --noconfirm --needed {{ .packages.linux | quoteList | join " " }}
-  sudo pacman -S --noconfirm --needed {{ .packages.arch | quoteList | join " " }}
+  sudo pacman -S --noconfirm --needed {{ .packages.linux | concat (.packages.arch) | quoteList | join " " }}
   ;;
 *"fedora"*)
   sudo dnf upgrade -y
-
-  sudo dnf install -y {{ .packages.linux | quoteList | join " " }}
-  sudo dnf install -y {{ .packages.fedora | quoteList | join " " }}
+  sudo dnf install -y {{ .packages.linux | concat (.packages.fedora) | quoteList | join " " }}
   ;;
 *"nixos"*)
   printf >&2 "NixOS is not supported by this script.\n"

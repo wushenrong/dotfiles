@@ -59,7 +59,11 @@
 # References:
 # Relates-to:
 
-# Reported-by:
 Signed-off-by: {{ .name }} <{{ .email }}>
+# Reported-by:
+# Acked-by:
 # Reviewed-by:
+# Tested-by:
 # Co-authored-by:
+# Helped-by:
+# Assisted-by:

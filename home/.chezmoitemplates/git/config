@@ -213,6 +213,12 @@
 [gpg]
 	format = ssh
 
+[url "https://github.com/"]
+  insteadOf = "gh:"
+
+[url "https://github.com/wushenrong/"]
+  insteadOf = "wsr:"
+
 {{- if (and (eq .chezmoi.os "linux") (.chezmoi.kernel.osrelease | lower | contains "microsoft")) }}
 [credential]
 	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe

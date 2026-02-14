@@ -6,9 +6,6 @@
 # Update packages
 winget update --all --accept-package-agreements
 
-# Install CLI tools
-winget install -e {{ .packages.windows.cli | quoteList | join " " }}
-
-# Install GUI applications
-winget install -e {{ .packages.windows.gui | quoteList | join " " }}
+# Install packages
+winget install -e {{ .packages.windows | quoteList | join " " }}
 {{ end -}}
