@@ -2,10 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Set max column length for lines
---max-columns=80
---max-columns-preview
-
 # Match all instances unless there is uppercase
 --smart-case
 

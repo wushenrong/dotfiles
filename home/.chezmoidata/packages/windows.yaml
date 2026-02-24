@@ -15,6 +15,7 @@ packages:
     - Discord.Discord
     - Docker.DockerDesktop
     - dundee.gdu
+    - eza-community.eza
     - Fastfetch-cli.Fastfetch
     - Git.Git
     - GnuPG.Gpg4win
