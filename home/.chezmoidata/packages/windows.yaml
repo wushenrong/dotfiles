@@ -7,6 +7,7 @@ packages:
     - ajeetdsouza.zoxide
     - aristocratos.btop4win
     - BenBoyter.scc
+    - BiomeJS.Biome
     - BurntSushi.ripgrep.MSVC
     - charmbracelet.glow
     - cURL.cURL

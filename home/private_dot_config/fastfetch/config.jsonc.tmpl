@@ -8,11 +8,11 @@
   "display": {
     // From: https://github.com/fastfetch-cli/fastfetch/discussions/971#discussioncomment-12628729
     "constants": [
-      "\u001b[66C", // $1: Move cursor forward 77 columns (adjust if needed)
-      "\u001b[66D", // $2: Move cursor back 77 columns (not used, defined anyway)
-      "\u001b[79C", // $3: Move cursor to max width (wide term), or last column (narrow term)
+      "\u001b[67C", // $1: Move cursor forward 78 columns (adjust if needed)
+      "\u001b[67D", // $2: Move cursor back 78 columns (not used, defined anyway)
+      "\u001b[80C", // $3: Move cursor to max width (wide term), or last column (narrow term)
       "\u001b[20D", // $4: Move back 20 columns for the color block (both lines)
-      "────────────────────────────────────────────────────────────────────────────"
+      "─────────────────────────────────────────────────────────────────────────────"
     ],
     "key": {
       "width": 14
@@ -24,9 +24,9 @@
   },
   "logo": {
     "padding": {
-      "left": 2,
-      "right": {{ if (eq .chezmoi.os "windows") -}}3{{- else -}}2{{- end -}},
-      "top": {{ if (eq .chezmoi.os "windows") -}}3{{- else -}}2{{- end -}}
+      "left": 1,
+      "right": {{ if (eq .chezmoi.os "windows") -}}2{{- else -}}1{{- end -}},
+      "top": 1
     },
     {{- if (eq .chezmoi.os "windows") }}
     "source": "~/Pictures/Terminal/feli_ppt2_7.sixel",
@@ -38,7 +38,6 @@
     "width": 36
   },
   "modules": [
-    "break",
     {
       "format": "╭─{$5}─╮",
       "outputColor": "38;2;232;47;103",
@@ -153,6 +152,11 @@
       "key": "│     Video:{$1} │",
       "keyColor": "38;2;209;111;179",
       "type": "display"
+    },
+    {
+      "key": "│     Audio:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "sound"
     },
     {
       "key": "│    Memory:{$1} │",
