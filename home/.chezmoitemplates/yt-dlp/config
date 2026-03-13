@@ -9,11 +9,8 @@
 # Get next video if it is apart of a playlist
 --yes-playlist
 
-# Mark video as watched
---mark-watched
-
 # Subtitles
---sub-langs "all"
+--sub-langs all
 --embed-subs
 
 # Get Browser Cookies
