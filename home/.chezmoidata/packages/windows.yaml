@@ -9,6 +9,7 @@ packages:
     - BenBoyter.scc
     - BiomeJS.Biome
     - BurntSushi.ripgrep.MSVC
+    - Casey.Just
     - charmbracelet.glow
     - cURL.cURL
     - dalance.procs
@@ -22,6 +23,7 @@ packages:
     - GnuPG.Gpg4win
     - GoLang.Go
     - hpjansson.Chafa
+    - Inkscape.Inkscape
     - JanDeDobbeleer.OhMyPosh
     - jftuga.less
     - jqlang.jq
@@ -42,6 +44,7 @@ packages:
     - Microsoft.VisualStudioCode
     - Microsoft.WindowsTerminal
     - MikeFarah.yq
+    - MiKTeX.MiKTeX
     - Mozilla.Firefox
     - Mozilla.Thunderbird
     - muesli.duf
@@ -55,9 +58,10 @@ packages:
     - sharkdp.hexyl
     - sharkdp.hyperfine
     - sharkdp.vivid
+    - StrawberryPerl.StrawberryPerl
     - Valve.Steam
+    - WireGuard.WireGuard
     - XAMPPRocky.tokei
     - yt-dlp.yt-dlp
     - Yubico.Authenticator
     - Yubico.YubiKeyManagerCLI
-    - YutakaSawada.MultiPar

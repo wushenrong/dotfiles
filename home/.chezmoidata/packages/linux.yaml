@@ -22,6 +22,7 @@ packages:
     - hyfetch
     - hyperfine
     - jq
+    - just
     - mediainfo
     - mpv
     - nano
