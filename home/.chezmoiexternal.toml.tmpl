@@ -11,9 +11,20 @@ type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
 
 {{ if (eq .chezmoi.os "linux") -}}
-[".config/zsh/antidote"]
+[".config/nano/extras"]
+stripComponents = 1
 type = "archive"
-url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
+url = "https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz"
+
+[".config/tmux/plugins/tpm"]
 exact = true
 stripComponents = 1
+type = "archive"
+url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
+
+[".config/zsh/antidote"]
+exact = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
 {{ end -}}

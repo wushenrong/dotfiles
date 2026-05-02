@@ -61,6 +61,7 @@ packages:
     - StrawberryPerl.StrawberryPerl
     - Valve.Steam
     - WireGuard.WireGuard
+    - WiresharkFoundation.Wireshark
     - XAMPPRocky.tokei
     - yt-dlp.yt-dlp
     - Yubico.Authenticator
