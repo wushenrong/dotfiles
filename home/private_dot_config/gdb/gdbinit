@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+# Show disassembly on steps
+set disassemble-next-line on
+
+# Prefer Intel syntax over AT&T
+set disassembly-flavor intel
+
+# Enable history
+set history save on

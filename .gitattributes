@@ -4,5 +4,5 @@
 
 *             text=auto
 *.sh.tmpl     text eol=lf
-executable_*  text eol=lf
+*executable_*  text eol=lf
 install       text eol=lf
