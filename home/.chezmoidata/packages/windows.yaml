@@ -28,6 +28,7 @@ packages:
     - jftuga.less
     - jqlang.jq
     - junegunn.fzf
+    - LLVM.LLVM
     - Logitech.OptionsPlus
     - KDE.Glaxnimate
     - KDE.Kdenlive

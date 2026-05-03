@@ -5,7 +5,6 @@
 packages:
   arch:
     - base-devel
-    - clang
     - fd
     - go
     - hunspell-en_us

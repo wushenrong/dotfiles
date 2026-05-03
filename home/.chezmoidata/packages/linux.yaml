@@ -5,9 +5,11 @@
 packages:
   linux:
     - bat
+    - bear
     - bfs
     - btop
     - chafa
+    - clang
     - curl
     - duf
     - eza
@@ -23,6 +25,9 @@ packages:
     - hyperfine
     - jq
     - just
+    - lld
+    - lldb
+    - llvm
     - mediainfo
     - mpv
     - nano
@@ -32,6 +37,7 @@ packages:
     - rustup
     - tmux
     - tokei
+    - valgrind
     - vivid
     - wget
     - yq

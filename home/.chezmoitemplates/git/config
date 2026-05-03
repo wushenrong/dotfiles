@@ -157,6 +157,7 @@
 	pf = p --force-with-lease --force-if-includes
 
 	pl = pull
+  plr = pl --recurse-submodules
 
 	r = restore
 	rp = r --patch
@@ -178,7 +179,8 @@
 	sm = submodule
 	sma = sm add
 	sms = sm status
-	smu = sm update --init --recursive
+	smi = sm update --init --recursive
+  smu = sm update --remote --recursive
 
 	st = stash
 	std = st drop
