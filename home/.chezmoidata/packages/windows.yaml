@@ -19,6 +19,7 @@ packages:
     - dundee.gdu
     - eza-community.eza
     - Fastfetch-cli.Fastfetch
+    - FrankBijnen.ExifToolGUI
     - Git.Git
     - GnuPG.Gpg4win
     - GoLang.Go
@@ -29,7 +30,6 @@ packages:
     - jqlang.jq
     - junegunn.fzf
     - LLVM.LLVM
-    - Logitech.OptionsPlus
     - KDE.Glaxnimate
     - KDE.Kdenlive
     - KDE.Krita
