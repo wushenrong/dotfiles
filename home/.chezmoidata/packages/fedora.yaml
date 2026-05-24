@@ -10,7 +10,6 @@ packages:
     - cascadia-code-fonts
     - clang-tools-extra
     - fd-find
-    - golang
     - hunspell-en
     - openssh
     - perl-Image-ExifTool

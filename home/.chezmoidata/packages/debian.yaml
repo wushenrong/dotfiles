@@ -12,7 +12,6 @@ packages:
     - clang-tools
     - fd-find
     - fonts-cascadia-code
-    - golang
     - hunspell-en-us
     - libarchive-tools
     - openssh-client

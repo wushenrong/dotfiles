@@ -6,12 +6,10 @@ packages:
   arch:
     - base-devel
     - fd
-    - go
     - hunspell-en_us
     - lesspipe
     - man-db
     - pacman-contrib
-    - scc
     - ttf-cascadia-code
     - openssh
     - perl-image-exiftool

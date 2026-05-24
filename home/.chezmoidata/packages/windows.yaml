@@ -6,23 +6,20 @@ packages:
   windows:
     - ajeetdsouza.zoxide
     - aristocratos.btop4win
-    - BenBoyter.scc
     - BiomeJS.Biome
     - BurntSushi.ripgrep.MSVC
+    - calibre.calibre
     - Casey.Just
     - charmbracelet.glow
     - cURL.cURL
     - dalance.procs
     - dandavison.delta
     - Discord.Discord
-    - Docker.DockerDesktop
     - dundee.gdu
     - eza-community.eza
     - Fastfetch-cli.Fastfetch
-    - FrankBijnen.ExifToolGUI
     - Git.Git
     - GnuPG.Gpg4win
-    - GoLang.Go
     - hpjansson.Chafa
     - Inkscape.Inkscape
     - JanDeDobbeleer.OhMyPosh
@@ -30,7 +27,6 @@ packages:
     - jqlang.jq
     - junegunn.fzf
     - LLVM.LLVM
-    - KDE.Glaxnimate
     - KDE.Kdenlive
     - KDE.Krita
     - Kitware.CMake
@@ -49,17 +45,19 @@ packages:
     - Mozilla.Firefox
     - Mozilla.Thunderbird
     - muesli.duf
-    - namazso.OpenHashTab
     - OBSProject.OBSStudio
     - OliverBetz.ExifTool
-    - OnionShare.OnionShare
+    - RedHat.Podman-Desktop
     - Rustlang.Rustup
+    - samuel-lucas6.kryptor
     - sharkdp.bat
     - sharkdp.fd
     - sharkdp.hexyl
     - sharkdp.hyperfine
     - sharkdp.vivid
+    - shinchiro.mpv
     - StrawberryPerl.StrawberryPerl
+    - TenacityTeam.Tenacity
     - Valve.Steam
     - WireGuard.WireGuard
     - WiresharkFoundation.Wireshark

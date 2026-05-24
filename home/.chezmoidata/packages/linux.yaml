@@ -10,6 +10,7 @@ packages:
     - btop
     - chafa
     - clang
+    - cmake
     - curl
     - duf
     - eza
@@ -29,11 +30,9 @@ packages:
     - lldb
     - llvm
     - mediainfo
-    - mpv
     - nano
     - procs
     - ripgrep
-    - ruby
     - rustup
     - tmux
     - tokei
