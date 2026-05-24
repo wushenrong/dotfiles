@@ -1,9 +1,3 @@
-[submodule "home/private_dot_config/external_private_mpv"]
-	path = home/private_dot_config/external_private_mpv
-	url = https://github.com/wushenrong/mpv-config.git
 [submodule "home/private_dot_config/external_private_zsh"]
 	path = home/private_dot_config/private_zsh
 	url = https://github.com/wushenrong/zdotdir.git
-[submodule "home/AppData/Roaming/external_mpv.net"]
-	path = home/AppData/Roaming/external_mpv.net
-	url = https://github.com/wushenrong/mpvnet-config.git

@@ -2,15 +2,16 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-{{ if (eq .chezmoi.os "windows") -}}
-["AppData/Roaming/vivid/filetype.yml"]
-{{ else -}}
+{{ if (eq .chezmoi.os "linux") -}}
 [".config/vivid/filetype.yml"]
-{{ end -}}
 type = "file"
 url = "https://raw.githubusercontent.com/sharkdp/vivid/master/config/filetypes.yml"
 
-{{ if (eq .chezmoi.os "linux") -}}
+[".config/mpv"]
+stripComponents = 1
+type = "archive"
+url = "https://github.com/wushenrong/mpv-config/archive/master.tar.gz"
+
 [".config/nano/extras"]
 stripComponents = 1
 type = "archive"
