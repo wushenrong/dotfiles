@@ -30,6 +30,7 @@ packages:
     - lldb
     - llvm
     - mediainfo
+    - mpv
     - nano
     - procs
     - ripgrep

@@ -2,11 +2,15 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Get next video if it is apart of a playlist
+# Get the next video if it's apart of a playlist
 --yes-playlist
 
-# Subtitles
+# Embed metadata
+--embed-metadata
+
+# Embed subtitles
 --sub-langs all
+--embed-subs
 
 # SponsorBlock
 --sponsorblock-mark all
