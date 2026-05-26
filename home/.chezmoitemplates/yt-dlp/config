@@ -9,7 +9,7 @@
 --embed-metadata
 
 # Embed subtitles
---sub-langs all
+--sub-langs all,-live_chat
 --embed-subs
 
 # SponsorBlock
