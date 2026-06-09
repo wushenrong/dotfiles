@@ -4,8 +4,8 @@
 
 fedora:
   groups:
-    - "@c-development"
-    - "@development-tools"
+    - c-development
+    - development-tools
 
   packages:
     - bat
@@ -50,7 +50,6 @@ fedora:
     - tmux
     - tokei
     - valgrind
-    - vivid
     - wget
     - yq
     - yt-dlp
