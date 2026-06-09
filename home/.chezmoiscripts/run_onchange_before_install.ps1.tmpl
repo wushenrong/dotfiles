@@ -7,5 +7,5 @@
 winget update --all --accept-package-agreements
 
 # Install packages
-winget install -e {{ .packages.windows | quoteList | join " " }}
+winget install -e {{ .windows.packages | quoteList | join " " }}
 {{ end -}}

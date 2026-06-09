@@ -2,19 +2,28 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-packages:
-  linux:
+fedora:
+  groups:
+    - "@c-development"
+    - "@development-tools"
+
+  packages:
     - bat
     - bear
     - bfs
+    - bsdtar
     - btop
+    - cascadia-code-fonts
+    - cascadia-code-nf-fonts
     - chafa
     - clang
+    - clang-tools-extra
     - cmake
     - curl
     - duf
     - eza
     - fastfetch
+    - fd-find
     - ffmpeg
     - fzf
     - gdu
@@ -22,6 +31,7 @@ packages:
     - glow
     - groff
     - hexyl
+    - hunspell-en
     - hyfetch
     - hyperfine
     - jq
@@ -32,6 +42,8 @@ packages:
     - mediainfo
     - mpv
     - nano
+    - openssh
+    - perl-Image-ExifTool
     - procs
     - ripgrep
     - rustup

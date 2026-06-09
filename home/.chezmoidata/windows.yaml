@@ -2,8 +2,8 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-packages:
-  windows:
+windows:
+  packages:
     - ajeetdsouza.zoxide
     - aristocratos.btop4win
     - BiomeJS.Biome
