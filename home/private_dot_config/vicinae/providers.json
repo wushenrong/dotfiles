@@ -1,0 +1,68 @@
+// SPDX-FileCopyrightText: 2026 Samuel Wu
+//
+// SPDX-License-Identifier: 0BSD
+{
+  "$schema": "https://vicinae.com/schemas/config.json",
+  "providers": {
+    "browser-extension": {
+      "enabled": false
+    },
+    "calculator": {
+      "entrypoints": {
+        "history": {
+          "alias": "="
+        }
+      }
+    },
+    "clipboard": {
+      "preferences": {
+        "encryption": false,
+        "eraseOnStartup": true,
+        "ignorePasswords": true,
+        "monitoring": true
+      }
+    },
+    "core": {
+      "enabled": false
+    },
+    "developer": {
+      "enabled": false
+    },
+    "files": {
+      "entrypoints": {
+        "search": {
+          "alias": "file"
+        }
+      }
+    },
+    "font": {
+      "enabled": false
+    },
+    "manage-shortcuts": {
+      "enabled": false
+    },
+    "raycast-compat": {
+      "enabled": false
+    },
+    "snippets": {
+      "enabled": false
+    },
+    "system": {
+      "entrypoints": {
+        "run": {
+          "alias": ">"
+        }
+      }
+    },
+    "theme": {
+      "enabled": false
+    },
+    "wm": {
+      "entrypoints": {
+        "switch-windows": {
+          "alias": "<"
+        }
+      }
+    }
+  }
+}
