@@ -6,18 +6,11 @@
 # General settings
 #
 
-# Use gtk theme
-set $gnome-schema org.gnome.desktop.interface
-exec_always {
-  gsettings set $gnome-schema gtk-theme 'Arc'
-  gsettings set $gnome-schema icon-theme 'Papirus'
-  gsettings set $gnome-schema cursor-theme 'Papirus'
-  gsettings set $gnome-schema font-name 'Sans 12'
-  gsettings set $gnome-schema gtk-application-prefer-dark-theme 0
-}
+# Import gtk theme
+exec_always ~/.local/bin/import-gsettings
 
 # Start programs and applets
-exec vicinae server --replace
+exec vicinae server
 
 # Gaps between windows
 gaps inner 8px
@@ -79,8 +72,11 @@ bindsym $mod+Shift+q kill
 
 bindsym $mod+Shift+e exec swaynag \
   -t warning \
-  -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
-  -B 'Yes, exit sway' 'swaymsg exit'
+  -m 'Do you want to exit sway?' \
+  -B 'Sleep' 'systemctl suspend-then-hibernate' \
+  -b 'Reboot' 'systemctl reboot' \
+  -B 'Shutdown' 'systemctl poweroff' \
+  -B 'Logoff' 'swaymsg exit'
 
 #
 # Moving around:
@@ -193,4 +189,4 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Load additional configuration for loading environment variables
-include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf")'
+include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
