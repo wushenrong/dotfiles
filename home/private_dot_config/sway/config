@@ -73,7 +73,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+e exec swaynag \
   -t warning \
   -m 'Do you want to exit sway?' \
-  -B 'Sleep' 'systemctl suspend-then-hibernate' \
+  -B 'Sleep' 'systemctl suspend' \
   -b 'Reboot' 'systemctl reboot' \
   -B 'Shutdown' 'systemctl poweroff' \
   -B 'Logoff' 'swaymsg exit'
