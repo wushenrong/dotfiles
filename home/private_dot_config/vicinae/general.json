@@ -3,7 +3,6 @@
 // SPDX-License-Identifier: 0BSD
 {
   "$schema": "https://vicinae.com/schemas/config.json",
-  "close_on_focus_loss": true,
   "font": {
     "normal": {
       "size": 12

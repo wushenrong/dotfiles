@@ -34,6 +34,9 @@ assign [app_id="discord"] 4:Discord
 assign [class="steam"] 5:Gaming
 assign [app_id="mpv"] 6:Media
 
+# Rules for windows
+for_window [shell="xwayland"] title_format "[XWayland] %title"
+
 #
 # Display configuration
 #
@@ -73,8 +76,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+Shift+e exec swaynag \
   -t warning \
   -m 'Do you want to exit sway?' \
-  -B 'Sleep' 'systemctl suspend' \
-  -b 'Reboot' 'systemctl reboot' \
+  -Z 'Sleep' 'systemctl suspend' \
+  -B 'Reboot' 'systemctl reboot' \
   -B 'Shutdown' 'systemctl poweroff' \
   -B 'Logoff' 'swaymsg exit'
 
