@@ -43,6 +43,8 @@ fedora:
     - mpv
     - nano
     - openssh
+    - pandoc-cli
+    - pandoc-pdf
     - perl-Image-ExifTool
     - procs
     - ripgrep

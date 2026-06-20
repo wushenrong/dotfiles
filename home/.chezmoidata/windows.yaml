@@ -24,6 +24,7 @@ windows:
     - Inkscape.Inkscape
     - JanDeDobbeleer.OhMyPosh
     - jftuga.less
+    - JohnMacFarlane.Pandoc
     - jqlang.jq
     - junegunn.fzf
     - LLVM.LLVM
