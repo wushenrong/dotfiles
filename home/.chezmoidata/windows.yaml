@@ -31,6 +31,7 @@ windows:
     - KDE.Kdenlive
     - KDE.Krita
     - Kitware.CMake
+    - koalaman.shellcheck
     - M2Team.NanaZip
     - MediaArea.MediaInfo
     - Meta.Zstandard
@@ -46,6 +47,7 @@ windows:
     - Mozilla.Firefox
     - Mozilla.Thunderbird
     - muesli.duf
+    - mvdan.shfmt
     - OBSProject.OBSStudio
     - OliverBetz.ExifTool
     - RedHat.Podman-Desktop
@@ -59,6 +61,7 @@ windows:
     - shinchiro.mpv
     - StrawberryPerl.StrawberryPerl
     - TenacityTeam.Tenacity
+    - topgrade-rs.topgrade
     - Valve.Steam
     - WireGuard.WireGuard
     - WiresharkFoundation.Wireshark

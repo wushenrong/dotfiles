@@ -7,6 +7,11 @@ fedora:
     - c-development
     - development-tools
 
+  copr:
+    - lilay/topgrade
+    - quadratech188/vicinae
+    - swayfx/swayfx
+
   packages:
     - bat
     - bear
@@ -49,8 +54,11 @@ fedora:
     - procs
     - ripgrep
     - rustup
+    - shellcheck
+    - shfmt
     - tmux
     - tokei
+    - topgrade
     - valgrind
     - wget
     - yq

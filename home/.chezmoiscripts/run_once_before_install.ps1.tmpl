@@ -3,9 +3,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Update packages
-winget update --all --accept-package-agreements
-
 # Install packages
 winget install -e {{ .windows.packages | quoteList | join " " }}
 {{ end -}}

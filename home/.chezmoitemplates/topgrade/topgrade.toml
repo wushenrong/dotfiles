@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2026 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+[misc]
+first = ["chezmoi"]
+last = ["system"]
+no_self_update = true
