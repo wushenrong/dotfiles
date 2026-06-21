@@ -3,6 +3,5 @@
 # SPDX-License-Identifier: 0BSD
 
 [misc]
-first = ["chezmoi"]
-last = ["system"]
+first = ["chezmoi", "system"]
 no_self_update = true
