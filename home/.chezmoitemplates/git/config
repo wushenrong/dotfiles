@@ -6,7 +6,7 @@
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
-	signingKey = ~/.ssh/id_main_key
+	signingKey = {{ .chezmoi.homeDir }}/.ssh/id_main_key
 
 [core]
 	compression = 9
@@ -134,6 +134,10 @@
 	cam = c --amend
   caa = c --amend --all
 
+  cs = c --signoff
+  csa = c --signoff --all
+  csi = c --signoff --interactive
+
 	co = checkout
 	cob = co -b
 	com = co main
@@ -204,7 +208,6 @@
 # Formatting
 [format]
 	pretty = %C(auto)%h  %an  %ar  %d%n%s%n
-	signOff = true
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
@@ -214,6 +217,13 @@
 
 [gpg]
 	format = ssh
+
+[gpg "ssh"]
+{{- if (eq .chezmoi.os "linux")  }}
+	allowedSignersFile = {{ .chezmoi.homeDir }}/.config/git/allowed_signers
+{{- else }}
+	allowedSignersFile = {{ .chezmoi.homeDir }}/AppData/Roaming/git/allowed_signers
+{{- end }}
 
 [url "https://github.com/"]
   insteadOf = "gh:"

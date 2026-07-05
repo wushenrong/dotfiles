@@ -59,7 +59,6 @@
 # References:
 # Relates-to:
 
-Signed-off-by: {{ .name }} <{{ .email }}>
 # Reported-by:
 # Acked-by:
 # Reviewed-by:
