@@ -19,7 +19,7 @@ windows:
     - eza-community.eza
     - Fastfetch-cli.Fastfetch
     - Git.Git
-    - GnuPG.Gpg4win
+    - Google.GoogleDrive
     - hpjansson.Chafa
     - Inkscape.Inkscape
     - JanDeDobbeleer.OhMyPosh
@@ -52,7 +52,6 @@ windows:
     - OliverBetz.ExifTool
     - RedHat.Podman-Desktop
     - Rustlang.Rustup
-    - samuel-lucas6.kryptor
     - sharkdp.bat
     - sharkdp.fd
     - sharkdp.hexyl
