@@ -6,7 +6,7 @@
 [user]
 	name = {{ .name }}
 	email = {{ .email }}
-	signingKey = {{ .chezmoi.homeDir }}/.ssh/id_main_key
+	signingKey = {{ .chezmoi.homeDir }}/.ssh/id_yubikey_main
 
 [core]
 	compression = 9
