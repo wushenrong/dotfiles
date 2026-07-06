@@ -3,8 +3,8 @@
 # SPDX-License-Identifier: 0BSD
 
 # Personal Keys
-twopizza9621536@gmail.com namespaces="git" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAILDRXgCb3nkMN7IIyiSNCyx1yF/UuBHrla5HRcqp4pz5AAAABHNzaDo=
-twopizza9621536@gmail.com namespaces="git" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIEr/UtRgg/J59Cyj13xah7zFPVl3syg2UzoDP5dKFwlBAAAABHNzaDo=
+twopizza9621536@gmail.com valid-before="20260707Z" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAILDRXgCb3nkMN7IIyiSNCyx1yF/UuBHrla5HRcqp4pz5AAAABHNzaDo=
+twopizza9621536@gmail.com valid-before="20260707Z" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIEr/UtRgg/J59Cyj13xah7zFPVl3syg2UzoDP5dKFwlBAAAABHNzaDo=
 
-twopizza9621536@gmail.com valid-after=20260707Z sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIHoahJJKdlIZtBbeneh30JsGmn5wD98k+eB/UsEQAmMaAAAACnNzaDpnaXRodWI=
-twopizza9621536@gmail.com valid-after=20260707Z sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIASO+58GZ7W6F8nBqCaTCzTlSdzvLKTFdXgsjR6ch91jAAAACnNzaDpnaXRodWI=
+twopizza9621536@gmail.com valid-after="20260706Z" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIHoahJJKdlIZtBbeneh30JsGmn5wD98k+eB/UsEQAmMaAAAACnNzaDpnaXRodWI=
+twopizza9621536@gmail.com valid-after="20260706Z" sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIASO+58GZ7W6F8nBqCaTCzTlSdzvLKTFdXgsjR6ch91jAAAACnNzaDpnaXRodWI=
