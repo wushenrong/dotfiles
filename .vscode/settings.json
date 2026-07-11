@@ -1,5 +1,8 @@
 {
-    "json.schemaDownload.trustedDomains": {
-        "https://vicinae.com/schemas/config.json": true
-    }
+  "files.associations": {
+    "ignore": "ignore"
+  },
+  "json.schemaDownload.trustedDomains": {
+    "https://vicinae.com/schemas/config.json": true
+  }
 }
