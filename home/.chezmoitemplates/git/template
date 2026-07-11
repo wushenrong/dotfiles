@@ -2,56 +2,26 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# 🎉 Initial Commit
+# chore: init
 
-# Features
-# ✨
-# ⚡
-# 🔒
+# feat:
+# fix:
 
-# Bugs
-# 🐛
-# 🩹
-# 🚑
+# refactor:
+# perf:
+# style:
 
-# Refactors
-# ♻️
-# 🔥
-# 🎨
+# revert:
 
-# Reverts
-# ⏪
+# chore:
 
-# Chores
-# 🔧
-# ⬆️
+# docs:
 
-# Dependencies
-# ⬇️
-# ➕
-# ➖
-# 📌
+# build:
+# test:
+# ci:
 
-# Documentation
-# 📝
-# 💡
-# 📄
-
-# CI
-# 👷
-# 💚
-
-# Tests
-# 🧪
-# ✅
-
-# Release
-# 🔖
-# 📦
-# 🚀
-
-# Breaking Changes
-# 💥
+# BREAKING CHANGE:
 
 # Fixes:
 # Closes:

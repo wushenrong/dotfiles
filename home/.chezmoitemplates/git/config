@@ -128,15 +128,16 @@
 	bm = b --move
 
 	c = commit
+  cs = c --signoff
+
 	ca = c --all
+  cas = ca --signoff
+
   ci = c --interactive
+  cis = ci --signoff
 
 	cam = c --amend
-  caa = c --amend --all
-
-  cs = c --signoff
-  csa = c --signoff --all
-  csi = c --signoff --interactive
+  caa = ca --amend
 
 	co = checkout
 	cob = co -b
@@ -151,7 +152,7 @@
 
 	i = init
 
-	l = log --graph --all
+	l = log --graph
 
 	m = merge
 	ma = m --abort
@@ -165,6 +166,7 @@
 
 	r = restore
 	rp = r --patch
+
 	rs = r --staged
 	rsp = rs --patch
 	rsw = rs --worktree
@@ -204,10 +206,6 @@
   wta = wt add
   wtl = wt list
   wtr = wt remove
-
-# Formatting
-[format]
-	pretty = %C(auto)%h  %an  %ar  %d%n%s%n
 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
