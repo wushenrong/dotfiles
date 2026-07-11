@@ -52,6 +52,7 @@ fedora:
     - pandoc-cli
     - pandoc-pdf
     - perl-Image-ExifTool
+    - powertop
     - procs
     - ripgrep
     - rustup
@@ -60,6 +61,7 @@ fedora:
     - tmux
     - tokei
     - topgrade
+    - tuned-utils
     - valgrind
     - wget
     - yq
