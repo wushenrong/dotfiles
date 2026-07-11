@@ -39,6 +39,7 @@ fedora:
     - hunspell-en
     - hyfetch
     - hyperfine
+    - iperf3
     - jq
     - just
     - lld
