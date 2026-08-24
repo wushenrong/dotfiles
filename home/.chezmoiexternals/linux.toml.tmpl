@@ -4,24 +4,72 @@
 
 {{ if (eq .chezmoi.os "linux") -}}
 [".config/mpv"]
+private = true
 stripComponents = 1
 type = "archive"
 url = "https://github.com/wushenrong/mpv-config/archive/master.tar.gz"
 
 [".config/nano/extras"]
+refreshPeriod = "672h"
 stripComponents = 1
 type = "archive"
 url = "https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz"
 
 [".config/tmux/plugins/tpm"]
 exact = true
+refreshPeriod = "672h"
 stripComponents = 1
 type = "archive"
 url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
 
-[".config/zsh/antidote"]
+[".config/zsh"]
+exact = true
+private = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/wushenrong/zdotdir/archive/main.tar.gz"
+
+[".local/share/zsh/zsh-completions"]
+exact = true
+refreshPeriod = "24h"
+stripComponents = 1
+type = "archive"
+url = "https://github.com/zsh-users/zsh-completions/archive/master.tar.gz"
+
+[".local/share/zsh/zsh-defer"]
 exact = true
 stripComponents = 1
 type = "archive"
-url = "https://github.com/mattmc3/antidote/archive/main.tar.gz"
+url = "https://github.com/romkatv/zsh-defer/archive/master.tar.gz"
+
+[".local/share/zsh/zsh-autopair"]
+exact = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/hlissner/zsh-autopair/archive/master.tar.gz"
+
+[".local/share/zsh/fsh"]
+exact = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/zdharma-continuum/fast-syntax-highlighting/archive/master.tar.gz"
+
+[".local/share/zsh/zsh-autosuggestions"]
+exact = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/zsh-users/zsh-autosuggestions/archive/master.tar.gz"
+
+[".local/share/zsh/zsh-history-substring-search"]
+exact = true
+stripComponents = 1
+type = "archive"
+url = "https://github.com/zsh-users/zsh-history-substring-search/archive/master.tar.gz"
+
+[".local/share/zsh/powerlevel10k"]
+exact = true
+refreshPeriod = "672h"
+stripComponents = 1
+type = "archive"
+url = "https://github.com/romkatv/powerlevel10k/archive/master.tar.gz"
 {{ end -}}

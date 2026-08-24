@@ -1,3 +1,0 @@
-[submodule "home/private_dot_config/external_private_zsh"]
-	path = home/private_dot_config/private_zsh
-	url = https://github.com/wushenrong/zdotdir.git

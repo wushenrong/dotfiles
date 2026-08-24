@@ -3,6 +3,7 @@
     "ignore": "ignore"
   },
   "json.schemaDownload.trustedDomains": {
+    "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/master/doc/json_schema.json": true,
     "https://vicinae.com/schemas/config.json": true
   }
 }

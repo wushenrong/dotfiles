@@ -3,10 +3,7 @@
 # SPDX-License-Identifier: 0BSD
 
 {{- if (eq .chezmoi.os "windows") }}
-.config/*
-!.config/fastfetch
-!.config/fzf
-!.config/ripgrep
+.config
 .gnupg
 .local
 
