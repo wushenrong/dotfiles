@@ -24,6 +24,7 @@ fedora:
     - clang
     - clang-tools-extra
     - cmake
+    - croc
     - curl
     - duf
     - eza

@@ -37,6 +37,7 @@ windows:
     - mvdan.shfmt
     - OliverBetz.ExifTool
     - Rustlang.Rustup
+    - schollz.croc
     - sharkdp.bat
     - sharkdp.fd
     - sharkdp.hexyl
