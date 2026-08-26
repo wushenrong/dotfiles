@@ -2,9 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Set theme
---theme "Visual Studio Dark+"
-
 # Use italic text on the terminal (not supported on all terminals)
 --italic-text=always
 

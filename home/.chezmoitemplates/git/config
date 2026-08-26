@@ -57,7 +57,6 @@
 	hyperlinks = true
 	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
 	navigate = true
-	syntax-theme = Visual Studio Dark+
 	tabs = 4
 
 # Git Commit
