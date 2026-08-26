@@ -1,0 +1,29 @@
+#!/usr/bin/bash
+# SPDX-FileCopyrightText: 2025 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+if [[ -d "$1" ]]; then
+  eza -1F -sName --group-directories-first --icons --color=always "$1"
+  exit 0
+fi
+
+if [[ "$1" == *.md ]]; then
+  CLICOLOR_FORCE=1 glow -s dark "$1"
+  exit 0
+fi
+
+mime=$(file -Lbs --mime-type "$1")
+category=${mime%%/*}
+
+if [ "$category" = image ]; then
+  if [ "$TERM" = xterm-kitty ]; then
+    kitten icat "$1"
+  else
+    chafa -f sixel "$1"
+  fi
+  mediainfo --Output=JSON --Full "$1" | yq -PC
+  exit 0
+fi
+
+exit 1

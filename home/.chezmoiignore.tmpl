@@ -6,10 +6,6 @@
 .config
 .gnupg
 .local
-
-.lessfilter
-{{- end }}
-
-{{- if (eq .chezmoi.os "linux") }}
+{{- else }}
 AppData
 {{- end }}
