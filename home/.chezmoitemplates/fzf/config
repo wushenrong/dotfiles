@@ -3,7 +3,6 @@
 # SPDX-License-Identifier: 0BSD
 
 # Set preview window options
---height 100%
 --preview-window=right:70%,wrap
 
 # Set theme

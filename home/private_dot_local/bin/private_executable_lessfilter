@@ -12,7 +12,7 @@ text/* | application/javascript | inode/x-empty)
   if [[ "$1" == *.md ]]; then
     CLICOLOR_FORCE=1 glow -s dark "$1"
   else
-    bat --color=always "$1"
+    bat --plain --color=always "$1"
   fi
   ;;
 image/*)
