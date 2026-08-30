@@ -8,19 +8,16 @@
   "display": {
     // From: https://github.com/fastfetch-cli/fastfetch/discussions/971#discussioncomment-12628729
     "constants": [
-      "\u001b[67C", // $1: Move cursor forward 78 columns (adjust if needed)
-      "\u001b[67D", // $2: Move cursor back 78 columns (not used, defined anyway)
-      "\u001b[80C", // $3: Move cursor to max width (wide term), or last column (narrow term)
-      "\u001b[20D", // $4: Move back 20 columns for the color block (both lines)
-      "─────────────────────────────────────────────────────────────────────────────"
+      "\u001b[68C",
+      "\u001b[68D",
+      "\u001b[80C",
+      "\u001b[20D",
+      "──────────────────────────────────────────────────────────────────────────────"
     ],
     "key": {
       "width": 14
     },
-    "separator": "",
-    "size": {
-      "binaryPrefix": "jedec"
-    }
+    "separator": ""
   },
   "logo": {
     "padding": {
@@ -29,7 +26,7 @@
       "top": 1
     },
     {{- if (eq .chezmoi.os "windows") }}
-    "source": "~/Pictures/Terminal/feli_ppt2_7.sixel",
+    "source": "~/Pictures/Terminal/feli.sixel",
     "type": "raw",
     {{- else }}
     "source": "~/Pictures/Terminal/*.png",
@@ -79,121 +76,98 @@
       "type": "terminal"
     },
     {
-      "format": "╰─{$5}─╯",
-      "outputColor": "38;2;232;47;103",
-      "type": "custom"
-    },
-    {
-      "format": "╭─{$5}─╮",
-      "outputColor": "38;2;170;89;219",
-      "type": "custom"
-    },
-    {
-      "key": "│        DE:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "de"
-    },
-    {
-      "key": "│        WM:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "wm"
-    },
-    {
-      "key": "│     Theme:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "theme"
-    },
-    {
-      "key": "│  WM Theme:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "wmtheme"
-    },
-    {
-      "key": "│      Font:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "font"
-    },
-    {
-      "key": "│ Term Font:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "terminalfont"
-    },
-    {
-      "key": "│     Icons:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "icons"
-    },
-    {
-      "key": "│    Cursor:{$1} │",
-      "keyColor": "38;2;170;89;219",
-      "type": "cursor"
-    },
-    {
-      "format": "╰─{$5}─╯",
-      "outputColor": "38;2;170;89;219",
-      "type": "custom"
-    },
-    {
-      "format": "╭─{$5}─╮",
-      "outputColor": "38;2;209;111;179",
+      "format": "├─{$5}─┤",
       "type": "custom"
     },
     {
       "key": "│       CPU:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "cpu"
     },
     {
+      "format": "{name}",
       "key": "│       GPU:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "gpu"
     },
     {
+      "format": "{preferred-width}x{preferred-height} @ {scale-factor}x in {inch}\", {preferred-refresh-rate} Hz",
       "key": "│     Video:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "display"
     },
     {
-      "key": "│     Audio:{$1} │",
-      "keyColor": "38;2;209;111;179",
-      "type": "sound"
-    },
-    {
       "key": "│    Memory:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "memory"
     },
     {
       "key": "│      Swap:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "swap"
     },
     {
       "key": "│      Disk:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "disk"
     },
     {
       "key": "│   Battery:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "keyColor": "38;2;170;89;219",
       "type": "battery"
     },
     {
-      "format": "╰─{$5}─╯",
-      "outputColor": "38;2;209;111;179",
+      "format": "├─{$5}─┤",
       "type": "custom"
     },
     {
-      "format": "╭─{$5}─╮",
-      "outputColor": "38;2;237;145;171",
-      "type": "custom"
+      "key": "│        DE:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "de"
     },
     {
-      "color": {
-        "at": "bright_white",
-        "host": "bright_white",
-        "user": "bright_white"
+      "key": "│        WM:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "wm"
+    },
+    {
+      "key": "│     Theme:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "theme"
+    },
+    {
+      "key": "│  WM Theme:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "wmtheme"
+    },
+    {
+      "key": "│      Font:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "font"
+    },
+    {
+      "key": "│ Term Font:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "terminalfont"
+    },
+    {
+      "key": "│     Icons:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "icons"
+    },
+    {
+      "key": "│    Cursor:{$1} │",
+      "keyColor": "38;2;209;111;179",
+      "type": "cursor"
+    },
+    {
+      "condition": {
+        "succeeded": true
       },
+      "format": "├─{$5}─┤",
+      "type": "custom"
+    },
+    {
       "key": "│      User:{$1} │",
       "keyColor": "38;2;237;145;171",
       "type": "title"
