@@ -26,10 +26,10 @@
       "top": 1
     },
     {{- if (eq .chezmoi.os "windows") }}
-    "source": "~/Pictures/Terminal/feli.sixel",
+    "source": "~/Pictures/Terminal/Cards/feli.sixel",
     "type": "raw",
     {{- else }}
-    "source": "~/Pictures/Terminal/*.png",
+    "source": "~/Pictures/Terminal/Cards/*.png",
     "type": "kitty-direct",
     {{- end }}
     "width": 36
