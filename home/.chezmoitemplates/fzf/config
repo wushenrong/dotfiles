@@ -2,8 +2,7 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Set preview window options
---preview-window right:70%,wrap
+# Set preview popup options
 --popup 80%
 
 # Set theme
