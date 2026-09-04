@@ -4,7 +4,7 @@
 
 {{ if (eq .chezmoi.os "linux") -}}
 [".config/mpv"]
-private = true
+exact = true
 stripComponents = 1
 type = "archive"
 url = "https://github.com/wushenrong/mpv-config/archive/master.tar.gz"
@@ -24,7 +24,6 @@ url = "https://github.com/tmux-plugins/tpm/archive/master.tar.gz"
 
 [".config/zsh"]
 exact = true
-private = true
 stripComponents = 1
 type = "archive"
 url = "https://github.com/wushenrong/zdotdir/archive/main.tar.gz"
