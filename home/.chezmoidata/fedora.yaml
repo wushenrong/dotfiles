@@ -20,6 +20,7 @@ fedora:
     - btop
     - cascadia-code-fonts
     - cascadia-code-nf-fonts
+    - ccache
     - chafa
     - clang
     - clang-tools-extra
@@ -27,6 +28,7 @@ fedora:
     - croc
     - curl
     - duf
+    - elinks
     - eza
     - fastfetch
     - fd-find
@@ -35,6 +37,7 @@ fedora:
     - gdu
     - git-delta
     - glow
+    - golang
     - groff
     - hexyl
     - hunspell-en
@@ -49,7 +52,9 @@ fedora:
     - llvm
     - mediainfo
     - mpv
+    - msedit
     - nano
+    - ncurses-term
     - openssh
     - pandoc-cli
     - pandoc-pdf
