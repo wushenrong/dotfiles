@@ -69,6 +69,7 @@ fedora:
     - topgrade
     - tuned-utils
     - valgrind
+    - vcpkg
     - wget
     - yt-dlp
     - zoxide
