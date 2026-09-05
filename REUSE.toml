@@ -5,13 +5,14 @@
 version = 1
 
 [[annotations]]
-SPDX-FileCopyrightText = "2024 Samuel Wu"
+SPDX-FileCopyrightText = "2024-2026 Samuel Wu"
 SPDX-License-Identifier = "0BSD"
 path = [
-  "**/*.tmpl",
   ".chezmoiroot",
   ".chezmoiversion",
   "README.md",
   "home/.chezmoitemplates/hyfetch.json",
-  "home/dot_glzr/zebar/**",
+  "home/AppData/**/*.tmpl",
+  "home/dot_config/**/*.tmpl",
+  "home/private_dot_gnupg/**/*.tmpl",
 ]

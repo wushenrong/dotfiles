@@ -47,6 +47,7 @@ fedora:
     - iperf3
     - jq
     - just
+    - less
     - lld
     - lldb
     - llvm
@@ -68,6 +69,7 @@ fedora:
     - tokei
     - topgrade
     - tuned-utils
+    - uv
     - valgrind
     - vcpkg
     - wget

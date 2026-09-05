@@ -16,10 +16,10 @@ text/* | application/javascript | inode/x-empty)
   fi
   ;;
 image/*)
-  if [[ "$TERM" = xterm-kitty ]]; then
+  if [[ "$TERM" = *kitty* ]]; then
     kitten icat "$1"
   else
-    chafa -f sixel "$1"
+    chafa -f sixels "$1"
   fi
   mediainfo --Full "$1"
   ;;

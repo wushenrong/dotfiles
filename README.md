@@ -20,18 +20,11 @@ Configurations are now stored in their respective OS-specific directories,
 
 ## External Configuration
 
-This configuration downloads additional configurations, files, and plugins from
-other repositories:
-
-- [antidote](https://github.com/mattmc3/antidote)
-- [kitty-themes](https://github.com/kovidgoyal/kitty-themes)
-- [mpv-config](https://github.com/wushenrong/mpv-config)
-- [nano-syntax-highlighting](https://github.com/galenguyer/nano-syntax-highlighting)
-- [tpm](https://github.com/tmux-plugins/tpm)
-- [vivid](https://github.com/sharkdp/vivid)
-- [zdotdir](https://github.com/wushenrong/zdotdir)
+My zsh configuration is at <https://github.com/wushenrong/zdotdir> and is under
+the MIT License. My mpv configuration is at
+<https://github.com/wushenrong/mpv-config> and is under mixed licenses.
 
 ## License
 
-This repostory is licensed under the BSD Zero Clause License using
-[SPDX](https://spdx.dev) expressions.
+This repository is under the 0BSD, but external configuration, projects, and
+files downloaded are under difference licenses.

@@ -1,15 +1,23 @@
 {
-  "args": "--logo-width 0",
+  "args": null,
   "auto_detect_light_dark": true,
   "backend": "fastfetch",
   "color_align": {
     "mode": "horizontal"
   },
   "custom_ascii_path": null,
-  "distro": "windows_11_small",
+  {{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "fedora")) -}}
+  "distro": "fedora_small",
+  {{ else if (eq .chezmoi.os "windows") -}}
+  "distro": "windows",
+  {{ end -}}
   "light_dark": "dark",
   "lightness": 0.65,
   "mode": "rgb",
-  "preset": "beiyang",
+  "preset": [
+    "beiyang",
+    "cisgender",
+    "equal-rights"
+  ],
   "pride_month_disable": false
 }
