@@ -6,15 +6,15 @@
 
 # Add coprs
 {{ range .fedora.copr -}}
-sudo dnf copr enable {{ . | quote }}
+sudo dnf copr enable {{ . | shellQuote }}
 {{ end -}}
 
 # Update packages
 sudo dnf upgrade -y
 
 # Install Development Tools
-sudo dnf group install -y {{ .fedora.groups | quoteList | join " " }}
+sudo dnf group install -y {{ .fedora.groups | shellQuoteList | join " " }}
 
 # Install packages
-sudo dnf install -y {{ .fedora.packages | quoteList | join " " }}
+sudo dnf install -y {{ .fedora.packages | shellQuoteList | join " " }}
 {{ end -}}
