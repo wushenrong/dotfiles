@@ -105,7 +105,7 @@ set functioncolor green
 
 ## To include most of the existing syntax definitions, you can do:
 include /usr/share/nano/*.nanorc
-include ~/.config/nano/extras/*.nanorc
+include ~/.local/share/nano/extras/*.nanorc
 
 
 ## === Key bindings ===
