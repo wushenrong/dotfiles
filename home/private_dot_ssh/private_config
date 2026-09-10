@@ -11,10 +11,15 @@ HostbasedAcceptedAlgorithms ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,sk-ssh-
 CASignatureAlgorithms ssh-ed25519,sk-ssh-ed25519@openssh.com,rsa-sha2-256,rsa-sha2-512
 RequiredRSASize 3072
 
-IdentitiesOnly yes
-
 Host openwrt
+  PubkeyAuthentication yes
   IdentityFile ~/.ssh/id_openwrt
+  SetEnv TERM=xterm-256color
 
 Host amitie
+  PubkeyAuthentication yes
   IdentityFile ~/.ssh/id_amitie
+
+Host *
+  PubkeyAuthentication no
+  IdentitiesOnly yes
