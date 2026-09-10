@@ -20,12 +20,6 @@ gaps outer 8px
 default_border pixel 2px
 default_floating_border pixel 2px
 
-# Requires swayfx
-corner_radius 8
-
-# Transparency
-for_window [all] opacity 0.9
-
 # Rules for processes
 assign [app_id="firefox"] 1:Web
 assign [app_id="code"] 2:Code
