@@ -11,14 +11,32 @@ exec_always ~/.local/bin/import-gsettings
 
 # Start programs and applets
 exec vicinae server
+exec swaync
 
 # Gaps between windows
-gaps inner 8px
-gaps outer 8px
+gaps {
+  inner 4
+  outer 0
+}
 
 # Windows effects
-default_border pixel 2px
-default_floating_border pixel 2px
+default_border pixel 2
+default_floating_border pixel 2
+
+for_window [all] opacity 0.85
+
+# SwayFX
+animation_duration_ms 250
+blur enable
+corner_radius 4
+default_dim_inactive 0.15
+shadows enable
+
+layer_effects "waybar" {
+  blur enable;
+  blur_ignore_transparent enable;
+  shadows enable;
+}
 
 # Rules for processes
 assign [app_id="firefox"] 1:Web
@@ -29,6 +47,26 @@ assign [class="steam"] 5:Gaming
 assign [app_id="mpv"] 6:Media
 
 # Rules for windows
+for_window [window_role = "pop-up"] floating enable
+for_window [window_role = "bubble"] floating enable
+for_window [window_role = "dialog"] floating enable
+for_window [window_type = "dialog"] floating enable
+for_window [window_role = "task_dialog"] floating enable
+for_window [window_type = "menu"] floating enable
+for_window [app_id = "floating"] floating enable
+for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
+for_window [class = "(?i)pinentry"] floating enable
+for_window [title = "Administrator privileges required"] floating enable
+
+# Firefox Tweaks
+for_window [title = "About Mozilla Firefox"] floating enable
+for_window [window_role = "About"] floating enable
+for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
+
+# Steam dialog
+for_window [class="^(steam$)" title="^(?!Steam$)"] floating enable
+
+# Mark applications using xwayland
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 #
@@ -37,6 +75,11 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 # Wallpaper
 output * bg /usr/share/backgrounds/default.jxl fill
+
+#
+# Idle configuration
+#
+exec swayidle idlehint 1
 
 #
 # Keybindings
@@ -75,6 +118,10 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Shutdown' 'systemctl poweroff' \
   -B 'Logoff' 'swaymsg exit'
 
+# Other programs
+bindsym control+shift+escape exec $term btop
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
 #
 # Moving around:
 #
@@ -84,7 +131,7 @@ bindsym $mod+$left focus left
 bindsym $mod+$down focus down
 bindsym $mod+$up focus up
 bindsym $mod+$right focus right
-
+# Or use $mod+[up|down|left|right]
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -100,6 +147,23 @@ bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
+
+# Switch the current container between different layout styles
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+t layout toggle split
+
+# Make the current focus fullscreen
+bindsym $mod+f fullscreen
+
+# Change the current focus to be floating
+bindsym $mod+Shift+space floating toggle
+
+# Swap focus between the tiling area and the floating area
+bindsym $mod+space focus mode_toggle
+
+# Move focus to the parent container
+bindsym $mod+a focus parent
 
 #
 # Workspaces:
@@ -118,33 +182,20 @@ bindsym $mod+9 workspace number 9
 bindsym $mod+0 workspace number 10
 
 # Move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number 1
-bindsym $mod+Shift+2 move container to workspace number 2
-bindsym $mod+Shift+3 move container to workspace number 3
-bindsym $mod+Shift+4 move container to workspace number 4
-bindsym $mod+Shift+5 move container to workspace number 5
-bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+1 move container to workspace number 1:Web
+bindsym $mod+Shift+2 move container to workspace number 2:Code
+bindsym $mod+Shift+3 move container to workspace number 3:Terminal
+bindsym $mod+Shift+4 move container to workspace number 4:Discord
+bindsym $mod+Shift+5 move container to workspace number 5:Gaming
+bindsym $mod+Shift+6 move container to workspace number 6:Media
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
 bindsym $mod+Shift+0 move container to workspace number 10
 
-# Switch the current container between different layout styles
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+t layout toggle split
-
-# Make the current focus fullscreen
-bindsym $mod+f fullscreen
-
-# Change the current focus to be floating
-bindsym $mod+Shift+space floating toggle
-
-# Swap focus between the tiling area and the floating area
-bindsym $mod+space focus mode_toggle
-
-# Move focus to the parent container
-bindsym $mod+a focus parent
+# Move between workspaces
+bindsym $mod+control+left  workspace prev
+bindsym $mod+control+right workspace next
 
 #
 # Scratchpad:
