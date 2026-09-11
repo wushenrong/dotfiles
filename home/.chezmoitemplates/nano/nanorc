@@ -63,6 +63,10 @@ set punct "!.?"
 ## of the line (the left edge).
 set smarthome
 
+## Use this spelling checker instead of the internal one.  This option
+## does not have a default value.
+set speller "hunspell"
+
 ## Use the end of the title bar for some state flags: I = auto-indenting,
 ## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
 set stateflags
@@ -104,8 +108,12 @@ set functioncolor green
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
 
 ## To include most of the existing syntax definitions, you can do:
+{{- if (eq .chezmoi.os "windows") }}
+include ~/AppData/Roaming/nano/extras/*.nanorc
+{{- else }}
 include /usr/share/nano/*.nanorc
 include ~/.local/share/nano/extras/*.nanorc
+{{- end }}
 
 
 ## === Key bindings ===
