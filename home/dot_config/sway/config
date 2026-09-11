@@ -10,7 +10,7 @@
 exec_always ~/.local/bin/import-gsettings
 
 # Start programs and applets
-exec vicinae server
+exec wl-paste --watch cliphist store
 exec swaync
 
 # Gaps between windows
@@ -47,6 +47,7 @@ assign [class="steam"] 5:Gaming
 assign [app_id="mpv"] 6:Media
 
 # Rules for windows
+# Make all popups and dialogs as floating
 for_window [window_role = "pop-up"] floating enable
 for_window [window_role = "bubble"] floating enable
 for_window [window_role = "dialog"] floating enable
@@ -57,6 +58,8 @@ for_window [app_id = "floating"] floating enable
 for_window [app_id = "floating_update"] floating enable, resize set width 1000px height 600px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
+
+for_window [app_id="flying-kitty"] floating enable
 
 # Firefox Tweaks
 for_window [title = "About Mozilla Firefox"] floating enable
@@ -94,9 +97,13 @@ set $up k
 set $right l
 
 set $term kitty
-set $menu vicinae vicinae://toggle
+
+set $rofi_cmd rofi \
+        -terminal '$term'
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+
 set $file_explorer thunar
-set $clipboard vicinae vicinae://launch/clipboard/history
+set $clipboard cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
 # Basic keybindings
 floating_modifier $mod normal
@@ -119,7 +126,7 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Logoff' 'swaymsg exit'
 
 # Other programs
-bindsym control+shift+escape exec $term btop
+bindsym control+shift+escape exec $term --app-id 'flying-kitty' btop
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
 #
@@ -179,7 +186,7 @@ bindsym $mod+6 workspace number 6:Media
 bindsym $mod+7 workspace number 7
 bindsym $mod+8 workspace number 8
 bindsym $mod+9 workspace number 9
-bindsym $mod+0 workspace number 10
+bindsym $mod+0 workspace back_and_forth
 
 # Move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace number 1:Web
@@ -191,7 +198,7 @@ bindsym $mod+Shift+6 move container to workspace number 6:Media
 bindsym $mod+Shift+7 move container to workspace number 7
 bindsym $mod+Shift+8 move container to workspace number 8
 bindsym $mod+Shift+9 move container to workspace number 9
-bindsym $mod+Shift+0 move container to workspace number 10
+bindsym $mod+Shift+0 move container to workspace back_and_forth
 
 # Move between workspaces
 bindsym $mod+control+left  workspace prev
