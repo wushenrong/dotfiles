@@ -1,0 +1,22 @@
+// SPDX-FileCopyrightText: 2025 Samuel Wu
+//
+// SPDX-License-Identifier: 0BSD
+
+configuration {
+  modes: "drun,run,combi";
+  font: "Cascadia Code 14";
+  show-icons: true;
+  terminal: "kitty";
+  icon-theme: "Papirus";
+  combi-modes: "drun,run";
+}
+
+@theme "Monokai"
+
+element-icon {
+  size: 2.2ch;
+}
+
+element-text {
+  vertical-align: 0.5;
+}

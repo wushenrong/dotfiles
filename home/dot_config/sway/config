@@ -59,7 +59,7 @@ for_window [app_id = "floating_update"] floating enable, resize set width 1000px
 for_window [class = "(?i)pinentry"] floating enable
 for_window [title = "Administrator privileges required"] floating enable
 
-for_window [app_id="flying-kitty"] floating enable
+for_window [app_id="flying-term"] floating enable
 
 # Firefox Tweaks
 for_window [title = "About Mozilla Firefox"] floating enable
@@ -82,7 +82,9 @@ output * bg /usr/share/backgrounds/default.jxl fill
 #
 # Idle configuration
 #
-exec swayidle idlehint 1
+# Suspend after 10 minutes
+exec swayidle -w \
+  timeout 600 'systemctl suspend'
 
 #
 # Keybindings
@@ -97,11 +99,7 @@ set $up k
 set $right l
 
 set $term kitty
-
-set $rofi_cmd rofi \
-        -terminal '$term'
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
-
+set $menu pkill rofi || rofi -show combi
 set $file_explorer thunar
 set $clipboard cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
@@ -125,9 +123,14 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Shutdown' 'systemctl poweroff' \
   -B 'Logoff' 'swaymsg exit'
 
-# Other programs
-bindsym control+shift+escape exec $term --app-id 'flying-kitty' btop
-bindsym $mod+Shift+n exec swaync-client -t -sw
+# Notifications
+bindsym $mod+n exec swaync-client -t -sw
+
+# Quake-like terminal
+bindsym $mod+` exec kitten quick-access-terminal
+
+# Task Manager
+bindsym control+shift+escape exec $term --app-id 'flying-term' btop
 
 #
 # Moving around:
