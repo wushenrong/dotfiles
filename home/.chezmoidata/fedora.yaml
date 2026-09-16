@@ -3,23 +3,12 @@
 # SPDX-License-Identifier: 0BSD
 
 fedora:
-  groups:
-    - c-development
-    - development-tools
-
-  copr:
-    - lilay/topgrade
-    - quadratech188/vicinae
-    - swayfx/swayfx
-
-  packages:
+  core_packages:
     - bat
     - bear
     - bfs
     - bsdtar
     - btop
-    - cascadia-code-fonts
-    - cascadia-code-nf-fonts
     - ccache
     - chafa
     - clang
@@ -32,7 +21,6 @@ fedora:
     - eza
     - fastfetch
     - fd-find
-    - ffmpeg
     - fzf
     - gdu
     - git-delta
@@ -40,10 +28,10 @@ fedora:
     - golang
     - groff
     - hexyl
+    - htop
     - hunspell-en
     - hyfetch
     - hyperfine
-    - inxi
     - iperf3
     - jq
     - just
@@ -52,15 +40,16 @@ fedora:
     - lldb
     - llvm
     - mediainfo
-    - mpv
     - msedit
     - nano
     - ncurses-term
+    - nmap
+    - nmap-ncat
     - openssh
     - pandoc-cli
     - pandoc-pdf
-    - powertop
     - procs
+    - qalculate
     - ripgrep
     - rustup
     - shellcheck
@@ -68,11 +57,30 @@ fedora:
     - tmux
     - tokei
     - topgrade
-    - tuned-utils
     - uv
     - valgrind
     - vcpkg
     - wget
-    - yt-dlp
     - zoxide
     - zsh
+
+  desktop_packages:
+    - cascadia-code-fonts
+    - cascadia-code-nf-fonts
+    - cliphist
+    - dnfdragora-gui
+    - ffmpeg
+    - glx-utils
+    - inxi
+    - lame
+    - libva-utils
+    - mpv
+    - powertop
+    - qalculate-gtk
+    - rofi
+    - SwayNotificationCenter
+    - tuned-utils
+    - vulkan-tools
+    - wev
+    - wl-clipboard
+    - yt-dlp

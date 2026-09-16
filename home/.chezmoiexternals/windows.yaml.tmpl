@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2026 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+{{ if (eq .chezmoi.os "windows") -}}
+nano_extras:
+  exact: true
+  refreshPeriod: 672h
+  stripComponents: 1
+  targetPath: AppData/Roaming/nano/extras
+  type: archive
+  url: https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz
+
+mpv_config:
+  exact: true
+  stripComponents: 1
+  targetPath: AppData/Roaming/mpv
+  type: archive
+  url: https://github.com/wushenrong/mpv-config/archive/master.tar.gz
+{{ end -}}

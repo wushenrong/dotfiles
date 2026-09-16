@@ -91,7 +91,6 @@
       "type": "gpu"
     },
     {
-      "format": "{preferred-width}x{preferred-height} @ {scale-factor}x in {inch}\", {preferred-refresh-rate} Hz",
       "key": "│     Video:{$1} │",
       "keyColor": "38;2;170;89;219",
       "type": "display"
@@ -154,11 +153,6 @@
       "key": "│     Icons:{$1} │",
       "keyColor": "38;2;209;111;179",
       "type": "icons"
-    },
-    {
-      "key": "│    Cursor:{$1} │",
-      "keyColor": "38;2;209;111;179",
-      "type": "cursor"
     },
     {
       "condition": {

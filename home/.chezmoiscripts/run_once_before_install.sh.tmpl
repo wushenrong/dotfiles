@@ -4,17 +4,31 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Add coprs
-{{ range .fedora.copr -}}
-sudo dnf copr enable {{ . | shellQuote }}
-{{ end -}}
+# Add RPMFusion
+sudo dnf install \
+  https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+  https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
+
+# Add Terra
+sudo dnf install --nogpgcheck \
+  --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' \
+  terra-release terra-gpg-keys
 
 # Update packages
 sudo dnf upgrade -y
 
 # Install Development Tools
-sudo dnf group install -y {{ .fedora.groups | shellQuoteList | join " " }}
+sudo dnf group install -y c-development development-tools
 
-# Install packages
-sudo dnf install -y {{ .fedora.packages | shellQuoteList | join " " }}
+# Install core packages
+sudo dnf install -y {{ .fedora.core_packages | shellQuoteList | join " " }}
+
+{{ if (.chezmoi.kernel.osrelease | lower | not contains "microsoft") -}}
+# Install desktop packages
+sudo dnf install -y {{ .fedora.desktop_packages | shellQuoteList | join " " }}
+
+sudo dnf group install -y multimedia
+{{ end -}}
 {{ end -}}

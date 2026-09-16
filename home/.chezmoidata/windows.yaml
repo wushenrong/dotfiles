@@ -7,12 +7,12 @@ windows:
     user:
       - ajeetdsouza.zoxide
       - ar51an.iPerf3
-      - aristocratos.btop4win
       - BiomeJS.Biome
       - BurntSushi.ripgrep.MSVC
       - Casey.Just
       - Ccache.Ccache
       - charmbracelet.glow
+      - ChawyeHsu.Nano
       - dalance.procs
       - dandavison.delta
       - dundee.gdu
@@ -21,6 +21,7 @@ windows:
       - Git.Git
       - Golang.Go
       - hpjansson.Chafa
+      - Insecure.Nmap
       - JanDeDobbeleer.OhMyPosh
       - jftuga.less
       - JohnMacFarlane.Pandoc
@@ -29,12 +30,15 @@ windows:
       - LLVM.LLVM
       - koalaman.shellcheck
       - M2Team.NanaZip
+      - marlocarlo.psnet
+      - marlocarlo.pstop
       - MediaArea.MediaInfo
       - Meta.Zstandard
       - Microsoft.OpenSSH.Preview
       - MiKTeX.MiKTeX
       - muesli.duf
       - mvdan.shfmt
+      - Qalculate.Qalculate
       - Rustlang.Rustup
       - schollz.croc
       - sharkdp.bat

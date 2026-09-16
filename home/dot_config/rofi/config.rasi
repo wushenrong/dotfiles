@@ -4,14 +4,14 @@
 
 configuration {
   modes: "drun,run,combi";
-  font: "Cascadia Code 14";
+  font: "Mono 14";
   show-icons: true;
   terminal: "kitty";
   icon-theme: "Papirus";
   combi-modes: "drun,run";
 }
 
-@theme "Monokai"
+@theme "Arc-Dark"
 
 element-icon {
   size: 2.2ch;
