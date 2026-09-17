@@ -39,6 +39,7 @@ fedora:
     - lld
     - lldb
     - llvm
+    - lynis
     - mediainfo
     - msedit
     - nano
@@ -65,6 +66,7 @@ fedora:
     - zsh
 
   desktop_packages:
+    - arc-theme
     - cascadia-code-fonts
     - cascadia-code-nf-fonts
     - cliphist
@@ -75,6 +77,7 @@ fedora:
     - lame
     - libva-utils
     - mpv
+    - papirus-icon-theme
     - powertop
     - qalculate-gtk
     - rofi
