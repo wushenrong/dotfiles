@@ -25,7 +25,7 @@ sudo dnf group install -y c-development development-tools
 # Install core packages
 sudo dnf install -y {{ .fedora.core_packages | shellQuoteList | join " " }}
 
-{{ if (.chezmoi.kernel.osrelease | lower | not contains "microsoft") -}}
+{{ if (not (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
 # Install desktop packages
 sudo dnf install -y {{ .fedora.desktop_packages | shellQuoteList | join " " }}
 

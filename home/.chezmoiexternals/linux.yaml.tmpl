@@ -11,7 +11,7 @@ nano_extras:
   type: archive
   url: https://github.com/galenguyer/nano-syntax-highlighting/archive/master.tar.gz
 
-{{ if (.chezmoi.kernel.osrelease | lower | not contains "microsoft") -}}
+{{ if (not (.chezmoi.kernel.osrelease | lower | contains "microsoft")) -}}
 mpv_config:
   exact: true
   private: true
