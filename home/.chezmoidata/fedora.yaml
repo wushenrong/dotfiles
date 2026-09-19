@@ -13,9 +13,11 @@ fedora:
     - chafa
     - clang
     - clang-tools-extra
+    - clean-rpm-gpg-pubkey
     - cmake
     - croc
     - curl
+    - dracut-config-rescue
     - duf
     - elinks
     - eza
@@ -51,10 +53,13 @@ fedora:
     - pandoc-pdf
     - procs
     - qalculate
+    - remove-retired-packages
     - ripgrep
+    - rpmconf
     - rustup
     - shellcheck
     - shfmt
+    - symlinks
     - tmux
     - tokei
     - topgrade
