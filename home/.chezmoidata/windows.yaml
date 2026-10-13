@@ -15,6 +15,7 @@ windows:
       - ChawyeHsu.Nano
       - dalance.procs
       - dandavison.delta
+      - dbrgn.tealdeer
       - dundee.gdu
       - eza-community.eza
       - Fastfetch-cli.Fastfetch
@@ -22,6 +23,7 @@ windows:
       - Golang.Go
       - hpjansson.Chafa
       - Insecure.Nmap
+      - ISC.bind
       - JanDeDobbeleer.OhMyPosh
       - jftuga.less
       - JohnMacFarlane.Pandoc
@@ -35,7 +37,6 @@ windows:
       - MediaArea.MediaInfo
       - Meta.Zstandard
       - Microsoft.OpenSSH.Preview
-      - MiKTeX.MiKTeX
       - muesli.duf
       - mvdan.shfmt
       - Qalculate.Qalculate
@@ -47,7 +48,6 @@ windows:
       - sharkdp.hyperfine
       - sharkdp.vivid
       - shinchiro.mpv
-      - StrawberryPerl.StrawberryPerl
       - topgrade-rs.topgrade
       - XAMPPRocky.tokei
       - yt-dlp.yt-dlp

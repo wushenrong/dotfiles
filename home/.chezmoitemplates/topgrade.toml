@@ -3,5 +3,9 @@
 # SPDX-License-Identifier: 0BSD
 
 [misc]
-first = ["chezmoi", "system"]
+first = ["chezmoi"]
+{{ if (eq .chezmoi.os "windows") -}}
+last = ["system"]
+{{ end -}}
+
 no_self_update = true

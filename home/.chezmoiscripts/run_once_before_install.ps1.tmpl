@@ -3,12 +3,9 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Update packages
-winget update --all
-
 # Install user packages
 winget install -e {{ .windows.packages.user | shellQuoteList | join " " }}
 
 # Install machine packages
-winget install --scope machine -e {{ .windows.packages.machine | shellQuoteList | join " " }}
+sudo winget install --scope machine -e {{ .windows.packages.machine | shellQuoteList | join " " }}
 {{ end -}}

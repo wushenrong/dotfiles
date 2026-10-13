@@ -7,6 +7,7 @@ fedora:
     - bat
     - bear
     - bfs
+    - bind-utils
     - bsdtar
     - btop
     - ccache
@@ -60,6 +61,7 @@ fedora:
     - shellcheck
     - shfmt
     - symlinks
+    - tealdeer
     - tmux
     - tokei
     - topgrade
