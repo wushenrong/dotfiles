@@ -146,9 +146,17 @@
   dc = d --cached
   ds = d --staged
 
+  dt = -c diff.external=difft d
+  dtc = dt --cached
+  dts = dt --staged
+
+  dtl = -c diff.external=difft lp --ext-diff
+  dts = -c diff.external=difft sh --ext-diff
+
   i = init
 
   l = log --graph
+  lp = l --patch
 
   m = merge
   ma = m --abort

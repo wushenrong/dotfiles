@@ -18,6 +18,7 @@ fedora:
     - cmake
     - croc
     - curl
+    - difftastic
     - dracut-config-rescue
     - duf
     - elinks

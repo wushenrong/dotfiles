@@ -49,6 +49,7 @@ windows:
       - sharkdp.vivid
       - shinchiro.mpv
       - topgrade-rs.topgrade
+      - Wilfred.difftastic
       - XAMPPRocky.tokei
       - yt-dlp.yt-dlp
 
