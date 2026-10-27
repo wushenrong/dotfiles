@@ -17,7 +17,11 @@
 
 [advice]
   addEmptyPathspec = false
-  pushNonFastForward = false
+  commitBeforeMerge = false
+  detachedHead = false
+  implicitIdentity = false
+  pushNonFFCurrent = false
+  resolveConflict = false
   statusHints = false
 
 [init]
@@ -25,9 +29,6 @@
 
 [column]
   ui = auto
-
-[help]
-  autocorrect = prompt
 
 # Git Status
 [status]
@@ -46,8 +47,7 @@
 
 [diff]
   algorithm = histogram
-  context = 3
-  colorMoved = plain
+  colorMoved = default
   interHunkContext = 10
   mnemonicPrefix = true
   renames = copies
@@ -122,6 +122,7 @@
   aa = a --all
   ai = a --interactive
   ap = a --patch
+  au = a --update
 
   b = branch
   ba = b --all
@@ -138,9 +139,14 @@
   cis = ci --signoff
 
   cam = c --amend
-  caa = ca --amend
+  caa = cam --all
 
-  cl = clone --recursive
+  cl = clone --recurse-submodules
+
+  cp = cherry-pick
+  cpa = cp --abort
+  cpc = cp --continue
+  cps = cp --skip
 
   d = diff
   dc = d --cached
@@ -176,6 +182,8 @@
   rsw = rs --worktree
 
   rb = rebase
+  rbm = rb main
+
   rba = rb --abort
   rbc = rb --continue
   rbs = rb --skip
@@ -184,6 +192,7 @@
   rbir = rbi --root
 
   s = status
+  sh = show
 
   sm = submodule
   sma = sm add
@@ -192,6 +201,7 @@
   smu = sm update --remote --recursive
 
   st = stash
+  stb = st branch
   std = st drop
   stl = st list
   stp = st pop
@@ -201,9 +211,10 @@
   stu = st --include-untracked
 
   sw = switch
+  swm = sw main
+
   swc = sw --create
   swp = sw -
-  swm = sw main
 
   wt = worktree
   wta = wt add
