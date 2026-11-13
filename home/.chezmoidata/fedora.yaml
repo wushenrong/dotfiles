@@ -75,8 +75,7 @@ fedora:
 
   desktop_packages:
     - arc-theme
-    - cascadia-code-fonts
-    - cascadia-code-nf-fonts
+    - cascadia-fonts-all
     - cliphist
     - dnfdragora-gui
     - ffmpeg
