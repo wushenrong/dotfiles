@@ -40,7 +40,8 @@ layer_effects "waybar" {
 
 # Rules for processes
 assign [app_id="firefox"] 1:Web
-assign [app_id="code"] 2:Code
+assign [app_id="(?i)code"] 2:Code
+assign [app_id="(?i)codium"] 2:Code
 assign [app_id="kitty"] 3:Terminal
 assign [app_id="discord"] 4:Discord
 assign [class="steam"] 5:Gaming

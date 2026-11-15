@@ -14,7 +14,6 @@ fedora:
     - chafa
     - clang
     - clang-tools-extra
-    - clean-rpm-gpg-pubkey
     - cmake
     - croc
     - curl
