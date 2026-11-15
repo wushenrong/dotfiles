@@ -1,7 +1,7 @@
 # pstop configuration file
 # Auto-generated — do not edit while pstop is running
 
-tree_view=0
+tree_view=1
 show_tree_by_default=1
 hide_kernel_threads=0
 shadow_other_users=0
@@ -13,6 +13,7 @@ highlight_threads=1
 header_margin=1
 detailed_cpu_time=0
 cpu_count_from_zero=0
+irix_mode=1
 update_process_names=0
 show_thread_names=0
 enable_mouse=1
@@ -21,6 +22,6 @@ update_interval_ms=1500
 color_scheme=0
 sort_field=9
 sort_ascending=0
-visible_columns=5,8,7,13,15,16,3,10,12,1,14,11,4,6,9,2,0
+visible_columns=0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16
 left_meters=AllCPUs;Memory;Swap;Network
-right_meters=AllCPUs;Tasks;Load average;Uptime
+right_meters=AllCPUs;Total CPU;Tasks;Load average;Uptime

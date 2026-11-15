@@ -6,184 +6,178 @@
 {
   "$schema": "https://raw.githubusercontent.com/fastfetch-cli/fastfetch/master/doc/json_schema.json",
   "display": {
-    // From: https://github.com/fastfetch-cli/fastfetch/discussions/971#discussioncomment-12628729
-    "constants": [
-      "\u001b[67C",
-      "\u001b[67D",
-      "\u001b[80C",
-      "\u001b[20D",
-      "─────────────────────────────────────────────────────────────────────────────"
-    ],
-    "key": {
-      "width": 14
+    "color": {
+      "separator": "#FDEC52"
     },
-    "separator": ""
+    "key": {
+      "width": 15
+    },
+    "separator": " │ "
   },
   "logo": {
+    "height": 18,
     "padding": {
       "left": 1,
-      "right": {{ if (eq .chezmoi.os "windows") -}}2{{- else -}}1{{- end -}},
+      "right": 1,
       "top": 1
     },
-    {{- if (eq .chezmoi.os "windows") }}
-    "source": "~/Pictures/Terminal/Cards/feli.sixel",
-    "type": "raw",
-    {{- else }}
-    "source": "~/Pictures/Terminal/Cards/*.png",
-    "type": "kitty-direct",
-    {{- end }}
+    // {{- if (eq .chezmoi.os "windows") }}
+    "source": "~/Pictures/Terminal/Cards/feli_7.png",
+    "type": "sixel",
+    // {{- else }}
+    // "source": "~/Pictures/Terminal/Cards/*.png",
+    // "type": "kitty-direct",
+    // {{- end }}
     "width": 36
   },
   "modules": [
     {
-      "format": "╭─{$5}─╮",
-      "outputColor": "38;2;232;47;103",
+      "format": "╭───────────┬─────────── {#black}★ {#red}★ {#green}★ {#yellow}★ {#blue}★ {#magenta}★ {#cyan}★ {#white}★{#reset_default}",
+      "outputColor": "#FFFFFF",
       "type": "custom"
     },
     {
-      "key": "│        OS:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│        OS",
+      "keyColor": "#E82F67",
       "type": "os"
     },
     {
-      "key": "│      Host:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│      Host",
+      "keyColor": "#E82F67",
       "type": "host"
     },
     {
-      "key": "│    Kernel:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│    Kernel",
+      "keyColor": "#E82F67",
       "type": "kernel"
     },
     {
-      "key": "│    Uptime:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│    Uptime",
+      "keyColor": "#E82F67",
       "type": "uptime"
     },
     {
-      "key": "│  Packages:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│  Packages",
+      "keyColor": "#E82F67",
       "type": "packages"
     },
     {
-      "key": "│     Shell:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│     Shell",
+      "keyColor": "#E82F67",
       "type": "shell"
     },
     {
-      "key": "│  Terminal:{$1} │",
-      "keyColor": "38;2;232;47;103",
+      "key": "│  Terminal",
+      "keyColor": "#E82F67",
       "type": "terminal"
     },
     {
-      "format": "├─{$5}─┤",
+      "format": "├───────────┼───┤",
+      "outputColor": "#FFFFFF",
       "type": "custom"
     },
     {
-      "key": "│       CPU:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│       CPU",
+      "keyColor": "#AA59DB",
       "type": "cpu"
     },
     {
       "format": "{name}",
-      "key": "│       GPU:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│       GPU",
+      "keyColor": "#AA59DB",
       "type": "gpu"
     },
     {
-      "key": "│     Video:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│     Video",
+      "keyColor": "#AA59DB",
       "type": "display"
     },
     {
-      "key": "│    Memory:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│    Memory",
+      "keyColor": "#AA59DB",
       "type": "memory"
     },
     {
-      "key": "│      Swap:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│      Swap",
+      "keyColor": "#AA59DB",
       "type": "swap"
     },
     {
-      "key": "│      Disk:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│      Disk",
+      "keyColor": "#AA59DB",
       "type": "disk"
     },
     {
-      "key": "│   Battery:{$1} │",
-      "keyColor": "38;2;170;89;219",
+      "key": "│   Battery",
+      "keyColor": "#AA59DB",
       "type": "battery"
     },
     {
-      "format": "├─{$5}─┤",
+      "format": "├───────────┼───┤",
+      "outputColor": "#FFFFFF",
       "type": "custom"
     },
     {
-      "key": "│        DE:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│        DE",
+      "keyColor": "#D16FB3",
       "type": "de"
     },
     {
-      "key": "│        WM:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│        WM",
+      "keyColor": "#D16FB3",
       "type": "wm"
     },
     {
-      "key": "│     Theme:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│     Theme",
+      "keyColor": "#D16FB3",
       "type": "theme"
     },
     {
-      "key": "│  WM Theme:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│  WM Theme",
+      "keyColor": "#D16FB3",
       "type": "wmtheme"
     },
     {
-      "key": "│      Font:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│      Font",
+      "keyColor": "#D16FB3",
       "type": "font"
     },
     {
-      "key": "│ Term Font:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│ Term Font",
+      "keyColor": "#D16FB3",
       "type": "terminalfont"
     },
     {
-      "key": "│     Icons:{$1} │",
-      "keyColor": "38;2;209;111;179",
+      "key": "│     Icons",
+      "keyColor": "#D16FB3",
       "type": "icons"
     },
     {
       "condition": {
         "succeeded": true
       },
-      "format": "├─{$5}─┤",
+      "format": "├───────────┼───┤",
+      "outputColor": "#FFFFFF",
       "type": "custom"
     },
     {
-      "key": "│      User:{$1} │",
-      "keyColor": "38;2;237;145;171",
+      "key": "│      User",
+      "keyColor": "#FAA8C1",
       "type": "title"
     },
     {
-      "key": "│  Local IP:{$1} │",
-      "keyColor": "38;2;237;145;171",
+      "key": "│  Local IP",
+      "keyColor": "#FAA8C1",
       "type": "localip"
     },
     {
-      "key": "│    Locale:{$1} │",
-      "keyColor": "38;2;237;145;171",
+      "key": "│    Locale",
+      "keyColor": "#FAA8C1",
       "type": "locale"
     },
     {
-      "format": "╰──{$5}{$4}┬─ {#black} {#red} {#green} {#yellow} {#blue} {#magenta} {#cyan} {#white}{#38;2;237;145;171} ─┤",
-      "outputColor": "38;2;237;145;171",
-      "type": "custom"
-    },
-    {
-      "format": "{$3}{$4}╰─ {#bright_black} {#bright_red} {#bright_green} {#bright_yellow} {#bright_blue} {#bright_magenta} {#bright_cyan} {#bright_white}{#reset_default}{#38;2;237;145;171} ─╯",
-      "outputColor": "38;2;237;145;171",
+      "format": "╰───────────┴─────────── {#bright_black}★ {#bright_red}★ {#bright_green}★ {#bright_yellow}★ {#bright_blue}★ {#bright_magenta}★ {#bright_cyan}★ {#bright_white}★{#reset_default}",
+      "outputColor": "#FFFFFF",
       "type": "custom"
     },
     "break"

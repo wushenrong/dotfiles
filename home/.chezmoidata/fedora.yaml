@@ -15,7 +15,7 @@ fedora:
     - clang
     - clang-tools-extra
     - cmake
-    - croc
+    # - croc
     - curl
     - difftastic
     - dracut-config-rescue
@@ -52,16 +52,15 @@ fedora:
     - openssh
     - pandoc-cli
     - pandoc-pdf
-    - procs
     - qalculate
     - remove-retired-packages
     - ripgrep
     - rpmconf
     - rustup
     - shellcheck
-    - shfmt
+    # - shfmt
     - symlinks
-    - tealdeer
+    # - tealdeer
     - tmux
     - tokei
     - topgrade

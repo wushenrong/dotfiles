@@ -12,7 +12,6 @@ windows:
       - Casey.Just
       - Ccache.Ccache
       - charmbracelet.glow
-      - dalance.procs
       - dandavison.delta
       - dbrgn.tealdeer
       - dundee.gdu
