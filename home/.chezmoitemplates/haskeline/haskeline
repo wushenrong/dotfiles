@@ -1,0 +1,3 @@
+completionType: MenuCompletion
+maxhistorysize: Just 20000
+historyDuplicates: IgnoreAll
