@@ -7,6 +7,7 @@
 from kitty.boss import Boss
 from kitten.tui.path_completer import get_path
 
+
 def main(args: list[str]) -> str:
     answer = get_path("Enter path to logo image: ")
 
