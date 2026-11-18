@@ -11,7 +11,6 @@ exec_always ~/.local/bin/import-gsettings
 
 # Start programs and applets
 exec wl-paste --watch cliphist store
-exec swaync
 
 # Gaps between windows
 gaps {

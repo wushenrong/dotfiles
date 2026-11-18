@@ -68,6 +68,7 @@ fedora:
     - valgrind
     - vcpkg
     - wget
+    - yq
     - zoxide
     - zsh
 
@@ -86,7 +87,6 @@ fedora:
     - powertop
     - qalculate-gtk
     - rofi
-    - SwayNotificationCenter
     - tuned-utils
     - vulkan-tools
     - wev
