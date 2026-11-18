@@ -2,11 +2,13 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-from kitty.boss import Boss
+# TODO: Make this better with a file chooser
 
+from kitty.boss import Boss
+from kitten.tui.path_completer import get_path
 
 def main(args: list[str]) -> str:
-    answer = input("Enter path to logo image: ")
+    answer = get_path("Enter path to logo image: ")
 
     return answer
 
@@ -17,4 +19,4 @@ def handle_result(
     w = boss.window_id_map.get(target_window_id)
 
     if w is not None:
-        boss.call_remote_control(w, ("set-window-logo", f"--match=id:{w.id}", answer))
+        boss.call_remote_control(w, ("set-window-logo", "--self", answer))
