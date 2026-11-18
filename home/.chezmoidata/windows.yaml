@@ -35,6 +35,7 @@ windows:
       - MediaArea.MediaInfo
       - Meta.Zstandard
       - Microsoft.OpenSSH.Preview
+      - MikeFarah.yq
       - muesli.duf
       - mvdan.shfmt
       - Qalculate.Qalculate
