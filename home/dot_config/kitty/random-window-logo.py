@@ -33,4 +33,4 @@ def handle_result(
 
         selected_image = choice(images)
 
-        boss.call_remote_control(w, ("set-window-logo", "--self", str(selected_logo)))
+        boss.call_remote_control(w, ("set-window-logo", "--self", str(selected_image)))
