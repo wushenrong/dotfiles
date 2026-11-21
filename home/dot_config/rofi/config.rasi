@@ -4,7 +4,7 @@
 
 configuration {
   modes: "drun,run,combi";
-  font: "Mono 14";
+  font: "Noto Sans Mono 14";
   show-icons: true;
   terminal: "kitty";
   icon-theme: "Papirus";

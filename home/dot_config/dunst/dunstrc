@@ -2,7 +2,6 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-
 # From https://github.com/Hugh-ONeill/dotfiles/blob/main/.config/dunst/dunstrc
 
 [global]
@@ -10,9 +9,6 @@
 follow = mouse
 
 ### Geometry ###
-width = 300
-height = (0, 300)
-offset = (10, 50)
 notification_limit = 5
 
 ### Progress bar ###
@@ -21,11 +17,14 @@ frame_width = 2
 gap_size = 4
 
 ### Text ###
-font = Monospace 12
+font = Noto Sans Mono 12
+
+format = "<b>󰁕 %a</b>\n%s\n<i>%b</i>"
 
 ### Icons ###
 icon_theme = Papirus
 max_icon_size = 64
+icon_path = /usr/share/icons/Papirus-Dark/48x48/apps:/usr/share/icons/Papirus-Dark/48x48/status:/usr/share/icons/hicolor/48x48/apps
 
 ### Misc/Advanced ###
 dmenu = /usr/bin/rofi -dmenu -p "dunst:"
