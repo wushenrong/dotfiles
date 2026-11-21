@@ -47,7 +47,7 @@
 
 [diff]
   algorithm = histogram
-  colorMoved = default
+  colorMoved = dimmed-zebra
   interHunkContext = 10
   mnemonicPrefix = true
   renames = copies
@@ -153,45 +153,51 @@
 # Git Alias
 [alias]
   amend = cam
-  renormalize = add --all --renormalize
+  renormalize = add -A --renormalize
   unstage = rs
 
   a = add
-  aa = a --all
-  ai = a --interactive
-  ap = a --patch
-  au = a --update
+  aa = a -A
+  ai = a -i
+  ap = a -p
+  au = a -u
 
   b = branch
-  ba = b --all
-  bd = b --delete
-  bm = b --move
+  ba = b -a
+  bd = b -d
+  bdd = b -D
+  bm = b -m
+  bmm = b -m
 
   c = commit
-  cs = c --signoff
+  cs = c -s
 
-  ca = c --all
-  cas = ca --signoff
+  ca = c -a
+  cas = ca -s
 
-  ci = c --interactive
-  cis = ci --signoff
+  ci = c -i
+  cis = ci -s
 
   cam = c --amend
-  caa = cam --all
+  caa = cam -a
 
   cl = clone --recurse-submodules
 
   cp = cherry-pick
+
   cpa = cp --abort
+  cpas = cpa -s
+
   cpc = cp --continue
+  cpcs = cpc -s
+
   cps = cp --skip
+  cpss = cps -s
 
   d = diff
-  dc = d --cached
   ds = d --staged
 
   dt = -c diff.external=difft d
-  dtc = dt --cached
   dts = dt --staged
 
   dtl = -c diff.external=difft lp --ext-diff
@@ -206,7 +212,7 @@
   i = init
 
   l = log --graph
-  lp = l --patch
+  lp = l -p
 
   m = merge
   ma = m --abort
@@ -219,11 +225,11 @@
   plr = pl --recurse-submodules
 
   r = restore
-  rp = r --patch
+  rp = r -p
 
-  rs = r --staged
-  rsp = rs --patch
-  rsw = rs --worktree
+  rs = r -S
+  rsp = rs -p
+  rsw = rs -W
 
   rb = rebase
   rbm = rb main
@@ -232,7 +238,7 @@
   rbc = rb --continue
   rbs = rb --skip
 
-  rbi = rb --interactive
+  rbi = rb -i
   rbir = rbi --root
 
   s = status
@@ -250,14 +256,15 @@
   stl = st list
   stp = st pop
 
-  sta = st --all
-  sts = st --staged
-  stu = st --include-untracked
+  sta = st -a
+  stp = st -p
+  sts = st -S
+  stu = st -u
 
   sw = switch
   swm = sw main
 
-  swc = sw --create
+  swc = sw -c
   swp = sw -
 
   wt = worktree

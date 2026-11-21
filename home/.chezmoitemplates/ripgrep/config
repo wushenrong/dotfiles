@@ -2,11 +2,11 @@
 #
 # SPDX-License-Identifier: 0BSD
 
-# Match all instances unless there is uppercase
---smart-case
+# Smart case search
+-S
 
 # Show context around each match
---context=2
+-C 3
 
 # Hyperlinks
 --hyperlink-format=vscode

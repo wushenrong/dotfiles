@@ -12,12 +12,12 @@ text/* | application/javascript | inode/x-empty)
   if [[ "$1" == *.md ]]; then
     CLICOLOR_FORCE=1 glow -s dark "$1"
   else
-    bat --plain --color=always "$1"
+    bat -p --color=always "$1"
   fi
   ;;
 image/*)
   if [[ "$TERM" = *kitty* ]]; then
-    kitten icat "$1"
+    kitty +kitten icat "$1"
   else
     chafa -f sixels "$1"
   fi
