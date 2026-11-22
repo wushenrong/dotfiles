@@ -3,12 +3,13 @@
 // SPDX-License-Identifier: 0BSD
 
 configuration {
-  modes: "drun,run,combi";
+  modes: "combi";
   font: "Noto Sans Mono 14";
   show-icons: true;
   terminal: "kitty";
+  ssh-client: "kitty +kitten ssh";
   icon-theme: "Papirus";
-  combi-modes: "drun,run";
+  combi-modes: "drun,run,window";
 }
 
 @theme "Arc-Dark"
