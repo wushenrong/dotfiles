@@ -10,7 +10,7 @@
 
 [core]
   compression = 9
-  editor = code --wait
+  editor = code -w
   whitespace = error
   pager = delta
   preloadindex = true

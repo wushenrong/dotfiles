@@ -6,7 +6,7 @@
 -S
 
 # Show context around each match
--C 3
+-C=3
 
 # Hyperlinks
 --hyperlink-format=vscode

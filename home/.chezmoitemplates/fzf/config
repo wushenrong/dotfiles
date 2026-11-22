@@ -7,5 +7,5 @@
 --color info:144,prompt:161,spinner:135,pointer:135,marker:118
 
 # Auto select entry if there is only one and exit if there is none
---select-1
---exit-0
+-1
+-0
