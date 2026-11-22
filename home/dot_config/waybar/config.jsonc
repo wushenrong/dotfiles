@@ -1,7 +1,6 @@
 // -*- mode: jsonc -*-
 {
   "backlight": {
-    // "device": "acpi_video1",
     "format": "{percent}% {icon}",
     "format-icons": [
       "🌑",
@@ -41,9 +40,10 @@
     "format": "{usage}% ",
     "tooltip": false
   },
-  // "layer": "top", // Waybar at top layer
-  // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 30, // Waybar height (to be removed for auto height)
+  "disk": {
+    "format": "{percentage_free}% "
+  },
+  // "height": 30, // Waybar height (to be removed for auto height)
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -51,38 +51,28 @@
       "deactivated": ""
     }
   },
-  "keyboard-state": {
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    },
-    "numlock": true
-  },
   "memory": {
     "format": "{}% "
   },
   "modules-center": [
     "clock"
   ],
-  // Choose the order of the modules
   "modules-left": [
     "sway/workspaces",
-    "keyboard-state",
     "sway/mode",
     "sway/scratchpad"
   ],
   "modules-right": [
     "privacy",
     "idle_inhibitor",
+    "backlight",
     "pulseaudio",
-    "power-profiles-daemon",
     "cpu",
     "memory",
+    "disk",
     "temperature",
-    "backlight",
     "battery",
+    "power-profiles-daemon",
     "tray"
   ],
   "power-profiles-daemon": {
@@ -99,26 +89,20 @@
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": "󰅶 {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
     "format-icons": {
-      "car": "",
       "default": [
         "",
         "",
         ""
-      ],
-      "hands-free": "󰂑",
-      "headphone": "",
-      "headset": "󰂑",
-      "phone": "",
-      "portable": ""
+      ]
     },
-    "format-muted": "󰅶 {format_source}",
+    "format-muted": " {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "on-click": "pavucontrol"
   },
-  "spacing": 4, // Gaps between modules (4px)
+  "spacing": 4,
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },
@@ -135,7 +119,7 @@
   "sway/workspaces": {
     "all-outputs": true,
     "disable-scroll": true,
-    "format": "{index}:{icon}",
+    "format": "{index} {icon}",
     "format-icons": {
       "1": "",
       "2": "",

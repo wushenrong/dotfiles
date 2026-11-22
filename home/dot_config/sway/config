@@ -12,15 +12,15 @@ exec_always ~/.local/bin/import-gsettings
 # Start programs and applets
 exec wl-paste --watch cliphist store
 
+# font
+font pango:Noto Sans 10
+
 # Gaps between windows
-gaps inner 2px
-gaps outer 0px
-smart_gaps on
+gaps inner 4px
+gaps outer 8px
+smart_gaps inverse_outer
 
 # Windows effects
-default_border pixel 1
-default_floating_border pixel 1
-
 for_window [all] opacity 0.85
 
 # SwayFX
@@ -28,12 +28,10 @@ animation_duration_ms 250
 blur enable
 corner_radius 4
 default_dim_inactive 0.15
-shadows enable
 
 layer_effects "waybar" {
   blur enable;
   blur_ignore_transparent enable;
-  shadows enable;
 }
 
 # Rules for processes
@@ -128,7 +126,7 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Logoff' 'swaymsg exit'
 
 # Quake-like Terminal
-bindsym $mod+Grave exec $term +kitten quick-access-terminal
+bindsym $mod+grave exec $term +kitten quick-access-terminal
 
 # Task Manager
 bindsym Control+Shift+Escape exec $term --app-id 'flying-kitty' btop

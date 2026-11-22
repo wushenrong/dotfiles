@@ -15,15 +15,6 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
 window#waybar.termite {
   background-color: #3F3F3F;
 }
@@ -139,10 +130,6 @@ button:hover {
   animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-  padding-right: 15px;
-}
-
 #power-profiles-daemon.performance {
   background-color: #f53c3c;
   color: #ffffff;
@@ -163,42 +150,40 @@ label:focus {
 }
 
 #cpu {
-  background-color: #2ecc71;
-  color: #000000;
+  border-bottom: 3px solid #2ecc71;
 }
 
 #memory {
-  background-color: #9b59b6;
+  border-bottom: 3px solid #9b59b6;
 }
 
 #disk {
-  background-color: #964B00;
+  border-bottom: 3px solid #964B00;
 }
 
 #backlight {
-  background-color: #90b1b1;
+  border-bottom: 3px solid #90b1b1;
 }
 
 #pulseaudio {
-  background-color: #f1c40f;
-  color: #000000;
+  border-bottom: 3px solid #f1c40f;
 }
 
 #pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
+  border-bottom: 3px solid #90b1b1;
 }
 
 #temperature {
-  background-color: #f0932b;
+  border-bottom: 3px solid #f0932b;
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  border-bottom: 3px solid #eb4d4b;
 }
 
 #tray {
   background-color: #2980b9;
+  border-bottom: 3px solid rgba(106, 194, 253, 0.5);
 }
 
 #tray>.passive {
