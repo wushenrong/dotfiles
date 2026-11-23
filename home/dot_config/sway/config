@@ -12,7 +12,7 @@ exec_always ~/.local/bin/import-gsettings
 # Start programs and applets
 exec wl-paste --watch cliphist store
 
-# font
+# Font
 font pango:Noto Sans 10
 
 # Gaps
@@ -88,7 +88,7 @@ for_window [shell="xwayland"] title_format "[XWayland] %title"
 #
 
 # Wallpaper
-output * bg /usr/share/backgrounds/default.jxl fill
+output * bg ~/Pictures/interlude_45.png fill
 
 #
 # Idle configuration
@@ -129,6 +129,9 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Shutdown' 'systemctl poweroff' \
   -B 'Logoff' 'swaymsg exit'
 
+# Lock Desktop
+bindsym $mod+l exec swaylock -f
+
 # Quake-like Terminal
 bindsym $mod+grave exec kitten quick_access_terminal
 
@@ -140,7 +143,6 @@ bindsym Control+Shift+Escape exec $term --app-id 'flying-kitty' btop
 #
 
 # Moving focus
-
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
