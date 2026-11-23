@@ -15,13 +15,14 @@ exec wl-paste --watch cliphist store
 # font
 font pango:Noto Sans 10
 
-# Gaps between windows
+# Gaps
 gaps inner 4px
 gaps outer 8px
 smart_gaps inverse_outer
 
-# Windows effects
-for_window [all] opacity 0.85
+# Borders
+default_border pixel
+default_floating_border pixel
 
 # SwayFX
 animation_duration_ms 250
@@ -44,6 +45,9 @@ assign [class="steam"] 5
 assign [app_id="mpv"] 6
 
 # Rules for windows
+# Make all window opaque
+for_window [all] opacity 0.85
+
 # Make all popups and dialogs as floating
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="bubble"] floating enable
@@ -71,7 +75,7 @@ for_window [app_id="nm-connection-editor"] floating enable
 # Firefox Tweaks
 for_window [title="About Mozilla Firefox"] floating enable
 for_window [window_role="About"] floating enable
-for_window [app_id="firefox" title="Library"] floating enable, border pixel 1, sticky enable
+for_window [app_id="firefox" title="Library"] floating enable, sticky enable
 
 # Steam dialog
 for_window [class="^(steam$)" title="^(?!Steam$)"] floating enable
@@ -101,7 +105,7 @@ exec swayidle -w \
 set $mod Mod4
 
 set $term kitty
-set $menu pkill rofi || rofi -show combi
+set $menu rofi -show combi
 set $file_explorer thunar
 set $clipboard cliphist list | rofi -dmenu | cliphist decode | wl-copy
 
@@ -109,7 +113,7 @@ set $clipboard cliphist list | rofi -dmenu | cliphist decode | wl-copy
 floating_modifier $mod normal
 
 bindsym $mod+Return exec $term
-bindsym $mod+Mod1+space exec $menu
+bindsym $mod+Mod1+Space exec $menu
 bindsym $mod+e exec $file_explorer
 bindsym $mod+v exec $clipboard
 
@@ -126,7 +130,7 @@ bindsym $mod+Shift+e exec swaynag \
   -B 'Logoff' 'swaymsg exit'
 
 # Quake-like Terminal
-bindsym $mod+grave exec $term +kitten quick-access-terminal
+bindsym $mod+grave exec kitten quick_access_terminal
 
 # Task Manager
 bindsym Control+Shift+Escape exec $term --app-id 'flying-kitty' btop

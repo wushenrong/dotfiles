@@ -4,8 +4,8 @@
 }
 
 window#waybar {
-  background-color: rgba(43, 48, 59, 0.5);
-  border-bottom: 3px solid rgba(100, 114, 125, 0.5);
+  background-color: rgba(31, 31, 31, 0.5);
+  border-bottom: 3px solid rgba(102, 102, 102, 0.5);
   color: #ffffff;
   transition-property: background-color;
   transition-duration: .5s;
@@ -16,7 +16,7 @@ window#waybar.hidden {
 }
 
 window#waybar.termite {
-  background-color: #3F3F3F;
+  background-color: #666666;
 }
 
 window#waybar.chromium {
@@ -40,7 +40,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-  background-color: #a37800;
+  background-color: rgba(229, 229, 16, 0.5);
 }
 
 #workspaces button {
@@ -55,12 +55,12 @@ button:hover {
 
 #workspaces button.focused,
 #workspaces button.active {
-  background-color: #64727D;
-  box-shadow: inset 0 -3px #ffffff;
+  background-color: #264f78;
+  box-shadow: inset 0 -3px #cccccc;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: #f14c4c;
 }
 
 #mode {
@@ -80,8 +80,7 @@ button:hover {
 #mode,
 #idle_inhibitor,
 #scratchpad,
-#power-profiles-daemon,
-#mpd {
+#power-profiles-daemon {
   padding: 0 10px;
   color: #ffffff;
 }
@@ -102,26 +101,27 @@ button:hover {
 }
 
 #battery {
-  background-color: #ffffff;
-  color: #000000;
+  border-bottom: 3px solid #e5e5e5;
 }
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
-  background-color: #26A65B;
+  color: #0dbc79;
+  box-shadow: inset 0 -3px #23d18b;
 }
 
 @keyframes blink {
   to {
     background-color: #ffffff;
+    box-shadow: inset 0 -3px #e5e5e5;
     color: #000000;
   }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-  background-color: #f53c3c;
+  background-color: #cd3131;
+  box-shadow: inset 0 -3px #f14c4c;
   color: #ffffff;
   animation-name: blink;
   animation-duration: 0.5s;
@@ -131,17 +131,20 @@ button:hover {
 }
 
 #power-profiles-daemon.performance {
-  background-color: #f53c3c;
+  background-color: #cd3131;
+  box-shadow: inset 0 -3px #f14c4c;
   color: #ffffff;
 }
 
 #power-profiles-daemon.balanced {
-  background-color: #2980b9;
+  background-color: #11a8cd;
+  box-shadow: inset 0 -3px #29b8db;
   color: #ffffff;
 }
 
 #power-profiles-daemon.power-saver {
-  background-color: #2ecc71;
+  background-color: #0dbc79;
+  box-shadow: inset 0 -3px #23d18b;
   color: #000000;
 }
 
@@ -150,19 +153,19 @@ label:focus {
 }
 
 #cpu {
-  border-bottom: 3px solid #2ecc71;
+  border-bottom: 3px solid #23d18b;
 }
 
 #memory {
-  border-bottom: 3px solid #9b59b6;
+  border-bottom: 3px solid #d670d6;
 }
 
 #disk {
-  border-bottom: 3px solid #964B00;
+  border-bottom: 3px solid #3b8eea;
 }
 
 #backlight {
-  border-bottom: 3px solid #90b1b1;
+  border-bottom: 3px solid #000000;
 }
 
 #pulseaudio {
@@ -170,7 +173,7 @@ label:focus {
 }
 
 #pulseaudio.muted {
-  border-bottom: 3px solid #90b1b1;
+  border-bottom: 3px solid #000000;
 }
 
 #temperature {
@@ -178,12 +181,12 @@ label:focus {
 }
 
 #temperature.critical {
-  border-bottom: 3px solid #eb4d4b;
+  border-bottom: 3px solid #cd3131;
 }
 
 #tray {
-  background-color: #2980b9;
-  border-bottom: 3px solid rgba(106, 194, 253, 0.5);
+  background-color: #2472c8;
+  box-shadow: inset 0 -3px rgba(59, 142, 234, 0.5);
 }
 
 #tray>.passive {
@@ -192,16 +195,18 @@ label:focus {
 
 #tray>.needs-attention {
   -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
+  background-color: #f14c4c;
 }
 
 #idle_inhibitor {
-  background-color: #2d3436;
+  background-color: #000000;
+  box-shadow: inset 0 -3px #1f1f1f;
 }
 
 #idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
+  background-color: #e5e5e5;
+  box-shadow: inset 0 -3px rgba(102, 102, 102, 0.5);
+  color: #000000;
 }
 
 #scratchpad {
@@ -210,29 +215,4 @@ label:focus {
 
 #scratchpad.empty {
   background-color: transparent;
-}
-
-#privacy {
-  padding: 0;
-}
-
-#privacy-item {
-  padding: 0 5px;
-  color: white;
-}
-
-#privacy-item.screenshare {
-  background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-  background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-  background-color: #0069d4;
-}
-
-#privacy-item.location {
-  background-color: #00afff;
 }
