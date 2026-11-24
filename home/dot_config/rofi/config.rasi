@@ -3,21 +3,16 @@
 // SPDX-License-Identifier: 0BSD
 
 configuration {
-  modes: "combi";
+  modes: [combi];
   font: "Noto Sans Mono 14";
   show-icons: true;
   terminal: "kitty";
-  ssh-client: "kitty +kitten ssh";
   icon-theme: "Papirus";
-  combi-modes: "drun,run,window";
+  combi-modes: [
+    window,
+    drun,
+    run
+  ];
 }
 
-@theme "Arc-Dark"
-
-element-icon {
-  size: 2.2ch;
-}
-
-element-text {
-  vertical-align: 0.5;
-}
+@theme "mytheme"
