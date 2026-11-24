@@ -1,30 +1,31 @@
-/**
- * rofi -dump-theme output.
- * Rofi version: 2.1.0
- **/
+/* SPDX-FileCopyrightText: 2026 Samuel Wu
+ *
+ * SPDX-License-Identifier: 0BSD
+ */
+
 * {
   background-color: transparent;
-  text-color: white;
+  text-color: #fff;
   spacing: 2;
-  separator-color: rgba(102, 102, 102, 20%);
-  selected-color: rgba(255, 255, 255, 10%);
-  special-background-color: rgba(255, 255, 255, 35%);
-  special-selected-color: black;
+  separator-color: rgba(102, 102, 102, 0.2);
+  selected-color: rgba(255, 255, 255, 0.1);
+  special-background-color: rgba(255, 255, 255, 0.45);
+  special-selected-color: #000;
   urgent-text-color: #cd3131;
-  active-text-color: #268bd2;
+  active-text-color: #2472c8;
 }
 
 window {
   padding: 5;
   width: 1024;
   height: 630;
-  background-color: white;
+  background-color: #fff;
   background-image: url("~/Pictures/interlude_46.png", both);
   border: 1;
 }
 
 mainbox {
-  background-color: rgba(227, 0, 140, 40%);
+  background-color: rgba(227, 0, 140, 0.5);
   padding: 0;
   border: 0;
 }
@@ -36,8 +37,8 @@ message {
 }
 
 textbox {
-  background-color: rgba(0, 0, 0, 80%);
-  text-color: #f14c4c;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-color: #cd3131;
 }
 
 listview {
@@ -59,7 +60,6 @@ element-icon {
 }
 
 element-text {
-  background-color: inherit;
   text-color: inherit;
 }
 
@@ -78,12 +78,12 @@ element selected.normal {
 }
 
 element selected.urgent {
-  background-color: rgba(205, 49, 49, 50%);
+  background-color: rgba(205, 49, 49, 0.5);
   text-color: var(special-selected-color);
 }
 
 element selected.active {
-  background-color: rgba(38, 139, 210, 50%);
+  background-color: rgba(36, 114, 200, 0.5);
   text-color: var(special-selected-color);
 }
 
@@ -102,7 +102,7 @@ scrollbar {
   padding: 0;
   handle-width: 4px;
   border: 0;
-  handle-color: rgba(255, 255, 255, 50%);
+  handle-color: rgba(255, 255, 255, 0.5);
 }
 
 button {
