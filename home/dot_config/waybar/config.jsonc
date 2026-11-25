@@ -42,8 +42,8 @@
         "weekdays": "<span color='#e5e510'>{}</span>"
       }
     },
-    "format": "{:%Y-%m-%d - %H:%M:%S}",
-    "interval": 1,
+    "format": "{:%A, %B %d - %H:%M}",
+    "format-alt": "{:%Y-%m-%d - %H:%M}",
     "tooltip-format": "{calendar}"
   },
   "cpu": {
