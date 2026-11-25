@@ -33,7 +33,7 @@ def handle_result(
 
     for w in boss.all_windows:
         if not images:
-            images = sample(available_images, len(images))
+            images = sample(available_images, len(available_images))
 
         boss.call_remote_control(
             w,
