@@ -93,6 +93,10 @@ set tabstospaces
 ## Snip whitespace at the end of lines when justifying or hard-wrapping.
 set trimblanks
 
+## Two single-column characters used when displaying tabs and spaces.
+## The default when in a UTF-8 locale:
+set whitespace "»·"
+
 ## Treat punctuation characters as parts of words.
 set wordbounds
 
