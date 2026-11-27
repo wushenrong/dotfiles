@@ -6,6 +6,9 @@
 --color fg:252,hl:67,fg+:252,hl+:81
 --color info:144,prompt:161,spinner:135,pointer:135,marker:118
 
+# Set minimum height to 20 lines instead of 10
+--min-height=20+
+
 # Auto select entry if there is only one and exit if there is none
 -1
 -0
