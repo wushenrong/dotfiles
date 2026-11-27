@@ -1,0 +1,147 @@
+# SPDX-FileCopyrightText: 2026 Samuel Wu
+#
+# SPDX-License-Identifier: 0BSD
+
+## Make 'nextword' (Ctrl+Right) and 'chopwordright' (Ctrl+Delete)
+## stop at word ends instead of at beginnings.
+set afterends
+
+## When soft line wrapping is enabled, make it wrap lines at blanks
+## (tabs and spaces) instead of always at the edge of the screen.
+set atblanks
+
+## Automatically indent a newly created line to the same number of
+## tabs and/or spaces as the preceding line.
+set autoindent
+
+## Use bold text instead of reverse video text.
+set boldtext
+
+## The characters treated as closing brackets when justifying paragraphs.
+set brackets ""')>]}"
+
+## Interpret digits after a colon after a filename (on the command line)
+## as the line number to go to in that file.
+set colonparsing
+
+## Constantly report the cursor position, in the status bar or minibar.
+set constantshow
+
+## Draw a vertical stripe at the given column, to help judge text width.
+## (This option does not have a default value.)
+set guidestripe 80
+
+## Remember the used search/replace/command strings for the next session.
+set historylog
+
+## Display a "scrollbar" on the righthand side of the edit window.
+set indicator
+
+## Display line numbers to the left (and any anchors in the margin).
+set linenumbers
+
+## The opening and closing brackets that 'findbracket' recognizes.
+set matchbrackets "(<[{)>]}"
+
+## Use key bindings that most modern programs use, like ^Q for Quit,
+## ^O for Open, ^X for Cut, ^C for Copy, ^V for Paste, and so on.
+set modernbindings
+
+## Enable using the mouse to place the cursor (one click), set the mark
+## (two clicks), and execute shortcuts (by clicking in the help lines).
+set mouse
+
+## With ^R, insert a file into a separate buffer by default.
+set newbuffer
+
+## Remember the position of cursor and anchors for the next editing session.
+set positionlog
+
+## The characters treated as closing punctuation when justifying paragraphs.
+set punct "!.?"
+
+## The regular expression that matches quoting characters in email
+## or line-comment introducers in source code.
+set quotestr "^([ 	]*([!#%:;>|}]|//))+"
+
+## Put the cursor on the highlighted item in the file browser, and
+## show the cursor in the help viewer; useful for people who use a
+## braille display and people with poor vision.
+set showcursor
+
+## Make the Home key jump to the first non-blank character on a line,
+## but, when already there, then to column 1.
+set smarthome
+
+## Spread overlong lines over multiple screen lines.
+set softwrap
+
+## Use this spelling checker instead of the internal one.
+## (This option does not have a default value.)
+set speller "hunspell"
+
+## Use the end of the title bar for some state flags: I = auto-indenting,
+## M = mark, L = hard-wrapping long lines, R = recording, S = soft-wrapping.
+set stateflags
+
+## Use this tab size instead of the default; it must be greater than 0.
+set tabsize 4
+
+## Convert each typed tab to the fitting number of spaces.
+set tabstospaces
+
+## Snip whitespace at the end of lines when justifying or hard-wrapping.
+set trimblanks
+
+## Treat punctuation characters as parts of words.
+set wordbounds
+
+## Let an unmodified Backspace or Delete erase the marked region.
+set zap
+
+
+## Paint the interface elements of nano.  These are examples; there are
+## no colors by default, except for errorcolor and spotlightcolor.
+set titlecolor bold,white,blue
+set promptcolor lightwhite,grey
+set statuscolor bold,white,green
+set errorcolor bold,white,red
+set spotlightcolor black,lightyellow
+set selectedcolor lightwhite,#804
+set stripecolor ,#444
+set arrowcolor black,sky
+set scrollercolor slate,#222
+set numbercolor cyan
+set keycolor cyan
+set functioncolor green
+
+
+## === Syntax coloring ===
+## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
+
+## To include most of the existing syntax definitions, you can do:
+include /usr/share/nano/*.nanorc
+include ~/.local/share/nano/extras/*.nanorc
+
+
+## === Key bindings ===
+## For all details, see 'man nanorc', section REBINDING KEYS.
+
+## The <Ctrl+Delete> keystroke deletes the word to the right of the cursor.
+## On some terminals the <Ctrl+Backspace> keystroke produces ^H, which is
+## the ASCII character for backspace, so it is bound by default to the
+## backspace function.  The <Backspace> key itself produces a different
+## keycode, which is hard-bound to the backspace function.  So, if you
+## normally use <Backspace> for backspacing and not ^H, you can make
+## <Ctrl+Backspace> delete the word to the left of the cursor with:
+bind ^H chopwordleft main
+
+## For a more mnemonic Comment keystroke:
+bind ^/ comment main
+
+## For copying text to the local clipboard via OSC 52 (if terminal supports it):
+bind M-* "{execute}|| printf "\033]52;c;%s\007" "$(base64 | tr -d '\n')" {enter}{undo}" main
+
+## With 'set modernbindings', make these two keys work like in the shell:
+bind ^K "{mark}{end}{zap}" main
+bind ^U "{mark}{home}{zap}" main
